@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20. אינטגרל משולש · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html" class="on" aria-current="page"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="#c20">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c20" class="chapter" data-part="D">
+<header class="ch-head"><div class="ch-num">20</div><div><div class="ch-kicker">פרק עשרים</div><h2>אינטגרל משולש</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> אינטגרל כפול ופוביני (<a class="xref" href="chapter-17.html">פרק 17</a>), החלפת משתנים ויעקוביאן (<a class="xref" href="chapter-19.html">פרק 19</a>), קואורדינטות גליליות וכדוריות (<a class="xref" href="chapter-11.html">פרק 11</a>).</p>
+<ul class="goals"><li>מסה ונפח של גוף</li><li>מוטות</li><li>חתכים</li><li>גליליות</li><li>כדוריות</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+אינטגרל משולש הוא הסוף של הסיפור שהתחיל ב<a class="xref" href="chapter-1.html">פרק 1</a>: סוכמים \(F\cdot\Delta V\) על קוביות קטנות. עם \(F\equiv1\) מקבלים <b>נפח</b>, ועם צפיפות מקבלים <b>מסה</b>. בפועל זה תמיד "אינטגרל כפול של אינטגרל רגיל" (מוטות) או "אינטגרל רגיל של אינטגרל כפול" (חתכים), אז כל מה שלמדנו ב<a class="xref" href="chapter-17.html">פרקים <bdi dir="ltr">17–19</bdi></a> עובד.
+</div>
+
+<div class="box thm"><div class="tag">פוביני בתיבה</div>
+\[\iiint_{[a,b]\times[c,d]\times[e,f]}F=\int_a^b\int_c^d\int_e^fF\,dz\,dy\,dx\quad(\text{בכל סדר, אם }F\text{ רציפה})\]
+<b>דוגמה:</b> \(\iiint_{[0,1]\times[2,4]\times[1,3]}(xy+yz)=\int_0^1\int_2^4(2xy+4y)\,dy\,dx=\int_0^1(12x+24)dx=30\).
+</div>
+<div class="box thm"><div class="tag">שתי שיטות לגוף כללי</div>
+<b>שיטת המוטות:</b> \(V=\{(x,y)\in D,\ z_1(x,y)\le z\le z_2(x,y)\}\), כאשר \(D\) הוא ההיטל של הגוף על מישור \(xy\):
+\[\iiint_V F=\iint_D\Big(\int_{z_1(x,y)}^{z_2(x,y)}F\,dz\Big)dxdy\]
+<b>שיטת החתכים (הפרוסות):</b> לכל גובה \(z\) יש חתך \(D(z)\):
+\[\iiint_V F=\int_{z_1}^{z_2}\Big(\iint_{D(z)}F\,dxdy\Big)dz\]
+</div>
+
+<figure class="fig" data-fig="sticks"><figcaption><b>שתי השיטות בתמונה.</b> <b>מוטות</b> (משמאל): מעל כל נקודה \((x,y)\) בהיטל \(D\) יש "מוט" אנכי מ־\(z_1(x,y)\) עד \(z_2(x,y)\). <b>חתכים</b> (מימין): בכל גובה \(z\) חותכים את הגוף ומקבלים תחום מישורי \(D(z)\).</figcaption></figure>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>אינטגרל משולש: מוטות וחתכים</div>
+<div class="wk-q">חשבו את נפח הגוף \(V=\{x,y,z\ge0,\ x+y+z\le1\}\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים את הגוף.</span>
+טטראדר עם קודקודים \((0,0,0)\), \((1,0,0)\), \((0,1,0)\), \((0,0,1)\). הדופן העליונה היא המישור \(z=1-x-y\), והתחתונה \(z=0\).</li>
+<li><span class="st">שיטת המוטות: ההיטל על מישור \(xy\).</span>
+מציבים \(z=0\) בתנאים: \(D=\{x,y\ge0,\ x+y\le1\}\). מעל כל נקודה ב־\(D\), המוט עולה מ־\(z=0\) עד \(z=1-x-y\).</li>
+<li><span class="st">כותבים ומחשבים.</span>
+\[\iiint_V1\,dV=\iint_D\Big(\int_0^{1-x-y}dz\Big)dA=\int_0^1\int_0^{1-x}(1-x-y)\,dy\,dx=\int_0^1\frac{(1-x)^2}2\,dx=\frac16\]</li>
+<li><span class="st">בדיקה בשיטת החתכים.</span>
+בגובה \(z\in[0,1]\) החתך הוא המשולש \(\{x,y\ge0,\ x+y\le1-z\}\), ששטחו \(\frac{(1-z)^2}2\):
+\[\int_0^1\frac{(1-z)^2}2\,dz=\frac16\ \checkmark\]
+<p class="why-step">חתכים עדיפים כששטח החתך ידוע מגאומטריה, כמו כאן. מוטות עדיפים כשהגבולות העליון והתחתון הם משטחים פשוטים.</p></li>
+</ol>
+<div class="res">\(\mathrm{Vol}(V)=\frac16\)</div>
+</div>
+
+<h3>קואורדינטות גליליות וכדוריות</h3>
+<figure class="fig" data-fig="cylsph"><figcaption><b>משמאל, גליליות</b> \((r,\theta,z)\): קוטביות במישור \(xy\) ועוד גובה. אלמנט הנפח \(r\,dr\,d\theta\,dz\). <b>מימין, כדוריות</b> \((\rho,\varphi,\theta)\): מרחק מהראשית, זווית מציר \(z\), וזווית במישור \(xy\). אלמנט הנפח \(\rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta\).</figcaption></figure>
+<div class="card thm"><span class="pill">היעקוביאנים</span>
+<b>גליליות:</b> \(x=r\cos\theta,\ y=r\sin\theta,\ z=z\), \(|J|=r\). מתאים לגלילים, פרבולואידים, וכל מה שיש בו \(x^2+y^2\).<br>
+<b>כדוריות:</b> \(x=\rho\sin\varphi\cos\theta,\ y=\rho\sin\varphi\sin\theta,\ z=\rho\cos\varphi\), \(|J|=\rho^2\sin\varphi\). מתאים לכדורים וחרוטים.
+</div>
+<div class="exr"><div class="exr-h"><span class="n">דוגמה</span>נפח מתחת לפרבולואיד (גליליות)</div>
+<div class="exr-q">חשבו את נפח הגוף שבין \(z=0\) ל־\(z=4-x^2-y^2\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">יש \(x^2+y^2=r^2\), ולכן גליליות. ההיטל: \(4-r^2\ge0\), כלומר \(r\le2\).</p>
+\[V=\int_0^{2\pi}\int_0^2\int_0^{4-r^2}r\,dz\,dr\,d\theta=2\pi\int_0^2(4r-r^3)\,dr=2\pi(8-4)=\boxed{8\pi}\]
+</div></div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>קואורדינטות כדוריות</div>
+<div class="wk-q">חשבו את נפח הגוף שבתוך הכדור \(x^2+y^2+z^2\le4\) ומעל החרוט \(z=\sqrt{x^2+y^2}\).</div>
+<ol class="wsteps">
+<li><span class="st">בוחרים קואורדינטות.</span>
+שני המשטחים, כדור וחרוט, מתוארים בפשטות בכדוריות: \(x=\rho\sin\varphi\cos\theta\), \(y=\rho\sin\varphi\sin\theta\), \(z=\rho\cos\varphi\), עם \(|J|=\rho^2\sin\varphi\).</li>
+<li><span class="st">מתרגמים את הכדור.</span>
+\(x^2+y^2+z^2=\rho^2\le4\), ולכן \(0\le\rho\le2\).</li>
+<li><span class="st">מתרגמים את החרוט.</span>
+\(\sqrt{x^2+y^2}=\rho\sin\varphi\), ולכן \(z\ge\sqrt{x^2+y^2}\) פירושו \(\cos\varphi\ge\sin\varphi\), כלומר \(0\le\varphi\le\frac\pi4\). אין מגבלה על \(\theta\): \(0\le\theta\le2\pi\).
+<p class="why-step">\(\varphi\) נמדדת מהכיוון החיובי של ציר \(z\). "מעל החרוט" פירושו קרוב יותר לציר \(z\), כלומר \(\varphi\) קטנה.</p></li>
+<li><span class="st">כותבים את האינטגרל.</span>
+\[V=\int_0^{2\pi}\int_0^{\pi/4}\int_0^2\rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta\]
+הגבולות קבועים והאינטגרנד מכפלה, ולכן האינטגרל מתפרק למכפלה של שלושה אינטגרלים.</li>
+<li><span class="st">מחשבים.</span>
+\[\int_0^{2\pi}d\theta=2\pi,\qquad\int_0^{\pi/4}\sin\varphi\,d\varphi=1-\frac{\sqrt2}2,\qquad\int_0^2\rho^2\,d\rho=\frac83\]</li>
+</ol>
+<div class="res">\(V=2\pi\cdot\big(1-\frac{\sqrt2}2\big)\cdot\frac83=\frac{8\pi}3\big(2-\sqrt2\big)\)</div>
+</div>
+<div class="exr"><div class="exr-h"><span class="n">דוגמה</span>נפח כדור (כדוריות)</div>
+<div class="exr-q">חשבו את נפח הכדור \(x^2+y^2+z^2\le R^2\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+\[V=\int_0^{2\pi}\int_0^\pi\int_0^R\rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta=2\pi\cdot2\cdot\frac{R^3}3=\boxed{\tfrac43\pi R^3}\]
+<p class="small">אותה תוצאה כמו ב<a class="xref" href="chapter-5.html">פרק 5</a> (נפח לפי שטח חתך). שתי דרכים, אותה תשובה.</p>
+</div></div>
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לשכוח את היעקוביאן: \(r\) בגליליות, \(\rho^2\sin\varphi\) בכדוריות.</li>
+<li>בכדוריות: \(\varphi\in[0,\pi]\) (מציר \(z\)), לא \([0,2\pi]\).</li>
+<li>בשיטת המוטות: לטעות בהיטל \(D\). מוצאים אותו מחיתוך המשטח העליון והתחתון.</li>
+</ul>
+</div>
+
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+\(\iiint\) = מוטות (\(\iint\int dz\)) או חתכים (\(\int\iint dA\)). עגול? גליליות (\(r\)) או כדוריות (\(\rho^2\sin\varphi\)).
+</div>
+<a class="next" href="chapter-21.html"><span class="arr">←</span><span><b>בזה מסתיים החומר.</b> החלק הבא מרכז אותו: תרשימי החלטה לבחירת שיטה, תרגילי חזרה, הנחיות לכתיבת פתרון ודף נוסחאות.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-19.html"><small>→ הקודם</small><span>19. החלפת משתנים ויעקוביאן</span></a><a class="pg pg-next" href="worksheet-1.html"><small>הבא ←</small><span>דף עבודה 1: האינטגרל המסוים</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

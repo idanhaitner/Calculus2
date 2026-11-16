@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9. פונקציות, גרפים וקווי גובה · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html" class="on" aria-current="page"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="#c9">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<div class="part-head" id="partC"><div class="k">חלק ג׳ · פרקים <bdi dir="ltr">9–16</bdi></div><h2>פונקציות של כמה משתנים</h2>
+<p>החלק הגדול של הקורס. לוקחים את כל מה שידענו על \(f(x)\) מחדו״א 1 (גבול, רציפות, נגזרת, קיצון) ומעבירים לפונקציות כמו \(f(x,y)\). הרעיון המרכזי: <b>מקרוב, פונקציה חלקה נראית כמו מישור</b>. המטרה בסוף: למצוא מקסימום ומינימום, גם תחת אילוצים.</p></div>
+
+<section id="c9" class="chapter" data-part="C">
+<header class="ch-head"><div class="ch-num">9</div><div><div class="ch-kicker">פרק תשיעי</div><h2>פונקציות, גרפים וקווי גובה</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> נקודות ווקטורים ב־\(\mathbb R^n\), מרחק (<a class="xref" href="chapter-7.html">פרק 7</a>), ומשוואות של ישרים ומישורים (<a class="xref" href="chapter-8.html">פרק 8</a>).</p>
+<ul class="goals"><li>פונקציה סקלרית</li><li>תחום הגדרה</li><li>גרף = משטח</li><li>קווי גובה</li><li>מסילות</li><li>שדות וקטוריים</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+בעולם האמיתי כמעט שום דבר לא תלוי במשתנה אחד: הטמפרטורה בחדר תלויה ב־\((x,y,z)\), המחיר תלוי בכמות ובאיכות, הגובה של הר תלוי בקו האורך והרוחב. לפני שגוזרים פונקציה כזו צריך לדעת <b>לראות</b> אותה. יש שתי דרכים: <b>הגרף</b> (משטח בתלת־ממד) ו<b>מפת קווי הגובה</b> (כמו מפה טופוגרפית). כמעט כל שאלה בהמשך הקורס נעשית קלה יותר כשמציירים קווי גובה.
+</div>
+
+<figure class="fig" data-fig="surface3d"><figcaption><b>שתי דרכים לראות את אותה פונקציה.</b> משמאל הגרף \(z=f(x,y)\) (גררו לסיבוב). מימין מפת קווי הגובה: כל עקומה היא אוסף הנקודות שבהן \(f=c\). הזיזו את \(c\): במשטח רואים "חיתוך אופקי" בגובה \(c\), ובמפה העקומה המתאימה נדלקת. קווים צפופים = שיפוע תלול.</figcaption></figure>
+
+<h3>המושגים</h3>
+<div class="card def"><span class="pill">הגדרות</span>
+<ul>
+<li><b>פונקציה סקלרית</b> \(f:D\to\mathbb R\), \(D\subseteq\mathbb R^n\). למשל שטח מלבן \(A(x,y)=xy\), או מרחק מהראשית \(\sqrt{x^2+y^2}\).</li>
+<li><b>תחום הגדרה</b>: כל הנקודות שבהן הנוסחה הגיונית (מכנה \(\ne0\), שורש של אי־שלילי, \(\ln\) של חיובי). זה <b>אזור במישור</b>, ולכן משרטטים אותו.</li>
+<li><b>הגרף</b> של \(f(x,y)\): \(\{(x,y,f(x,y))\}\), משטח ב־\(\mathbb R^3\).</li>
+<li><b>קו גובה</b> \(c\): \(\{(x,y): f(x,y)=c\}\). עבור \(f(x,y,z)\) מקבלים <b>משטח רמה</b>.</li>
+</ul>
+<span class="plain">קו גובה = "חותכים את ההר בגובה \(c\) ומסתכלים מלמעלה".</span>
+</div>
+
+<div class="tablewrap"><table>
+<tr><th>פונקציה</th><th>הגרף</th><th>קווי הגובה</th></tr>
+<tr><td>\(x^2+y^2\)</td><td>פרבולואיד, "קערה"</td><td>מעגלים ברדיוס \(\sqrt c\), צפופים יותר ככל שמתרחקים</td></tr>
+<tr><td>\(\sqrt{x^2+y^2}\)</td><td>חרוט</td><td>מעגלים ברדיוס \(c\), במרווחים שווים</td></tr>
+<tr><td>\(x^2-y^2\)</td><td>אוכף ("צ׳יפס")</td><td>היפרבולות, ועבור \(c=0\) שני ישרים \(y=\pm x\)</td></tr>
+<tr><td>\(ax+by\)</td><td>מישור</td><td>ישרים מקבילים</td></tr>
+<tr><td>\(\frac{x^2-y^2}{x^2+y^2}\)</td><td>"מניפה" שנשברת בראשית</td><td>ישרים דרך הראשית, \(y=\pm\sqrt{\frac{1-c}{1+c}}\,x\)</td></tr>
+</table></div>
+<p class="small">בשורה האחרונה כל הישרים נפגשים ב־\((0,0)\) עם ערכים שונים, ולכן אין שם גבול. זה בדיוק הנושא של <a href="chapter-11.html">פרק 11</a>.</p>
+<div class="box ex"><div class="tag">דוגמאות של קווי גובה</div>
+<ul>
+<li>\(x^2+y^2=c\): מעגלים ברדיוס \(\sqrt c\), כש־\(c\ge0\).</li>
+<li>\(\frac1{\sqrt{x^2+y^2+z^2}}=c\): ספירות ברדיוס \(\frac1c\).</li>
+</ul>
+</div>
+
+
+<h3>מסילות ושדות וקטוריים</h3>
+<div class="two">
+<div class="card def" style="margin-top:20px"><span class="pill">מסילה \(p:[a,b]\to\mathbb R^n\)</span>
+"נקודה שזזה בזמן". \((\cos t,\sin t)\) היא מעגל, \((\cos t,\sin t,t)\) היא בורג. הנגזרת \(p'(t)\) היא <b>וקטור המהירות</b>, והוא משיק למסלול.</div>
+<div class="card def" style="margin-top:20px"><span class="pill">שדה וקטורי \(\vec F:\mathbb R^n\to\mathbb R^n\)</span>
+"חץ בכל נקודה". למשל שדה הכבידה \(-\frac{(x,y)}{x^2+y^2}\), או שדה הגרדיאנט \(\nabla f\) שנראה ב<a class="xref" href="chapter-13.html">פרק 13</a>.</div>
+</div>
+<figure class="fig" data-fig="pathfield"><figcaption><b>משמאל:</b> המסילה \(p(t)=(\cos t,\sin t,\tfrac t4)\) (בורג) עם וקטור מהירות. <b>מימין:</b> השדה \(\vec F=(-y,x)\): בכל נקודה חץ, וביחד הם "מסתובבים" סביב הראשית.</figcaption></figure>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>תחום הגדרה</div>
+<div class="wk-q">מצאו ושרטטו את תחום ההגדרה של \(f(x,y)=\sqrt{4-x^2-y^2}+\ln(x-y)\).</div>
+<ol class="wsteps">
+<li><span class="st">רושמים תנאי לכל רכיב בנוסחה.</span>
+השורש דורש \(4-x^2-y^2\ge0\). הלוגריתם דורש \(x-y\gt0\). תחום ההגדרה הוא החיתוך של שתי הקבוצות.</li>
+<li><span class="st">מתרגמים כל תנאי לצורה גאומטרית.</span>
+\(x^2+y^2\le4\): עיגול סגור ברדיוס 2 סביב הראשית, כולל המעגל.<br>
+\(y\lt x\): חצי המישור שמתחת לישר \(y=x\), בלי הישר עצמו.
+<p class="why-step">כדי לדעת איזה צד של הישר נבחר, מציבים נקודה שאינה עליו: \((1,0)\) מקיימת \(0\lt1\), ולכן הצד שמכיל אותה הוא הנכון.</p></li>
+<li><span class="st">משרטטים את החיתוך ומסמנים מה כלול.</span>
+התחום הוא חצי העיגול שמתחת לאלכסון: הקשת כלולה (קו מלא), והקוטר על \(y=x\) אינו כלול (קו מקווקו).</li>
+</ol>
+<div class="res">\(D=\{(x,y):\ x^2+y^2\le4,\ y\lt x\}\). כפי שנראה בפרק הבא, זו קבוצה חסומה שאינה פתוחה ואינה סגורה.</div>
+</div>
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לבלבל בין הגרף (ב־\(\mathbb R^3\)) לבין קו גובה (ב־\(\mathbb R^2\)).</li>
+<li>בתחום הגדרה: לשכוח לסמן מה כלול ומה לא (קו מלא מול קו מקווקו).</li>
+</ul>
+</div>
+
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+פונקציה של שני משתנים רואים כ<b>משטח</b> או כ<b>מפת קווי גובה</b>. קו גובה = כל הנקודות עם אותו ערך.
+</div>
+<a class="next" href="chapter-10.html"><span class="arr">←</span><span><b>הלאה: טופולוגיה.</b> כדי להגדיר גבול צריך לדבר על "סביבה של נקודה", ואת זה עושים בעזרת כדורים. נגדיר נקודה פנימית, שפה, קבוצה פתוחה, סגורה וקומפקטית. הן יחזרו במשפט ויירשטראס ובחיפוש קיצון.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-8.html"><small>→ הקודם</small><span>8. ישרים ומישורים</span></a><a class="pg pg-next" href="chapter-10.html"><small>הבא ←</small><span>10. טופולוגיה ב־ℝⁿ</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

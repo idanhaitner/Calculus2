@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דף עבודה 2: המשפט היסודי ושיטות אינטגרציה · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html" class="on" aria-current="page"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="#w2">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="w2">
+<h2>דף עבודה 2: המשפט היסודי ושיטות אינטגרציה</h2>
+<div class="box idea"><div class="tag">💡 איך מתרגלים עם זה</div>
+נסו לפתור לבד, ורק אז פותחים "רמז" ואחר כך "פתרון מלא". הדף מכסה את <a href="chapter-1.html">פרק 1</a> (גבול של סכום), <a href="chapter-2.html">פרק 2</a> (המשפט היסודי) ו<a href="chapter-3.html">פרקים <bdi dir="ltr">3–4</bdi></a> (שיטות). את כל התשובות הסופיות בדקנו גם בחישוב נומרי.
+</div>
+
+<div class="wq" id="w2q1"><div class="wq-title">שאלה 1</div>
+<div class="wq-q"><b>(א)</b> חשבו \(\displaystyle\lim_{n\to\infty}\frac{1^\alpha+2^\alpha+\dots+n^\alpha}{n^{\alpha+1}}\) לכל \(\alpha\gt0\).<br>
+<b>(ב)</b> חשבו \(\displaystyle\lim_{n\to\infty}\sum_{k=1}^n\frac1{n+k}=\lim_{n\to\infty}\Big[\frac1{n+1}+\frac1{n+2}+\dots+\frac1{2n}\Big]\). רמז: \(\sum_{k=1}^n\frac1n\cdot\frac n{n+k}=\sum_{k=1}^n\frac1n\cdot\frac1{1+\frac kn}\).</div>
+<details class="hint"><summary>רמז</summary><div>הוציאו \(\frac1n\) החוצה וכתבו את מה שנשאר כפונקציה של \(\frac kn\). זה סכום רימן על \([0,1]\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(א)</b> נכתוב</p>
+\[\frac{1^\alpha+\dots+n^\alpha}{n^{\alpha+1}}=\frac1n\sum_{k=1}^n\Big(\frac kn\Big)^\alpha .\]
+<p>זה סכום רימן של \(f(x)=x^\alpha\) על \([0,1]\), עם חלוקה אחידה \(x_k=\frac kn\), \(\Delta x=\frac1n\), ונקודות ביניים בקצה הימני. \(f\) רציפה ב־\([0,1]\) (כי \(\alpha\gt0\)), ולכן אינטגרבילית, וסכומי רימן מתכנסים לאינטגרל כש־\(\lambda(P_n)=\frac1n\to0\):</p>
+\[\lim_{n\to\infty}\frac1n\sum_{k=1}^n\Big(\frac kn\Big)^\alpha=\int_0^1x^\alpha\,dx=\boxed{\frac1{\alpha+1}}\]
+<p><b>(ב)</b> לפי הרמז, \(\sum_{k=1}^n\frac1{n+k}=\frac1n\sum_{k=1}^n\frac1{1+\frac kn}\). זה סכום רימן של \(g(x)=\frac1{1+x}\) על \([0,1]\), שהיא רציפה ולכן אינטגרבילית:</p>
+\[\lim_{n\to\infty}\sum_{k=1}^n\frac1{n+k}=\int_0^1\frac{dx}{1+x}=\ln(1+x)\Big|_0^1=\boxed{\ln2}\]
+</div></details></div>
+
+<div class="wq" id="w2q2"><div class="wq-title">שאלה 2</div>
+<div class="wq-q">תהא \(f:\mathbb R\to\mathbb R\) רציפה. הוכיחו כי \(\displaystyle\int_0^xt^3f(t^2)\,dt=\frac12\int_0^{x^2}tf(t)\,dt\) לכל \(x\in\mathbb R\).</div>
+<details class="hint"><summary>רמז</summary><div>שתי דרכים: הצבה \(u=t^2\) באגף שמאל, או להראות ששני האגפים שווים ב־0 ושהנגזרות שלהם שוות.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>דרך 1 (נגזרות).</b> נגדיר \(L(x)=\int_0^xt^3f(t^2)dt\) ו־\(R(x)=\frac12\int_0^{x^2}tf(t)dt\). האינטגרנדים \(t^3f(t^2)\) ו־\(tf(t)\) רציפים, ולכן לפי המשפט היסודי (וכלל השרשרת עבור הגבול \(x^2\)):</p>
+\[L'(x)=x^3f(x^2),\qquad R'(x)=\tfrac12\cdot x^2f(x^2)\cdot2x=x^3f(x^2).\]
+<p>לכן \((L-R)'\equiv0\), כלומר \(L-R\) קבועה ב־\(\mathbb R\). מאחר ש־\(L(0)=R(0)=0\), הקבוע הוא 0, ו־\(L(x)=R(x)\) לכל \(x\). \(\blacksquare\)</p>
+<p><b>דרך 2 (הצבה).</b> \(u=t^2\), \(du=2t\,dt\): \(t^3f(t^2)\,dt=t^2f(t^2)\cdot t\,dt=\frac12uf(u)\,du\). הגבולות: \(t=0\mapsto u=0\), \(t=x\mapsto u=x^2\). משפט ההצבה (עם \(g(t)=t^2\) גזירה ברציפות) נותן מיד את השוויון.</p>
+</div></details></div>
+
+<div class="wq" id="w2q3"><div class="wq-title">שאלה 3</div>
+<div class="wq-q">תהא \(f(x)=\int_0^x(1-t^2)e^{t^3}\,dt\). באיזה תחום הפונקציה עולה?</div>
+<details class="hint"><summary>רמז</summary><div>המשפט היסודי נותן את \(f'\) בלי לחשב את האינטגרל. בדקו את הסימן שלה.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>האינטגרנד רציף, ולכן לפי המשפט היסודי \(f\) גזירה ו־\(f'(x)=(1-x^2)e^{x^3}\). מאחר ש־\(e^{x^3}\gt0\), הסימן של \(f'\) הוא הסימן של \(1-x^2\):</p>
+<ul><li>\(f'(x)\gt0\) עבור \(|x|\lt1\);</li><li>\(f'(x)\lt0\) עבור \(|x|\gt1\).</li></ul>
+<p>לכן \(f\) <b>עולה בקטע \([-1,1]\)</b> ויורדת ב־\((-\infty,-1]\) וב־\([1,\infty)\). (בפרט \(x=-1\) מינימום מקומי ו־\(x=1\) מקסימום מקומי.)</p>
+</div></details></div>
+
+<div class="wq" id="w2q4"><div class="wq-title">שאלה 4</div>
+<div class="wq-q">תהא \(f:\mathbb R\to\mathbb R\) רציפה ו־\(T\)־מחזורית, כלומר \(f(x+T)=f(x)\) לכל \(x\). הוכיחו כי \(\frac{d}{dx}\int_x^{x+T}f(t)\,dt=0\), והסיקו הוכחה חדשה לכך ש־\(\int_a^{a+T}f=\int_0^Tf\) לכל \(a\).</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>נגדיר \(G(x)=\int_x^{x+T}f(t)\,dt\). \(f\) רציפה, ולכן לפי נוסחת הגזירה עם גבולות משתנים:</p>
+\[G'(x)=f(x+T)\cdot1-f(x)\cdot1=0 .\]
+<p>לכן \(G\) קבועה ב־\(\mathbb R\) (נגזרת אפס על קטע), ובפרט \(G(a)=G(0)\) לכל \(a\), כלומר \(\int_a^{a+T}f=\int_0^Tf\). \(\blacksquare\)</p>
+<p class="small">זו בדיוק ההוכחה שמופיעה ב<a class="xref" href="chapter-2.html">פרק 2</a>. <a class="xref" href="worksheet-1.html">בדף הקודם</a> הוכחנו את אותה טענה בעזרת אדיטיביות והצבה.</p>
+</div></details></div>
+
+<h3>חשבו משיקולים כלליים (שאלות 5–12)</h3>
+<p class="small">מומלץ להיעזר בתכונות הכלליות של האינטגרל, במשפט היסודי, ובזוגיות או אי־זוגיות.</p>
+
+<div class="wq" id="w2q5"><div class="wq-title">שאלות 5–6</div>
+<div class="wq-q"><b>5.</b> \(\displaystyle\int_{1/\sqrt3}^{\sqrt3}\frac{dx}{1+x^2}\) &nbsp;&nbsp; <b>6.</b> \(\displaystyle\int_{-0.5}^{0.5}\frac{dx}{\sqrt{1-x^2}}\)</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>5.</b> \(\arctan\) היא פונקציה קדומה:</p>
+\[\arctan x\Big|_{1/\sqrt3}^{\sqrt3}=\frac\pi3-\frac\pi6=\boxed{\frac\pi6}\]
+<p><b>6.</b> \(\arcsin\) היא פונקציה קדומה, והאינטגרנד רציף ב־\([-\frac12,\frac12]\):</p>
+\[\arcsin x\Big|_{-1/2}^{1/2}=\frac\pi6-\Big(-\frac\pi6\Big)=\boxed{\frac\pi3}\]
+</div></details></div>
+
+<div class="wq" id="w2q7"><div class="wq-title">שאלות 7–8</div>
+<div class="wq-q"><b>7.</b> \(\displaystyle\int_0^2|1-x|\,dx\) &nbsp;&nbsp; <b>8.</b> \(\displaystyle\int_0^{100\pi}\sqrt{1-\cos2x}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>7: פצלו ב־\(x=1\) (או חשבו שטח של שני משולשים). 8: \(1-\cos2x=2\sin^2x\), והשורש נותן \(|\sin x|\), לא \(\sin x\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>7.</b> לפי אדיטיביות:</p>
+\[\int_0^1(1-x)\,dx+\int_1^2(x-1)\,dx=\frac12+\frac12=\boxed1\]
+<p class="small">גאומטרית: שני משולשים ישרי־זווית עם ניצבים 1 ו־1.</p>
+<p><b>8.</b> \(1-\cos2x=2\sin^2x\), ולכן \(\sqrt{1-\cos2x}=\sqrt2\,|\sin x|\). הפונקציה \(|\sin x|\) מחזורית עם מחזור \(\pi\), ו־\(\int_0^\pi|\sin x|dx=\int_0^\pi\sin x\,dx=2\). לפי אדיטיביות ומחזוריות:</p>
+\[\int_0^{100\pi}\sqrt2\,|\sin x|\,dx=\sqrt2\cdot100\cdot2=\boxed{200\sqrt2}\]
+</div></details></div>
+
+<div class="wq" id="w2q9"><div class="wq-title">שאלות 9–11</div>
+<div class="wq-q"><b>9.</b> \(\displaystyle\int_{-1}^1xe^{-x^4}dx\) &nbsp;&nbsp; <b>10.</b> \(\displaystyle\int_{-0.5}^{0.5}x^3\cos5x\,dx\) &nbsp;&nbsp; <b>11.</b> \(\displaystyle\int_{-0.5}^{0.5}x^2\sin5x\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>הקטעים סימטריים. בדקו אם האינטגרנד זוגי או אי־זוגי.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>טענה.</b> אם \(g\) רציפה ואי־זוגית, אז \(\int_{-a}^ag=0\). <b>הוכחה:</b> בהצבה \(x=-u\): \(\int_{-a}^0g(x)dx=\int_a^0g(-u)(-du)=\int_0^ag(-u)du=-\int_0^ag(u)du\), ולכן \(\int_{-a}^ag=\int_{-a}^0g+\int_0^ag=0\).</p>
+<ul>
+<li><b>9.</b> \(xe^{-x^4}\): \(x\) אי־זוגית ו־\(e^{-x^4}\) זוגית, ולכן המכפלה אי־זוגית.</li>
+<li><b>10.</b> \(x^3\) אי־זוגית ו־\(\cos5x\) זוגית: אי־זוגית.</li>
+<li><b>11.</b> \(x^2\) זוגית ו־\(\sin5x\) אי־זוגית: אי־זוגית.</li>
+</ul>
+<p>שלושתם רציפים על קטע סימטרי, ולכן <b>שלושת האינטגרלים שווים \(\boxed0\)</b>.</p>
+</div></details></div>
+
+<div class="wq" id="w2q12"><div class="wq-title">שאלה 12</div>
+<div class="wq-q">\(\displaystyle\int_0^2f(x)\,dx\), כאשר \(f(x)=\begin{cases}x^2,&0\le x\le1\\2-x,&1\lt x\le2\end{cases}\)</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(f\) רציפה (בשני הצדדים של 1 הערך שואף ל־1), ולכן אינטגרבילית. לפי אדיטיביות:</p>
+\[\int_0^1x^2dx+\int_1^2(2-x)dx=\frac13+\Big[2x-\frac{x^2}2\Big]_1^2=\frac13+\Big(2-\frac32\Big)=\boxed{\frac56}\]
+</div></details></div>
+
+<h3>חשבו באמצעות אינטגרציה בחלקים (שאלות 13–18)</h3>
+
+<div class="wq" id="w2q13"><div class="wq-title">שאלות 13–15</div>
+<div class="wq-q"><b>13.</b> \(\displaystyle\int_0^{\ln2}xe^{-x}dx\) &nbsp;&nbsp; <b>14.</b> \(\displaystyle\int_0^\pi x\sin x\,dx\) &nbsp;&nbsp; <b>15.</b> \(\displaystyle\int_0^{2\pi}x^2\cos x\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>בכולן גוזרים את הפולינום (\(u=x\) או \(u=x^2\)). ב־15 צריך פעמיים.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>13.</b> \(u=x\), \(v'=e^{-x}\), ולכן \(u'=1\), \(v=-e^{-x}\):</p>
+\[\Big[-xe^{-x}\Big]_0^{\ln2}+\int_0^{\ln2}e^{-x}dx=-\frac{\ln2}2+\Big[-e^{-x}\Big]_0^{\ln2}=-\frac{\ln2}2+\Big(1-\frac12\Big)=\boxed{\frac{1-\ln2}2}\]
+<p><b>14.</b> \(u=x\), \(v'=\sin x\), \(v=-\cos x\):</p>
+\[\Big[-x\cos x\Big]_0^\pi+\int_0^\pi\cos x\,dx=\pi+0=\boxed\pi\]
+<p><b>15.</b> פעמיים בחלקים. \(u=x^2\), \(v'=\cos x\): \(\int x^2\cos x=x^2\sin x-\int2x\sin x\). שוב, \(u=2x\), \(v'=\sin x\): \(\int2x\sin x=-2x\cos x+2\sin x\). לכן</p>
+\[\int x^2\cos x\,dx=x^2\sin x+2x\cos x-2\sin x+C\]
+\[\int_0^{2\pi}x^2\cos x\,dx=\big(0+4\pi\cdot1-0\big)-0=\boxed{4\pi}\]
+</div></details></div>
+
+<div class="wq" id="w2q16"><div class="wq-title">שאלה 16</div>
+<div class="wq-q">\(\displaystyle\int_{1/e}^e|\ln x|\,dx\)</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(\ln x\lt0\) ב־\([\frac1e,1)\) ו־\(\ln x\ge0\) ב־\([1,e]\), ולכן מפצלים. פונקציה קדומה של \(\ln x\) (בחלקים, \(u=\ln x\), \(v'=1\)): \(F(x)=x\ln x-x\).</p>
+\[\int_1^e\ln x\,dx=F(e)-F(1)=0-(-1)=1\]
+\[-\int_{1/e}^1\ln x\,dx=-\Big(F(1)-F(\tfrac1e)\Big)=-\Big(-1-\big(-\tfrac1e-\tfrac1e\big)\Big)=1-\tfrac2e\]
+<p>סך הכול: \(\boxed{2-\frac2e}\).</p>
+</div></details></div>
+
+<div class="wq" id="w2q17"><div class="wq-title">שאלות 17–18</div>
+<div class="wq-q"><b>17.</b> \(\displaystyle\int_0^{1/2}\arccos x\,dx\) &nbsp;&nbsp; <b>18.</b> \(\displaystyle\int_0^{\sqrt3}x\arctan x\,dx\)</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>17.</b> \(u=\arccos x\), \(v'=1\): \(u'=-\frac1{\sqrt{1-x^2}}\), \(v=x\).</p>
+\[\int\arccos x\,dx=x\arccos x+\int\frac{x}{\sqrt{1-x^2}}dx=x\arccos x-\sqrt{1-x^2}+C\]
+\[\int_0^{1/2}\arccos x\,dx=\Big(\frac12\cdot\frac\pi3-\frac{\sqrt3}2\Big)-(0-1)=\boxed{\frac\pi6-\frac{\sqrt3}2+1}\]
+<p><b>18.</b> \(u=\arctan x\), \(v'=x\), \(v=\frac{x^2}2\). אחרי חילוק \(\frac{x^2}{1+x^2}=1-\frac1{1+x^2}\):</p>
+\[\int x\arctan x\,dx=\frac{x^2}2\arctan x-\frac12\big(x-\arctan x\big)=\frac{x^2+1}2\arctan x-\frac x2+C\]
+\[\int_0^{\sqrt3}x\arctan x\,dx=\frac42\cdot\frac\pi3-\frac{\sqrt3}2=\boxed{\frac{2\pi}3-\frac{\sqrt3}2}\]
+</div></details></div>
+
+<h3>חשבו באמצעות החלפת משתנים מתאימה (שאלות 19–23)</h3>
+
+<div class="wq" id="w2q19"><div class="wq-title">שאלה 19</div>
+<div class="wq-q">\(\displaystyle\int_{-1}^1\frac{x}{\sqrt{5-4x}}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>הציבו את כל השורש: \(t=\sqrt{5-4x}\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(t=\sqrt{5-4x}\), כלומר \(x=\frac{5-t^2}4\), \(dx=-\frac t2\,dt\). הגבולות: \(x=-1\mapsto t=3\), \(x=1\mapsto t=1\).</p>
+\[\int_3^1\frac{(5-t^2)/4}{t}\Big(-\frac t2\Big)dt=\frac18\int_1^3(5-t^2)\,dt=\frac18\Big[5t-\frac{t^3}3\Big]_1^3=\frac18\Big(6-\frac{14}3\Big)=\boxed{\frac16}\]
+</div></details></div>
+
+<div class="wq" id="w2q20"><div class="wq-title">שאלה 20</div>
+<div class="wq-q">\(\displaystyle\int_0^ax^2\sqrt{a^2-x^2}\,dx\) (\(a\gt0\))</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>הצבה טריגונומטרית \(x=a\sin\theta\), \(\theta\in[0,\frac\pi2]\): \(dx=a\cos\theta\,d\theta\), \(\sqrt{a^2-x^2}=a\cos\theta\).</p>
+\[\int_0^{\pi/2}a^2\sin^2\theta\cdot a\cos\theta\cdot a\cos\theta\,d\theta=a^4\int_0^{\pi/2}\sin^2\theta\cos^2\theta\,d\theta=\frac{a^4}4\int_0^{\pi/2}\sin^22\theta\,d\theta\]
+\[=\frac{a^4}8\int_0^{\pi/2}(1-\cos4\theta)\,d\theta=\frac{a^4}8\cdot\frac\pi2=\boxed{\frac{\pi a^4}{16}}\]
+</div></details></div>
+
+<div class="wq" id="w2q21"><div class="wq-title">שאלה 21</div>
+<div class="wq-q">\(\displaystyle\int_0^{0.75}\frac{dx}{(x+1)\sqrt{x^2+1}}\)</div>
+<details class="hint"><summary>רמז</summary><div>הצבה \(t=\frac1{x+1}\) "מעבירה" את הגורם הלינארי ומשאירה שורש של ביטוי ריבועי.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(t=\frac1{x+1}\), כלומר \(x=\frac1t-1\), \(dx=-\frac{dt}{t^2}\). הגבולות: \(x=0\mapsto t=1\), \(x=\frac34\mapsto t=\frac47\). בנוסף</p>
+\[x^2+1=\frac{(1-t)^2+t^2}{t^2}=\frac{2t^2-2t+1}{t^2}\quad\Rightarrow\quad\sqrt{x^2+1}=\frac{\sqrt{2t^2-2t+1}}t\ (t\gt0).\]
+<p>לכן האינטגרנד הופך ל־\(\frac{t\cdot t}{\sqrt{2t^2-2t+1}}\cdot\big(-\frac{dt}{t^2}\big)\):</p>
+\[\int_{4/7}^1\frac{dt}{\sqrt{2t^2-2t+1}}=\frac1{\sqrt2}\int_{4/7}^1\frac{dt}{\sqrt{(t-\frac12)^2+\frac14}}=\frac1{\sqrt2}\ln\Big(t-\tfrac12+\sqrt{(t-\tfrac12)^2+\tfrac14}\Big)\Big|_{4/7}^1\]
+<p>ב־\(t=1\): \(\frac12+\frac1{\sqrt2}=\frac{1+\sqrt2}2\). ב־\(t=\frac47\): \(\frac1{14}+\frac{5\sqrt2}{14}=\frac{1+5\sqrt2}{14}\). לכן</p>
+\[\frac1{\sqrt2}\ln\frac{7(1+\sqrt2)}{1+5\sqrt2}=\boxed{\frac1{\sqrt2}\ln\frac{9+4\sqrt2}7}\approx0.5226\]
+<p class="small">(הפישוט: כופלים מונה ומכנה ב־\(5\sqrt2-1\).)</p>
+</div></details></div>
+
+<div class="wq" id="w2q22"><div class="wq-title">שאלות 22–23</div>
+<div class="wq-q"><b>22.</b> \(\displaystyle\int_0^{\ln2}\sqrt{e^x-1}\,dx\) &nbsp;&nbsp; <b>23.</b> \(\displaystyle\int_{0.01}^{0.25}\frac{\arcsin\sqrt x}{\sqrt{x(1-x)}}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>22: הציבו את כל השורש. 23: מה הנגזרת של \(\arcsin\sqrt x\)?</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>22.</b> \(t=\sqrt{e^x-1}\): \(x=\ln(1+t^2)\), \(dx=\frac{2t\,dt}{1+t^2}\), הגבולות \(0\to1\):</p>
+\[\int_0^1t\cdot\frac{2t}{1+t^2}dt=2\int_0^1\Big(1-\frac1{1+t^2}\Big)dt=2\Big(1-\frac\pi4\Big)=\boxed{2-\frac\pi2}\]
+<p><b>23.</b> \(t=\arcsin\sqrt x\). אז \(\frac{dt}{dx}=\frac1{\sqrt{1-x}}\cdot\frac1{2\sqrt x}\), כלומר \(\frac{dx}{\sqrt{x(1-x)}}=2\,dt\). הגבולות: \(t\) מ־\(\arcsin0.1\) עד \(\arcsin0.5=\frac\pi6\).</p>
+\[\int2t\,dt=t^2\Big|_{\arcsin0.1}^{\pi/6}=\boxed{\frac{\pi^2}{36}-\arcsin^2(0.1)}\]
+</div></details></div>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="worksheet-1.html"><small>→ הקודם</small><span>דף עבודה 1: האינטגרל המסוים</span></a><a class="pg pg-next" href="worksheet-3.html"><small>הבא ←</small><span>דף עבודה 3: אינטגרלים לא מסוימים, מסוימים ושימושים</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

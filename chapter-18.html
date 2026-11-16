@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18. החלפת סדר אינטגרציה · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html" class="on" aria-current="page"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="#c18">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c18" class="chapter" data-part="D">
+<header class="ch-head"><div class="ch-num">18</div><div><div class="ch-kicker">פרק שמונה־עשר</div><h2>החלפת סדר אינטגרציה</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> פוביני ותחומים פשוטים בשני הכיוונים (<a class="xref" href="chapter-17.html">פרק 17</a>).</p>
+<ul class="goals"><li>מגבולות לתחום</li><li>מתחום לגבולות הפוכים</li><li>מתי זה מציל אתכם</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+את \(\int e^{x^2}dx\) אי אפשר לחשב בעזרת פונקציות אלמנטריות. אבל \(\int_0^1\int_y^1e^{x^2}\,dx\,dy\) כן אפשר לחשב: מחליפים את סדר האינטגרציה, ואז מופיע \(x\) שמאפשר הצבה. זו טכניקה שימושית: כשלאינטגרל הפנימי אין פונקציה קדומה אלמנטרית, משרטטים את התחום ופורסים אותו בכיוון השני.
+</div>
+
+<figure class="fig" data-fig="swaporder"><figcaption><b>אותו תחום, שני סדרים.</b> \(D=\{0\le y\le1,\ y\le x\le1\}\). בחרו את כיוון הפרוסות. בפרוסות <b>אופקיות</b> (\(dx\,dy\)) הפנימי הוא \(\int_y^1e^{x^2}dx\), שאין לו נוסחה. בפרוסות <b>אנכיות</b> (\(dy\,dx\)) הפנימי הוא \(\int_0^xe^{x^2}dy=xe^{x^2}\), וזה כבר הצבה פשוטה.</figcaption></figure>
+
+<ol class="steps">
+<li>מתוך הגבולות כותבים את התחום כאי־שוויונות.</li>
+<li>מציירים אותו.</li>
+<li>מתארים אותו מחדש: קודם טווח מספרי של המשתנה השני, ואז גבולות פונקציונליים לראשון.</li>
+</ol>
+
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>החלפת סדר אינטגרציה</div>
+<div class="wk-q">חשבו \(\displaystyle\int_0^1\int_y^1e^{x^2}\,dx\,dy\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים שהסדר הנתון אינו מאפשר חישוב.</span>
+האינטגרל הפנימי הוא \(\int e^{x^2}dx\), ואין לו פונקציה קדומה אלמנטרית. לכן מחליפים את הסדר.</li>
+<li><span class="st">כותבים את התחום כאי־שוויונות.</span>
+מהגבולות: \(0\le y\le1\) ו־\(y\le x\le1\).</li>
+<li><span class="st">משרטטים.</span>
+הישרים \(x=y\), \(x=1\), \(y=0\) תוחמים את המשולש עם הקודקודים \((0,0)\), \((1,0)\), \((1,1)\).</li>
+<li><span class="st">מתארים את התחום מחדש בפרוסות אנכיות.</span>
+קודם טווח מספרי למשתנה החיצוני החדש: \(0\le x\le1\). אחר כך, לכל \(x\), הפרוסה האנכית עולה מ־\(y=0\) עד \(y=x\):
+\[D=\{0\le x\le1,\ 0\le y\le x\}\]
+<p class="why-step">אסור פשוט להחליף את סדר הגבולות. הגבולות החדשים נקראים רק מהשרטוט.</p></li>
+<li><span class="st">מחשבים.</span>
+\[\int_0^1\int_0^xe^{x^2}\,dy\,dx=\int_0^1xe^{x^2}\,dx\overset{t=x^2}{=}\tfrac12\int_0^1e^t\,dt=\tfrac{e-1}2\]
+<p class="why-step">האינטגרל הפנימי לפי \(y\) הוסיף גורם \(x\), ובזכותו האינטגרל החיצוני נפתר בהצבה.</p></li>
+</ol>
+<div class="res">\(\displaystyle\int_0^1\int_y^1e^{x^2}\,dx\,dy=\frac{e-1}{2}\)</div>
+</div>
+<div class="box ex"><div class="tag">איחוד שני תחומים לאינטגרל אחד</div>
+\[\int_0^1\int_0^{2x}f\,dy\,dx+\int_1^5\int_0^{\sqrt{5-x}}f\,dy\,dx\]
+\(D_1=\{0\le x\le1,\ 0\le y\le2x\}\), \(D_2=\{1\le x\le5,\ 0\le y\le\sqrt{5-x}\}\). בציור רואים שבאיחוד \(0\le y\le2\), והגבולות הם \(\frac y2\le x\le5-y^2\):
+\[=\int_0^2\int_{y/2}^{5-y^2}f\,dx\,dy\]
+</div>
+<div class="box tip"><div class="tag">מתי משתמשים בזה</div>
+כשהאינטגרל הפנימי <b>בלתי אפשרי</b> (למשל \(\int e^{x^2}dx\) או \(\int\frac{\sin x}{x}dx\)), החלפת סדר הופכת אותו לפשוט. הופעה של אינטגרל כזה היא בדרך כלל סימן שזו הדרך.
+</div>
+
+
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\int_0^1\int_0^x f(x,y)\,dy\,dx\) בסדר הפוך הוא:</p>
+<div class="opts"><button class="opt">\(\int_0^1\int_0^y f\,dx\,dy\)</button><button class="opt">\(\int_0^x\int_0^1 f\,dx\,dy\)</button><button class="opt">\(\int_0^1\int_y^1 f\,dx\,dy\)</button><button class="opt">\(\int_0^1\int_0^1 f\,dx\,dy\)</button></div>
+<div class="exp">התחום הוא \(0\le y\le x\le1\), משולש. לכל \(y\in[0,1]\), \(x\) רץ מ־\(y\) עד 1.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+גבולות → אי־שוויונות → <b>ציור</b> → תיאור מחדש (קודם טווח מספרי למשתנה החיצוני החדש). כשהפנימי בלתי אפשרי, זה הרמז.
+</div>
+<a class="next" href="chapter-19.html"><span class="arr">←</span><span><b>הלאה: החלפת משתנים ויעקוביאן.</b> לפעמים שום סדר לא עוזר, כי התחום עגול או עקום. אז מחליפים את הקואורדינטות עצמן, ומשלמים "מחיר" אחד: היעקוביאן.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-17.html"><small>→ הקודם</small><span>17. אינטגרל כפול</span></a><a class="pg pg-next" href="chapter-19.html"><small>הבא ←</small><span>19. החלפת משתנים ויעקוביאן</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16. כופלי לגרנז׳ · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html" class="on" aria-current="page"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="#c16">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c16" class="chapter" data-part="C">
+<header class="ch-head"><div class="ch-num">16</div><div><div class="ch-kicker">פרק שישה־עשר</div><h2>כופלי לגרנז׳</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> גרדיאנט ניצב לקו גובה (<a class="xref" href="chapter-13.html">פרק 13</a>), משפט הפונקציה הסתומה (<a class="xref" href="chapter-14.html">פרק 14</a>), קיצון בתחום וויירשטראס (<a class="xref" href="chapter-15.html">פרק 15</a>).</p>
+<ul class="goals"><li>קיצון תחת אילוץ</li><li>\(\nabla f=\lambda\nabla g\)</li><li>משיקות של קווי גובה</li><li>אלגוריתם</li><li>שילוב פנים + שפה</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+בבעיות אמיתיות כמעט תמיד יש אילוץ: תקציב קבוע, שטח פנים נתון, נקודה שחייבת להיות על משטח. אפשר לנסות לחלץ משתנה מהאילוץ ולהציב, אבל לרוב זה מסובך או בלתי אפשרי. לגרנז׳ נותן דרך סימטרית ונקייה: בנקודת הקיצון <b>הגרדיאנטים של \(f\) ושל האילוץ מקבילים</b>. התמונה למטה מסבירה למה.
+</div>
+
+<figure class="fig" data-fig="lagrange"><figcaption><b>מקסימום של \(f=xy\) על האליפסה \(\frac{x^2}8+\frac{y^2}2=1\).</b> הזיזו את הרמה \(c\): קו הגובה \(xy=c\) (כחול כהה) נע. כל עוד הוא <b>חותך</b> את האליפסה (תכלת), אפשר לזוז לאורך האליפסה ולהגדיל את \(f\). הערך הגדול ביותר שעוד נוגע באליפסה הוא כשהקו <b>משיק</b> לה, ב־\(c=2\). שם \(\nabla f\) (ירוק) ו־\(\nabla g\) (צהוב) על אותו ישר: \(\nabla f=\lambda\nabla g\).</figcaption></figure>
+
+<div class="box thm"><div class="tag">משפט כופלי לגרנז׳</div>
+יהיו \(f,g\) גזירות ברציפות, ונניח ש־\(P\) היא נקודת קיצון מקומי של \(f\) על \(S=\{g=c\}\). אז:
+<ol>
+<li>\(\nabla g(P)=\vec0\), <b>או</b></li>
+<li>קיים \(\lambda\) כך ש־\(\nabla f(P)=\lambda\nabla g(P)\).</li>
+</ol>
+</div>
+<div class="box tip"><div class="tag">אלגוריתם</div>
+<ol class="steps">
+<li>בודקים אם \(S\) קומפקטית. אם כן, לפי ויירשטראס יש מקסימום ומינימום.</li>
+<li>פותרים את המערכת \(\begin{cases}\nabla f=\lambda\nabla g\\ g=c\end{cases}\). במשתנה אחד יש 3 משוואות עם 3 נעלמים \(x,y,\lambda\).</li>
+<li>מוסיפים לרשימת החשודות את הנקודות על \(S\) שבהן \(\nabla g=\vec0\).</li>
+<li>מציבים את כל החשודות ב־\(f\) ומשווים.</li>
+</ol>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>כופלי לגרנז׳</div>
+<div class="wk-q">מצאו את המקסימום והמינימום של \(f(x,y,z)=x+2y+2z\) על הספירה \(x^2+y^2+z^2=9\).</div>
+<ol class="wsteps">
+<li><span class="st">קיום.</span>
+הספירה \(S=\{g=9\}\), עם \(g=x^2+y^2+z^2\), סגורה וחסומה, ו־\(f\) רציפה. לכן המקסימום והמינימום קיימים.</li>
+<li><span class="st">נקודות שבהן \(\nabla g=\vec0\).</span>
+\(\nabla g=(2x,2y,2z)\) מתאפס רק בראשית, והיא אינה על \(S\). אין חשודות מהסוג הזה.</li>
+<li><span class="st">רושמים את מערכת לגרנז׳.</span>
+\[\nabla f=\lambda\nabla g:\quad 1=2\lambda x,\quad 2=2\lambda y,\quad 2=2\lambda z;\qquad x^2+y^2+z^2=9\]</li>
+<li><span class="st">פותרים בזהירות.</span>
+מהמשוואה הראשונה \(\lambda\ne0\) (אחרת \(1=0\)), ולכן מותר לחלק ב־\(\lambda\):
+\[x=\frac1{2\lambda},\qquad y=\frac1\lambda,\qquad z=\frac1\lambda\]
+מציבים באילוץ: \(\frac1{4\lambda^2}+\frac1{\lambda^2}+\frac1{\lambda^2}=\frac{9}{4\lambda^2}=9\), ולכן \(\lambda=\pm\frac12\).
+<p class="why-step">החלוקה ב־\(\lambda\) הותרה רק אחרי שהראינו ש־\(\lambda\ne0\). אילו \(\lambda=0\) היה אפשרי, היה צריך לטפל בו כמקרה נפרד.</p></li>
+<li><span class="st">הנקודות החשודות.</span>
+\(\lambda=\frac12\Rightarrow(1,2,2)\), ו־\(\lambda=-\frac12\Rightarrow(-1,-2,-2)\).</li>
+<li><span class="st">משווים ובודקים.</span>
+\(f(1,2,2)=9\) ו־\(f(-1,-2,-2)=-9\). בדיקה בקושי־שוורץ: \(|(1,2,2)\cdot(x,y,z)|\le|(1,2,2)|\cdot|(x,y,z)|=3\cdot3=9\). ✓</li>
+</ol>
+<div class="res">מקסימום \(9\) ב־\((1,2,2)\); מינימום \(-9\) ב־\((-1,-2,-2)\).</div>
+</div>
+<div class="box ex"><div class="tag">כשאפשר להציב אחד בשני: \(f=xy\) על האליפסה \(\frac{x^2}8+\frac{y^2}2=1\)</div>
+\(\nabla g=(\frac x4,y)\) מתאפס רק ב־\((0,0)\), שלא נמצאת על האליפסה.<br>
+\(\nabla f=\lambda\nabla g\): \(y=\lambda\frac x4\) ו־\(x=\lambda y\). מציבים ומקבלים \(y=\frac{\lambda^2y}{4}\). אם \(y=0\), אז גם \(x=\lambda y=0\), והראשית אינה על האליפסה. לכן \(y\neq0\) ו־\(\lambda=\pm2\), ולכן \(x=\pm2y\).<br>
+מציבים באליפסה: \(\frac{4y^2}{8}+\frac{y^2}2=1\), ולכן \(y=\pm1\). החשודות הן \((\pm2,\pm1)\).<br>
+<b>מקסימום</b> \(f(2,1)=f(-2,-1)=2\), <b>מינימום</b> \(f(-2,1)=f(2,-1)=-2\).
+</div>
+<div class="box tip"><div class="tag">שילוב: תחום עם פנים ושפה</div>
+עבור תחום כמו \(x^2+y^2e^z\le9\): בפנים מחפשים \(\nabla f=0\), ועל השפה \(x^2+y^2e^z=9\) משתמשים בלגרנז׳. בסוף משווים את כל החשודות.
+</div>
+
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>תיבה עם נפח מקסימלי, בלגרנז׳</div>
+<div class="exr-q">מצאו את הממדים של תיבה עם שטח פנים \(S\) ונפח מקסימלי.</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p>\(f=xyz\), \(g=2(xy+xz+yz)=S\), \(x,y,z\gt0\). המשוואות \(\nabla f=\lambda\nabla g\):</p>
+\[yz=2\lambda(y+z),\qquad xz=2\lambda(x+z),\qquad xy=2\lambda(x+y)\]
+<p class="why-step">כופלים את הראשונה ב־\(x\) ואת השנייה ב־\(y\): שני אגפי השמאל שווים ל־\(xyz\), ולכן \(\lambda x(y+z)=\lambda y(x+z)\), כלומר \(xz=yz\) ו־\(x=y\). באותו אופן \(y=z\).</p>
+<p>לכן \(x=y=z\), ומהאילוץ \(6x^2=S\): \(\boxed{x=y=z=\sqrt{S/6}}\), קובייה. (זו אותה תשובה כמו ב<a class="xref" href="chapter-15.html">פרק 15</a>, בלי לחלץ משתנים.)</p>
+</div></div>
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לשכוח את הנקודות שבהן \(\nabla g=\vec0\).</li>
+<li>לחלק ב־\(x\) או ב־\(\lambda\) בלי לבדוק בנפרד את המקרה שהם 0.</li>
+<li>בתחום עם פנים: לשכוח את הנקודות הקריטיות בפנים, ולבדוק רק את השפה.</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">מה המקסימום של \(x+y\) על המעגל \(x^2+y^2=2\)?</p>
+<div class="opts"><button class="opt">\(\sqrt2\)</button><button class="opt">\(2\)</button><button class="opt">\(4\)</button><button class="opt">\(1\)</button></div>
+<div class="exp">\((1,1)=\lambda(2x,2y)\) נותן \(x=y\), ועל המעגל \(x=y=\pm1\). המקסימום הוא \(f(1,1)=2\) והמינימום \(f(-1,-1)=-2\).</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+קיצון על \(g=c\) ⟹ \(\nabla f=\lambda\nabla g\) (או \(\nabla g=\vec0\)). התמונה: קו הגובה של \(f\) <b>משיק</b> לאילוץ.
+</div>
+<a class="next" href="chapter-17.html"><span class="arr">←</span><span><b>הלאה: חלק ד׳, אינטגרלים מרובים.</b> סיימנו לגזור בכמה משתנים. עכשיו חוזרים לרעיון של חלק א׳, "סכום של הרבה חתיכות קטנות", אבל על תחום במישור או במרחב.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-15.html"><small>→ הקודם</small><span>15. נקודות קיצון</span></a><a class="pg pg-next" href="chapter-17.html"><small>הבא ←</small><span>17. אינטגרל כפול</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

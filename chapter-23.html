@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>23. כתיבת פתרון ושגיאות נפוצות · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html" class="on" aria-current="page"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="#c23">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c23" class="chapter" data-part="E">
+<header class="ch-head"><div class="ch-num">23</div><div><div class="ch-kicker">חזרה וסיכום</div><h2>כתיבת פתרון ושגיאות נפוצות</h2></div></header>
+<div class="box tip"><div class="tag">מבנה של פתרון מלא</div>
+<ul>
+<li><b>מציינים את שם המשפט ומוודאים את תנאיו.</b> למשל: "\(f\) רציפה והקבוצה סגורה וחסומה, ולכן קומפקטית, ולפי ויירשטראס...". בדיקת התנאים היא חלק מההוכחה ולא תוספת לה.</li>
+<li>בכל פונקציה שמוגדרת בנפרד בנקודה, <b>עבדו לפי ההגדרות</b> (גבול לנגזרת חלקית, גבול לדיפרנציאביליות) ולא לפי נוסחאות הגזירה.</li>
+<li><b>ציירו</b> כל תחום: באינטגרלים, בבעיות קיצון ובהחלפת משתנים.</li>
+<li>בסוף כל חישוב בדקו "שפיות": שטח ונפח חיוביים, ונפח כדור יוצא \(\frac43\pi R^3\).</li>
+</ul>
+</div>
+<div class="box warn"><div class="tag">רשימת הטעויות הנפוצות</div>
+<ol>
+<li>אינטגרל מסוים על קטע שיש בו נקודה שבה הפונקציה מתפוצצת (\(\int_0^3\frac{dx}{x-1}\)).</li>
+<li>החלפת משתנה באינטגרל מסוים בלי לעדכן את הגבולות.</li>
+<li>\(\int_{-\infty}^\infty\) בעזרת גבול סימטרי.</li>
+<li>נגזרת כיוונית בלי לנרמל את הווקטור.</li>
+<li>הסקה ש"יש נגזרות חלקיות, ולכן הפונקציה דיפרנציאבילית או רציפה". לא נכון.</li>
+<li>בקוטביות: חסם שתלוי ב־\(\theta\), או בדיקה רק של כיוונים קבועים.</li>
+<li>\(\det H=0\), ומסקנה כאילו יש תשובה. צריך לבדוק ידנית.</li>
+<li>בבעיות קיצון גלובלי: לשכוח את השפה, את הפינות, או את הנקודות שבהן \(\nabla g=0\) בלגרנז׳.</li>
+<li>בהחלפת משתנים: לשכוח את \(|J|\) (במיוחד את ה־\(r\) בקוטביות) או את הערך המוחלט.</li>
+<li>אינטגרל כפול שבו לאינטגרל החיצוני יש גבולות שתלויים במשתנה.</li>
+</ol>
+</div>
+<div class="box idea"><div class="tag">הוכחות מרכזיות בקורס</div>
+<ul>
+<li>רציפה ⇒ אינטגרבילית. משפט הערך הממוצע האינטגרלי. המשפט היסודי וניוטון־לייבניץ. משפט החלפת המשתנה.</li>
+<li>טענות על פונקציות זוגיות ואי־זוגיות באינטגרל לא אמיתי. מבחן ההשוואה. מבחן האינטגרל לטורים.</li>
+<li>נוסחאות המרחק מנקודה לישר ומנקודה למישור. תכונות המכפלה הווקטורית (ניצבות ושטח).</li>
+<li>דיפרנציאבילית ⇒ רציפה. דיפרנציאבילית ⇒ \(L=\nabla f\cdot H\). נגזרות חלקיות רציפות ⇒ דיפרנציאבילית.</li>
+<li>כלל השרשרת. הגרדיאנט ניצב לקווי הגובה. משפט פרמה. משפט הערך הממוצע ב־\(n\) משתנים. משפט לגרנז׳ (בעזרת הפונקציה הסתומה).</li>
+<li>משפט הקוטביות לגבולות (\(F(r)G(\theta)\)).</li>
+</ul>
+</div>
+
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-22.html"><small>→ הקודם</small><span>22. תרגילי חזרה</span></a><a class="pg pg-next" href="chapter-24.html"><small>הבא ←</small><span>24. דף נוסחאות מרוכז</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

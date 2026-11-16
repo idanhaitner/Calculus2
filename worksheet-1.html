@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דף עבודה 1: האינטגרל המסוים · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html" class="on" aria-current="page"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="#w1">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="w1">
+<h2>דף עבודה 1: האינטגרל המסוים</h2>
+<div class="box idea"><div class="tag">💡 איך מתרגלים עם זה</div>
+כל שאלה מופיעה כמו בדף העבודה. נסו לפתור לבד, ורק אז פותחים "רמז" ואחר כך "פתרון מלא". הפתרונות כתובים בצורה פורמלית, כפי שנדרש בפתרון מלא: מה נתון, איזה משפט משתמשים בו ולמה התנאים שלו מתקיימים, ומה המסקנה.
+</div>
+<div class="box thm"><div class="tag">עובדות שהפתרונות משתמשים בהן</div>
+<ul>
+<li>פונקציה רציפה בקטע סגור היא אינטגרבילית. פונקציה חסומה עם מספר סופי של נקודות אי־רציפות היא אינטגרבילית.</li>
+<li>לינאריות, מונוטוניות, אדיטיביות, וחסמים \(m(b-a)\le\int_a^bf\le M(b-a)\).</li>
+<li><b>קריטריון דרבו:</b> \(f\) חסומה היא אינטגרבילית אם ורק אם לכל \(\varepsilon\gt0\) קיים \(\delta\gt0\) כך שלכל חלוקה \(P\) עם \(\lambda(P)\lt\delta\) מתקיים \(\overline S(f,P)-\underline S(f,P)\lt\varepsilon\). כמו כן, תמיד \(\underline S(f,P)\le\int_a^bf\le\overline S(f,P)\).</li>
+<li>אם \(f\) אינטגרבילית, סכומי רימן שלה מתכנסים לאינטגרל כש־\(\lambda(P)\to0\), <b>לכל בחירה</b> של נקודות הביניים.</li>
+<li>המשפט היסודי: אם \(f\) רציפה, \(G(x)=\int_0^xf\) גזירה ו־\(G'=f\). בנוסף, משפט ויירשטראס ומשפט ערך הביניים.</li>
+</ul>
+</div>
+
+<!-- ===== שאלה 1 ===== -->
+<div class="wq" id="w1q1"><div class="wq-title">שאלה 1</div>
+<div class="wq-q">יהי \(b\gt0\) כלשהו. חשבו לפי ההגדרה את האינטגרל \(\int_0^bx^3dx\). רמז: \(\sum_{k=1}^nk^3=\frac{n^2(n+1)^2}4\).</div>
+<details class="hint"><summary>רמז</summary><div>חלקו ל־\(n\) חלקים שווים. הפונקציה עולה, ולכן את הסופרמום והאינפימום לוקחים בקצוות הקטע. חשבו סכום עליון וסכום תחתון, והראו ששניהם שואפים לאותו גבול.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>פתרון.</b> הפונקציה \(f(x)=x^3\) רציפה ב־\([0,b]\), ולכן אינטגרבילית שם. לכן לכל חלוקה \(\underline S(f,P)\le\int_0^bx^3dx\le\overline S(f,P)\), ומספיק לחשב את הגבול של סכומי דרבו לאורך סדרת חלוקות.</p>
+<p>נחלק את הקטע ל־\(n\) חלקים שווים: \(x_i=\frac{ib}n\) עבור \(i=0,\dots,n\), כלומר \(\Delta x_i=\frac bn\) ו־\(\lambda(P_n)=\frac bn\to0\).</p>
+<p>הפונקציה \(x^3\) עולה ב־\([0,b]\), ולכן בכל קטע \([x_{i-1},x_i]\) מתקיים \(M_i=f(x_i)\) ו־\(m_i=f(x_{i-1})\). לפי הרמז:</p>
+\[\overline S_n=\sum_{i=1}^n\Big(\frac{ib}n\Big)^3\frac bn=\frac{b^4}{n^4}\sum_{i=1}^ni^3=\frac{b^4}{n^4}\cdot\frac{n^2(n+1)^2}4=\frac{b^4}4\Big(1+\frac1n\Big)^2\]
+\[\underline S_n=\sum_{i=1}^n\Big(\frac{(i-1)b}n\Big)^3\frac bn=\frac{b^4}{n^4}\sum_{k=1}^{n-1}k^3=\frac{b^4}{n^4}\cdot\frac{(n-1)^2n^2}4=\frac{b^4}4\Big(1-\frac1n\Big)^2\]
+<p>לכל \(n\): \(\underline S_n\le\int_0^bx^3dx\le\overline S_n\), ושני הצדדים שואפים ל־\(\frac{b^4}4\) כש־\(n\to\infty\). לפי סנדוויץ׳:</p>
+\[\int_0^bx^3dx=\frac{b^4}4\]
+</div></details></div>
+
+<!-- ===== שאלה 2 ===== -->
+<div class="wq" id="w1q2"><div class="wq-title">שאלה 2</div>
+<div class="wq-q">חשבו את האינטגרלים הבאים באמצעות החלוקה \(P=\{t_0,t_1,\dots,t_n\}\), כאשר \(t_j=2^{j/n}\) לכל \(0\le j\le n\):<br>
+(א) \(\int_1^2\frac1x\,dx\) &nbsp;&nbsp;&nbsp; (ב) \(\int_1^2\frac1{x^2}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>סמנו \(q=2^{1/n}\), ואז \(t_j=q^j\) ו־\(\Delta t_j=q^{j-1}(q-1)\). הנקודות מאפשרות לבחור נקודות ביניים כך שהסכום יהפוך לסדרה הנדסית. אל תשכחו להראות ש־\(\lambda(P_n)\to0\), ובחלק (א) תצטרכו את \(\lim_{h\to0}\frac{2^h-1}h\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>הכנה.</b> שתי הפונקציות רציפות ב־\([1,2]\), ולכן אינטגרביליות. לכן סכומי רימן שלהן מתכנסים לאינטגרל כש־\(\lambda(P)\to0\), לכל בחירה של נקודות ביניים.</p>
+<p>נסמן \(q=2^{1/n}\gt1\). אז \(t_j=q^j\), \(t_0=1\), \(t_n=2\), ו־\(\Delta t_j=t_j-t_{j-1}=q^{j-1}(q-1)\). הסדרה \(\Delta t_j\) עולה ב־\(j\), ולכן
+\[\lambda(P_n)=\Delta t_n=2-2^{1-1/n}=2\big(1-2^{-1/n}\big)\xrightarrow{n\to\infty}2(1-1)=0\]
+<p><b>(א)</b> נבחר את נקודת הביניים \(c_j=t_{j-1}\) (הקצה השמאלי). אז
+\[S_n=\sum_{j=1}^n\frac1{q^{j-1}}\cdot q^{j-1}(q-1)=n(q-1)=n\big(2^{1/n}-1\big)\]
+נסמן \(h=\frac1n\to0^+\). אז \(S_n=\frac{2^h-1}h=\frac{e^{h\ln2}-1}h\to\frac{d}{dh}\big(2^h\big)\big|_{h=0}=\ln2\). לכן
+\[\int_1^2\frac1x\,dx=\ln2\]
+<p><b>(ב)</b> נבחר שוב \(c_j=t_{j-1}\):
+\[S_n=\sum_{j=1}^n\frac1{q^{2(j-1)}}\,q^{j-1}(q-1)=(q-1)\sum_{k=0}^{n-1}q^{-k}=(q-1)\cdot\frac{1-q^{-n}}{1-q^{-1}}\]
+כיוון ש־\(q^n=2\), מתקיים \(q^{-n}=\frac12\), ו־\(1-q^{-1}=\frac{q-1}q\). לכן \(S_n=(q-1)\cdot\frac12\cdot\frac q{q-1}=\frac q2=\frac{2^{1/n}}2\to\frac12\). לכן
+\[\int_1^2\frac1{x^2}\,dx=\frac12\]
+<p class="small">בדיקת שפיות עם ניוטון־לייבניץ: \(\ln x\big|_1^2=\ln2\) ו־\(-\frac1x\big|_1^2=\frac12\).</p>
+</div></details></div>
+
+<!-- ===== שאלה 3 ===== -->
+<div class="wq" id="w1q3"><div class="wq-title">שאלה 3</div>
+<div class="wq-q">חשבו את האינטגרל \(\int_{0.25}^{4.3}\lfloor x\rfloor\,dx\), כאשר \(\lfloor x\rfloor=\max\{n\in\mathbb Z:n\le x\}\).</div>
+<details class="hint"><summary>רמז</summary><div>זו פונקציית מדרגות. פצלו את הקטע לפי הנקודות השלמות, ובכל חלק היא קבועה. מה קורה בקצוות, שבהם היא קופצת?</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>אינטגרביליות.</b> \(f(x)=\lfloor x\rfloor\) חסומה ב־\([0.25,4.3]\), ויש לה אי־רציפות בארבע נקודות בלבד: \(1,2,3,4\). לכן היא אינטגרבילית.</p>
+<p><b>למה (שינוי בנקודות סופיות).</b> אם \(g,h\) אינטגרביליות ב־\([c,d]\) ושוות פרט למספר סופי של נקודות, אז \(\int_c^dg=\int_c^dh\).<br>
+<i>הוכחה:</i> נסמן \(e=h-g\). היא אינטגרבילית, מתאפסת פרט ל־\(m\) נקודות, ו־\(|e|\le K\). בחלוקה לקטעים שווים ברוחב \(\delta\), כל נקודה כזו שייכת לכל היותר לשני תת־קטעים, ולכן בכל סכום רימן לכל היותר \(2m\) מחוברים שונים מאפס, כל אחד בערך מוחלט לכל היותר \(K\delta\). לכן \(\big|S(e,P)\big|\le2mK\delta\to0\), ולכן \(\int e=0\).</p>
+<p><b>החישוב.</b> לפי אדיטיביות:
+\[\int_{0.25}^{4.3}f=\int_{0.25}^1f+\int_1^2f+\int_2^3f+\int_3^4f+\int_4^{4.3}f\]
+בכל קטע \([k,k+1]\) הפונקציה שווה לקבוע \(k\), פרט לנקודה \(k+1\) (ובקטע הראשון והאחרון, פרט לקצה). לפי הלמה האינטגרל של כל חלק הוא (הקבוע) כפול (האורך):
+\[=0\cdot0.75+1\cdot1+2\cdot1+3\cdot1+4\cdot0.3=0+1+2+3+1.2=7.2\]
+</div></details></div>
+
+<!-- ===== שאלה 4 ===== -->
+<div class="wq" id="w1q4"><div class="wq-title">שאלה 4</div>
+<div class="wq-q">הוכיחו את אי־השוויונות הבאים:<br>
+(א) \(0\le\int_1^5\frac{\ln x}{x}dx\le\frac4e\) &nbsp;&nbsp; (ב) \(2\sqrt2\le\int_1^3\sqrt{x^2+1}\,dx\le2\sqrt{10}\)<br>
+(ג) \(1\le\int_0^1e^{x^2}dx\le e\) &nbsp;&nbsp; (ד) \(2^{-q}\le\int_0^1\frac{dx}{(x^p+1)^q}\le1\) לכל \(p,q\gt0\).</div>
+<details class="hint"><summary>רמז</summary><div>בכל סעיף מוצאים חסם עליון ותחתון של האינטגרנד בקטע (בעזרת מונוטוניות או נגזרת), ומשתמשים בתכונת החסמים \(m(b-a)\le\int f\le M(b-a)\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>בכל הסעיפים האינטגרנד רציף בקטע, ולכן אינטגרבילית. נשתמש בתכונה: אם \(m\le f\le M\) בקטע \([a,b]\), אז \(m(b-a)\le\int_a^bf\le M(b-a)\).</p>
+<p><b>(א)</b> \(f(x)=\frac{\ln x}x\). עבור \(x\ge1\) מתקיים \(\ln x\ge0\), ולכן \(f\ge0\), ומכאן \(\int_1^5f\ge0\). עבור החסם העליון: \(f'(x)=\frac{1-\ln x}{x^2}\), שחיובית עבור \(x\lt e\) ושלילית עבור \(x\gt e\). לכן ב־\([1,5]\), שמכיל את \(e\), המקסימום הוא \(f(e)=\frac1e\). לכן \(f\le\frac1e\), ומכאן \(\int_1^5f\le\frac1e(5-1)=\frac4e\).</p>
+<p><b>(ב)</b> \(f(x)=\sqrt{x^2+1}\) עולה ב־\([1,3]\), כי \(x^2+1\) עולה עבור \(x\gt0\). לכן \(\sqrt2=f(1)\le f(x)\le f(3)=\sqrt{10}\). אורך הקטע הוא 2, ולכן \(2\sqrt2\le\int_1^3f\le2\sqrt{10}\).</p>
+<p><b>(ג)</b> עבור \(x\in[0,1]\): \(0\le x^2\le1\), ו־\(e^t\) עולה, ולכן \(1=e^0\le e^{x^2}\le e^1=e\). אורך הקטע הוא 1, ולכן \(1\le\int_0^1e^{x^2}dx\le e\).</p>
+<p><b>(ד)</b> יהיו \(p,q\gt0\). עבור \(x\in[0,1]\): \(0\le x^p\le1\), ולכן \(1\le x^p+1\le2\). הפונקציה \(t\mapsto t^q\) עולה עבור \(q\gt0\), ולכן \(1\le(x^p+1)^q\le2^q\). בהיפוך: \(2^{-q}\le\frac1{(x^p+1)^q}\le1\). אורך הקטע הוא 1, ולכן \(2^{-q}\le\int_0^1\frac{dx}{(x^p+1)^q}\le1\).</p>
+</div></details></div>
+
+<!-- ===== שאלה 5 ===== -->
+<div class="wq" id="w1q5"><div class="wq-title">שאלה 5</div>
+<div class="wq-q">איזה אינטגרל גדול יותר: \(\int_0^1e^{-x^2}dx\) או \(\int_0^1e^{-x}dx\)?</div>
+<details class="hint"><summary>רמז</summary><div>השוו את האינטגרנדים נקודה־נקודה: מי גדול יותר ב־\([0,1]\)? ואז מונוטוניות. כדי להוכיח אי־שוויון <b>חזק</b>, שימו לב שהפרש רציף ואי־שלילי שחיובי בנקודה אחת נותן אינטגרל חיובי.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>טענה.</b> \(\int_0^1e^{-x^2}dx\gt\int_0^1e^{-x}dx\).</p>
+<p><b>הוכחה.</b> נגדיר \(g(x)=e^{-x^2}-e^{-x}\), פונקציה רציפה ב־\([0,1]\). עבור \(x\in[0,1]\) מתקיים \(x^2\le x\), ולכן \(-x^2\ge-x\), ומכיוון ש־\(e^t\) עולה, \(g(x)\ge0\) בכל הקטע.</p>
+<p>בנוסף, \(g\big(\tfrac12\big)=e^{-1/4}-e^{-1/2}=:\eta\gt0\). מרציפות \(g\) קיים \(\delta\gt0\) כך שעל \(\big[\tfrac12-\delta,\tfrac12+\delta\big]\subseteq[0,1]\) מתקיים \(g\ge\frac\eta2\). לפי אדיטיביות ו־\(g\ge0\) בשאר הקטע:
+\[\int_0^1g\ge\int_{1/2-\delta}^{1/2+\delta}g\ge\frac\eta2\cdot2\delta=\eta\delta\gt0\]
+לפי לינאריות, \(\int_0^1e^{-x^2}dx-\int_0^1e^{-x}dx=\int_0^1g\gt0\).</p>
+</div></details></div>
+
+<!-- ===== שאלה 6 ===== -->
+<div class="wq" id="w1q6"><div class="wq-title">שאלה 6</div>
+<div class="wq-q">תהא \(f:\mathbb R\to\mathbb R\) פונקציה רציפה ומחזורית עם מחזור \(T\gt0\). הוכיחו כי לכל \(a\in\mathbb R\): \(\int_a^{a+T}f(t)dt=\int_0^Tf(t)dt\).</div>
+<details class="hint"><summary>רמז</summary><div>הגדירו \(F(a)=\int_a^{a+T}f\) וגזרו לפי \(a\). מה הנגזרת?</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>הוכחה.</b> \(f\) רציפה ב־\(\mathbb R\). נגדיר \(G(x)=\int_0^xf(t)dt\). לפי המשפט היסודי, \(G\) גזירה ב־\(\mathbb R\) ו־\(G'=f\).</p>
+<p>לפי אדיטיביות, \(F(a):=\int_a^{a+T}f=G(a+T)-G(a)\). לכן \(F\) גזירה, ולפי כלל השרשרת (בגבול \(a+T\)):
+\[F'(a)=f(a+T)-f(a)=0\qquad\text{לכל }a,\]
+כי \(T\) מחזור של \(f\). פונקציה גזירה בכל \(\mathbb R\) שנגזרתה אפס היא קבועה (לפי משפט לגרנז׳), ולכן \(F(a)=F(0)\) לכל \(a\), כלומר
+\[\int_a^{a+T}f(t)dt=\int_0^Tf(t)dt\]
+</div></details></div>
+
+<!-- ===== שאלה 7 ===== -->
+<div class="wq" id="w1q7"><div class="wq-title">שאלה 7</div>
+<div class="wq-q">(א) (משפט הערך הממוצע האינטגרלי) אם \(f:[a,b]\to\mathbb R\) רציפה, אז קיים \(c\in[a,b]\) המקיים \(f(c)=\frac1{b-a}\int_a^bf(x)dx\).<br>
+(ב) מצאו פונקציה אינטגרבילית \(f:[a,b]\to\mathbb R\) (שאינה רציפה.) כך שאין \(c\in[a,b]\) המקיים את המשוואה של הסעיף הקודם.</div>
+<details class="hint"><summary>רמז</summary><div>(א) ויירשטראס נותן מינימום ומקסימום, והממוצע נמצא ביניהם, ואז ערך הביניים. (ב) פונקציית מדרגות עם שני ערכים בלבד: הממוצע שלה יהיה ערך שהיא לא מקבלת.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(א) הוכחה.</b> נניח \(a\lt b\). \(f\) רציפה בקטע סגור, ולכן לפי ויירשטראס קיימות \(x_m,x_M\in[a,b]\) כך ש־\(m=f(x_m)\le f(x)\le f(x_M)=M\) לכל \(x\in[a,b]\). לפי תכונת החסמים \(m(b-a)\le\int_a^bf\le M(b-a)\), ולכן
+\[m\le\mu:=\frac1{b-a}\int_a^bf\le M\]
+אם \(x_m=x_M\), אז \(f\) קבועה, ו־\(c=x_m\) מתאים. אחרת, \(f\) רציפה בקטע הסגור שבין \(x_m\) ל־\(x_M\), ומקבלת בקצותיו את \(m\) ו־\(M\). לפי משפט ערך הביניים היא מקבלת גם את \(\mu\) בנקודה \(c\) בין \(x_m\) ל־\(x_M\). לכן \(f(c)=\mu\).</p>
+<p><b>(ב) דוגמה נגדית.</b> ב־\([a,b]=[0,1]\) נגדיר \(f(x)=0\) עבור \(0\le x\lt\frac12\), ו־\(f(x)=1\) עבור \(\frac12\le x\le1\).</p>
+<p>\(f\) חסומה ויש לה נקודת אי־רציפות אחת בלבד, ולכן היא אינטגרבילית. לפי אדיטיביות והלמה על שינוי בנקודה סופית (ראו <a class="xref" href="#w1q3">שאלה 3</a>): \(\int_0^1f=0\cdot\frac12+1\cdot\frac12=\frac12\). הממוצע הוא \(\frac1{1-0}\cdot\frac12=\frac12\).</p>
+<p>אבל \(f\) מקבלת רק את הערכים \(0\) ו־\(1\), ולכן אין \(c\) עם \(f(c)=\frac12\).</p>
+</div></details></div>
+
+<!-- ===== שאלה 8 ===== -->
+<div class="wq" id="w1q8"><div class="wq-title">שאלה 8</div>
+<div class="wq-q">תהא \(f:[a,b]\to\mathbb R\) פונקציה רציפה. הוכיחו כי קיים \(c\in[a,b]\) שעבורו \(\int_a^cf(x)dx=\int_c^bf(x)dx\).</div>
+<details class="hint"><summary>רמז</summary><div>הגדירו \(H(c)=\int_a^cf-\int_c^bf\), הראו שהיא רציפה, ובדקו את הסימנים של \(H(a)\) ו־\(H(b)\). משפט ערך הביניים.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>הוכחה.</b> נסמן \(I=\int_a^bf\). נגדיר \(H:[a,b]\to\mathbb R\) על ידי
+\[H(c)=\int_a^cf-\int_c^bf=2\int_a^cf-I\]
+(השוויון האחרון לפי אדיטיביות: \(\int_c^bf=I-\int_a^cf\)).</p>
+<p>כיוון ש־\(f\) רציפה, \(c\mapsto\int_a^cf\) גזירה (לפי המשפט היסודי), ולכן רציפה. לכן \(H\) רציפה ב־\([a,b]\).</p>
+<p>בקצוות: \(H(a)=-I\) ו־\(H(b)=2I-I=I\). אם \(I=0\), אז \(H(a)=0\) ו־\(c=a\) מתאים. אחרת \(H(a)\) ו־\(H(b)\) הם בעלי סימנים הפוכים, ולפי משפט ערך הביניים קיימת \(c\in(a,b)\) כך ש־\(H(c)=0\).</p>
+<p>בשני המקרים \(H(c)=0\), כלומר \(\int_a^cf=\int_c^bf\).</p>
+</div></details></div>
+
+<!-- ===== שאלה 9 ===== -->
+<div class="wq" id="w1q9"><div class="wq-title">שאלה 9</div>
+<div class="wq-q">תהא \(f:[a,b]\to\mathbb R\) פונקציה אינטגרבילית כך שקיים \(C\gt0\) שלכל \(x\in[a,b]\) מתקיים \(f(x)\gt C\).<br>
+(א) הוכיחו כי \(\frac1{f(x)}\) גם כן אינטגרבילית ב־\([a,b]\).<br>
+(ב) הוכיחו כי \(\sqrt{f(x)}\) גם כן אינטגרבילית ב־\([a,b]\).</div>
+<details class="hint"><summary>רמז</summary><div>קריטריון דרבו. בכל תת־קטע, ההפרש \(M_i-m_i\) של הפונקציה החדשה קטן מ"קבוע כפול" ההפרש של \(f\), כי \(f\ge C\gt0\) מרחיקה אותה מהאפס.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>הכנה.</b> \(f\) אינטגרבילית ולכן חסומה. תהא \(P\) חלוקה של \([a,b]\), ובכל תת־קטע \(I_i=[x_{i-1},x_i]\) נסמן \(M_i=\sup_{I_i}f\) ו־\(m_i=\inf_{I_i}f\). מכיוון ש־\(f\gt C\), מתקיים \(m_i\ge C\gt0\).</p>
+<p><b>(א)</b> הפונקציה \(t\mapsto\frac1t\) רציפה ויורדת ב־\((0,\infty)\), ולכן ב־\(I_i\): \(\sup\frac1f=\frac1{m_i}\) ו־\(\inf\frac1f=\frac1{M_i}\). לכן
+\[\begin{aligned}\overline S\Big(\frac1f,P\Big)-\underline S\Big(\frac1f,P\Big)&=\sum_i\Big(\frac1{m_i}-\frac1{M_i}\Big)\Delta x_i=\sum_i\frac{M_i-m_i}{m_iM_i}\Delta x_i\\&\le\frac1{C^2}\Big(\overline S(f,P)-\underline S(f,P)\Big),\end{aligned}\]
+כי \(m_iM_i\ge C^2\).</p>
+<p>יהי \(\varepsilon\gt0\). מכיוון ש־\(f\) אינטגרבילית, קיים \(\delta\gt0\) כך שלכל חלוקה עם \(\lambda(P)\lt\delta\) מתקיים \(\overline S(f,P)-\underline S(f,P)\lt C^2\varepsilon\). לכל חלוקה כזו ההפרש עבור \(\frac1f\) קטן מ־\(\varepsilon\). בנוסף \(\frac1f\) חסומה (\(0\lt\frac1f\lt\frac1C\)), ולכן לפי קריטריון דרבו היא אינטגרבילית.</p>
+<p><b>(ב)</b> הפונקציה \(t\mapsto\sqrt t\) רציפה ועולה, ולכן ב־\(I_i\): \(\sup\sqrt f=\sqrt{M_i}\) ו־\(\inf\sqrt f=\sqrt{m_i}\). מכיוון ש־\(\sqrt{M_i}\ge\sqrt C\) ו־\(\sqrt{m_i}\ge\sqrt C\):
+\[\sqrt{M_i}-\sqrt{m_i}=\frac{M_i-m_i}{\sqrt{M_i}+\sqrt{m_i}}\le\frac{M_i-m_i}{2\sqrt C}\]
+לכן \(\overline S(\sqrt f,P)-\underline S(\sqrt f,P)\le\frac1{2\sqrt C}\big(\overline S(f,P)-\underline S(f,P)\big)\), וכמו בסעיף (א), לכל \(\varepsilon\gt0\) קיימת \(\delta\gt0\) שעבורה ההפרש קטן מ־\(\varepsilon\) לכל חלוקה עם \(\lambda(P)\lt\delta\). \(\sqrt f\) חסומה, ולכן אינטגרבילית.</p>
+</div></details></div>
+
+<!-- ===== שאלה 10 ===== -->
+<div class="wq" id="w1q10"><div class="wq-title">שאלה 10</div>
+<div class="wq-q">הוכיחו או הפריכו: אם \(|f|\) אינטגרבילית ב־\([a,b]\), אז גם \(f\) אינטגרבילית ב־\([a,b]\).</div>
+<details class="hint"><summary>רמז</summary><div>הטענה שגויה. חפשו פונקציה שמחליפה סימן בצורה "פראית", כך ש־\(|f|\) הופכת לקבועה. בדיוק בשביל זה יש את דירכלה.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>הטענה שגויה.</b> נניח \(a\lt b\), ונגדיר \(f:[a,b]\to\mathbb R\) על ידי
+\[f(x)=\begin{cases}1,&amp;x\in\mathbb Q\\-1,&amp;x\notin\mathbb Q\end{cases}\]
+<p><b>\(|f|\) אינטגרבילית:</b> \(|f|\equiv1\) קבועה, ולכן אינטגרבילית.</p>
+<p><b>\(f\) לא אינטגרבילית:</b> לכל חלוקה \(P\) ולכל תת־קטע \([x_{i-1},x_i]\) (שאורכו חיובי), יש בו גם מספרים רציונליים וגם אי־רציונליים (צפיפות). לכן \(M_i=1\) ו־\(m_i=-1\), ולכן
+\[\overline S(f,P)-\underline S(f,P)=\sum_i2\Delta x_i=2(b-a)\]
+לכל חלוקה. לכן, עבור \(\varepsilon=2(b-a)\) לא קיימת חלוקה עם הפרש קטן מ־\(\varepsilon\), ולפי קריטריון דרבו \(f\) לא אינטגרבילית.</p>
+</div></details></div>
+
+<!-- ===== שאלה 11 ===== -->
+<div class="wq" id="w1q11"><div class="wq-title">שאלה 11</div>
+<div class="wq-q">תהיינה \(f,g:[a,b]\to\mathbb R\) פונקציות אינטגרביליות. הוכיחו כי הפונקציות \(\varphi(x)=\max\{f(x),g(x)\}\) ו־\(\psi(x)=\min\{f(x),g(x)\}\) גם כן אינטגרביליות על \([a,b]\).<br>
+רמז: \(\max\{a,b\}=\frac{|a-b|+a+b}2\). מה תהיה הנוסחה למינימום?</div>
+<details class="hint"><summary>רמז</summary><div>כתבו את \(\varphi\) ו־\(\psi\) כצירוף של \(f,g\) ושל \(|f-g|\). צריך לדעת ש"ערך מוחלט של אינטגרבילית הוא אינטגרבילית" (ויש לזה הוכחה קצרה בעזרת דרבו).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>למה.</b> אם \(h\) אינטגרבילית ב־\([a,b]\), אז \(|h|\) אינטגרבילית ב־\([a,b]\).<br>
+<i>הוכחה:</i> \(h\) חסומה, ולכן \(|h|\) חסומה. תהא \(P\) חלוקה, ובתת־קטע \(I_i\) נסמן \(M_i,m_i\) עבור \(h\), ו־\(M_i',m_i'\) עבור \(|h|\). לכל \(x,y\in I_i\): \(\big||h(x)|-|h(y)|\big|\le|h(x)-h(y)|\le M_i-m_i\). לכן \(M_i'-m_i'=\sup_{x,y\in I_i}\big(|h(x)|-|h(y)|\big)\le M_i-m_i\). נכפול ב־\(\Delta x_i\) ונסכם: \(\overline S(|h|,P)-\underline S(|h|,P)\le\overline S(h,P)-\underline S(h,P)\). לפי קריטריון דרבו עבור \(h\), הדבר נכון גם עבור \(|h|\).</p>
+<p><b>הנוסחה למקסימום:</b> אם \(u\ge v\) אז \(\frac{|u-v|+u+v}2=\frac{(u-v)+u+v}2=u\), ואם \(u\lt v\) אז \(\frac{(v-u)+u+v}2=v\). לכן \(\max\{u,v\}=\frac{|u-v|+u+v}2\).<br>
+<b>הנוסחה למינימום:</b> \(\min\{u,v\}=\frac{u+v-|u-v|}2\). (בדיקה: אם \(u\ge v\), מקבלים \(\frac{u+v-(u-v)}2=v\).)</p>
+<p><b>הפתרון.</b> \(f-g\) אינטגרבילית (לינאריות), ולכן לפי הלמה \(|f-g|\) אינטגרבילית. לכן
+\[\varphi=\frac12\big(|f-g|+f+g\big),\qquad\psi=\frac12\big(f+g-|f-g|\big)\]
+הן צירופים לינאריים של פונקציות אינטגרביליות, ולכן אינטגרביליות.</p>
+</div></details></div>
+
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-20.html"><small>→ הקודם</small><span>20. אינטגרל משולש</span></a><a class="pg pg-next" href="worksheet-2.html"><small>הבא ←</small><span>דף עבודה 2: המשפט היסודי ושיטות אינטגרציה</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

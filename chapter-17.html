@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>17. אינטגרל כפול · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html" class="on" aria-current="page"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="#c17">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<div class="part-head" id="partD"><div class="k">חלק ד׳ · פרקים <bdi dir="ltr">17–20</bdi></div><h2>אינטגרלים מרובים</h2>
+<p>חוזרים לרעיון של חלק א׳, "לחתוך לחתיכות קטנות ולסכם", אבל עכשיו התחום הוא אזור במישור או גוף במרחב. במקום שטח מקבלים <b>נפח ומסה</b>. הכלי המרכזי (פוביני) מחזיר כל אינטגרל כפול לשני אינטגרלים רגילים, וכל השיטות מ<a class="xref" href="chapter-2.html">פרקים <bdi dir="ltr">2–4</bdi></a> עובדות שוב. מחלק ג׳ נשתמש ביעקוביאן.</p></div>
+
+<section id="c17" class="chapter" data-part="D">
+<header class="ch-head"><div class="ch-num">17</div><div><div class="ch-kicker">פרק שבעה־עשר</div><h2>אינטגרל כפול</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> סכומי רימן והאינטגרל המסוים (<a class="xref" href="chapter-1.html">פרק 1</a>), נפח לפי שטח חתך (<a class="xref" href="chapter-5.html">פרק 5</a>), שרטוט תחומים במישור (<a class="xref" href="chapter-9.html">פרקים <bdi dir="ltr">9–10</bdi></a>).</p>
+<ul class="goals"><li>נפח מתחת למשטח</li><li>פוביני</li><li>תחומים פשוטים</li><li>פרוסות אנכיות ואופקיות</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+\(\int_a^bf\) נתן שטח מתחת לעקומה. עכשיו רוצים <b>נפח מתחת למשטח</b> \(z=f(x,y)\), מעל אזור \(D\) במישור. אותו רעיון בדיוק: מחלקים את \(D\) למלבנים קטנים, מעל כל אחד בונים "עמוד" בגובה \(f\), ומסכמים. עם \(f\equiv1\) מקבלים <b>שטח</b> של \(D\), ועם צפיפות מקבלים <b>מסה</b>.
+<br>החדשות הטובות: <b>לא צריך כלים חדשים לחישוב.</b> משפט פוביני אומר שאפשר לחשב אינטגרל כפול כשני אינטגרלים רגילים, אחד בתוך השני. כל העבודה היא למצוא את הגבולות הנכונים, ולשם כך <b>מציירים את התחום</b>.
+</div>
+
+<figure class="fig" data-fig="columns"><figcaption><b>סכום רימן כפול.</b> מחלקים את המלבן ל־\(n\times n\) ריבועים, ומעל כל אחד בונים עמוד בגובה \(f\) במרכזו. נפח כל עמוד \(f(x_i,y_j)\Delta x\Delta y\). הגדילו את \(n\): העמודים מתקרבים למשטח, וסכום הנפחים שואף ל־\(\iint_Df\). גררו לסיבוב.</figcaption></figure>
+
+<div class="box thm"><div class="tag">משפט פוביני (מלבן)</div>
+אם \(f\) אינטגרבילית במלבן \([a,b]\times[c,d]\) והאינטגרלים החוזרים קיימים (למשל אם \(f\) רציפה):
+\[\iint_{[a,b]\times[c,d]}f\,dxdy=\int_a^b\Big(\int_c^d f\,dy\Big)dx=\int_c^d\Big(\int_a^b f\,dx\Big)dy\]
+<b>דוגמה:</b> \(\iint_{[0,1]^2}(x^2+y^2)=\int_0^1\big(x^2+\frac13\big)dx=\frac23\).
+</div>
+
+<div class="note"><b>למה פוביני הגיוני?</b> \(\int_c^df(x,y)\,dy\) עם \(x\) קבוע הוא <b>שטח החתך</b> של הגוף במישור הניצב לציר \(x\). אינטגרל של שטחי החתכים נותן נפח, בדיוק כמו עקרון קבלירי ב<a class="xref" href="chapter-5.html">פרק 5</a>.</div>
+
+<h3>תחום כללי</h3>
+<figure class="fig" data-fig="typeregions"><figcaption><b>שתי דרכים לתאר את אותו תחום.</b> משמאל: פרוסות <b>אנכיות</b>. לכל \(x\) הפרוסה הולכת מהעקומה התחתונה \(y_1(x)\) לעליונה \(y_2(x)\). מימין: פרוסות <b>אופקיות</b>. לכל \(y\) הפרוסה הולכת מהעקומה השמאלית \(x_1(y)\) לימנית \(x_2(y)\). כאן התחום הוא בין \(y=x^2\) ל־\(y=\sqrt x\).</figcaption></figure>
+<div class="box def"><div class="tag">תחומים פשוטים</div>
+<b>פשוט ביחס לציר \(y\)</b> ("פרוסות אנכיות"): \(D=\{a\le x\le b,\ y_1(x)\le y\le y_2(x)\}\), ואז
+\[\iint_D f=\int_a^b\int_{y_1(x)}^{y_2(x)}f\,dy\,dx\]
+<b>פשוט ביחס לציר \(x\)</b> ("פרוסות אופקיות"): \(D=\{c\le y\le d,\ x_1(y)\le x\le x_2(y)\}\), ואז
+\[\iint_D f=\int_c^d\int_{x_1(y)}^{x_2(y)}f\,dx\,dy\]
+<span class="small">הגבולות של האינטגרל <b>הפנימי</b> יכולים להיות פונקציות. הגבולות של <b>החיצוני</b> הם תמיד מספרים.</span>
+</div>
+<div class="box thm"><div class="tag">תכונות</div>
+לינאריות. מונוטוניות. \(\big|\iint f\big|\le\iint|f|\). אם \(m\le f\le M\), אז \(mS(D)\le\iint_Df\le MS(D)\). אדיטיביות: אם \(D=D_1\cup D_2\) והחיתוך שלהם בעל שטח אפס, \(\iint_D=\iint_{D_1}+\iint_{D_2}\).
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>אינטגרל כפול על תחום כללי</div>
+<div class="wk-q">חשבו \(\iint_D(x+y)\,dA\), כאשר \(D=\{x\ge0,\ x\le y\le2-x^2\}\).</div>
+<ol class="wsteps">
+<li><span class="st">מציירים את התחום ומוצאים נקודות חיתוך.</span>
+\(D\) כלוא בין הישר \(y=x\) (מלמטה) לפרבולה \(y=2-x^2\) (מלמעלה), מימין לציר \(y\). חיתוך הישר והפרבולה: \(x=2-x^2\iff(x+2)(x-1)=0\), ובתחום \(x\ge0\) מתקבל \(x=1\). קודקודי התחום: \((0,0)\), \((0,2)\), \((1,1)\).</li>
+<li><span class="st">בוחרים כיוון פריסה.</span>
+בפרוסות אנכיות כל פרוסה מתחילה על \(y=x\) ומסתיימת על \(y=2-x^2\), לכל \(x\in[0,1]\): אין צורך בפיצול.
+\[D=\{0\le x\le1,\ \ x\le y\le2-x^2\}\]
+<p class="why-step">בפרוסות אופקיות הגבול הימני מתחלף ב־\(y=1\) (מהישר לפרבולה), ולכן היה צורך בשני אינטגרלים.</p></li>
+<li><span class="st">האינטגרל הפנימי (לפי \(y\), כש־\(x\) קבוע).</span>
+\[\int_x^{2-x^2}(x+y)\,dy=\Big[xy+\frac{y^2}2\Big]_{y=x}^{y=2-x^2}\]
+בגבול העליון: \(x(2-x^2)+\frac{(2-x^2)^2}2=2+2x-2x^2-x^3+\frac{x^4}2\). בגבול התחתון: \(x^2+\frac{x^2}2=\frac{3x^2}2\). ההפרש:
+\[\frac{x^4}2-x^3-\frac{7}{2}x^2+2x+2\]</li>
+<li><span class="st">האינטגרל החיצוני.</span>
+\[\int_0^1\Big(\frac{x^4}2-x^3-\frac72x^2+2x+2\Big)dx=\frac1{10}-\frac14-\frac76+1+2=\frac{101}{60}\]</li>
+<li><span class="st">בדיקה בסדר ההפוך.</span>
+\(D_1=\{0\le y\le1,\ 0\le x\le y\}\) ו־\(D_2=\{1\le y\le2,\ 0\le x\le\sqrt{2-y}\}\):
+\[\int_0^1\int_0^y(x+y)\,dx\,dy=\int_0^1\tfrac32y^2\,dy=\tfrac12,\qquad\int_1^2\Big(\tfrac{2-y}2+y\sqrt{2-y}\Big)dy=\tfrac14+\tfrac{14}{15}\]
+\(\frac12+\frac14+\frac{14}{15}=\frac{101}{60}\). ✓</li>
+</ol>
+<div class="res">\(\displaystyle\iint_D(x+y)\,dA=\frac{101}{60}\)</div>
+</div>
+<div class="box tip"><div class="tag">טיפ</div>
+<b>מתחילים תמיד בשרטוט התחום.</b> מוצאים נקודות חיתוך, ובוחרים את הסדר שבו התחום "פשוט" (בלי פיצול) או שבו האינטגרל הפנימי קל.
+</div>
+
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>מסה של משולש עם צפיפות</div>
+<div class="exr-q">חשבו \(\iint_De^{x+y}\,dA\), כאשר \(D\) הוא המשולש \(0\le y\le x\le1\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">מציירים: המשולש עם קודקודים \((0,0),(1,0),(1,1)\). בפרוסות אנכיות: \(x\in[0,1]\), ובכל \(x\) הפרוסה מ־\(y=0\) עד \(y=x\).</p>
+\[\int_0^1\int_0^xe^{x+y}\,dy\,dx=\int_0^1e^x\big(e^x-1\big)dx=\Big[\tfrac{e^{2x}}2-e^x\Big]_0^1=\tfrac{e^2}2-e+\tfrac12=\boxed{\tfrac{(e-1)^2}{2}}\]
+</div></div>
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>גבולות של האינטגרל <b>החיצוני</b> שתלויים במשתנה. החיצוני תמיד בין מספרים.</li>
+<li>להתחיל לחשב בלי לצייר את התחום ובלי למצוא נקודות חיתוך.</li>
+<li>ב־\(dy\,dx\) הפנימי הוא לפי \(y\): הגבולות שלו הם פונקציות של \(x\).</li>
+</ul>
+</div>
+
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+\(\iint_Df\) = נפח מתחת ל־\(f\) מעל \(D\). <b>פוביני:</b> מחשבים כשני אינטגרלים רגילים. <b>מציירים</b> את התחום, בוחרים פרוסות, ורק אז כותבים גבולות.
+</div>
+<a class="next" href="chapter-18.html"><span class="arr">←</span><span><b>הלאה: החלפת סדר אינטגרציה.</b> לכל תחום יש שתי דרכים לפרוס. לפעמים אחת מהן הופכת אינטגרל בלתי אפשרי לקל.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-16.html"><small>→ הקודם</small><span>16. כופלי לגרנז׳</span></a><a class="pg pg-next" href="chapter-18.html"><small>הבא ←</small><span>18. החלפת סדר אינטגרציה</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. וקטורים ב־ℝⁿ · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html" class="on" aria-current="page"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="#c7">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<div class="part-head" id="partB"><div class="k">חלק ב׳ · פרקים <bdi dir="ltr">7–8</bdi></div><h2>וקטורים וגאומטריה</h2>
+<p>לפני שעוברים לפונקציות של כמה משתנים צריך <b>שפה למרחב</b>: איך מודדים אורך וזווית, איך מתארים כיוון, ואיך כותבים משוואה של ישר ושל מישור. כל אלה יחזרו בחלק ג׳: הגרדיאנט הוא וקטור, הנגזרת הכיוונית היא מכפלה סקלרית, והמישור המשיק הוא מישור.</p></div>
+
+<section id="c7" class="chapter" data-part="B">
+<header class="ch-head"><div class="ch-num">7</div><div><div class="ch-kicker">פרק שביעי</div><h2>וקטורים ב־\(\mathbb R^n\)</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> קואורדינטות במישור, משפט פיתגורס, טריגונומטריה בסיסית.</p>
+<ul class="goals"><li>אורך ומרחק</li><li>מכפלה סקלרית וזווית</li><li>היטל</li><li>מכפלה וקטורית ושטח</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+נקודה ב־\(\mathbb R^n\) היא רשימה של \(n\) מספרים, אבל כדי לעשות גאומטריה צריך לדעת <b>למדוד</b>: כמה רחוק, באיזו זווית, האם ניצב. שתי פעולות עושות את כל העבודה:
+<ul>
+<li><b>מכפלה סקלרית</b> מודדת "כמה שני וקטורים מצביעים לאותו כיוון". ממנה מקבלים אורך, זווית, ניצבות והיטל. ב<a class="xref" href="chapter-13.html">פרק 13</a> היא תהפוך לנגזרת כיוונית: \(D_{\vec u}f=\nabla f\cdot\vec u\).</li>
+<li><b>מכפלה וקטורית</b> (רק ב־\(\mathbb R^3\)) מייצרת וקטור <b>ניצב</b> לשני וקטורים נתונים. ממנה מקבלים נורמל למישור ושטחים.</li>
+</ul>
+</div>
+
+<h3>פעולות בסיסיות ומכפלה סקלרית</h3>
+<figure class="fig" data-fig="dotproj"><figcaption><b>מכפלה סקלרית והיטל.</b> סובבו את \(\vec y\). ההיטל (הצל הצהוב של \(\vec y\) על הישר של \(\vec x\)) באורך \(|\vec y|\cos\varphi\), ו־\(\vec x\cdot\vec y=|\vec x|\cdot\text{היטל}\). כש־\(\varphi=90^\circ\) ההיטל מתאפס, ולכן <b>ניצב ⟺ מכפלה סקלרית 0</b>. כשהזווית קהה, ההיטל והמכפלה שליליים.</figcaption></figure>
+<div class="box def"><div class="tag">פעולות בסיסיות</div>
+<ul>
+<li>חיבור וכפל בסקלר נעשים רכיב־רכיב. וקטור בין שתי נקודות: \(\overrightarrow{AB}=B-A\) (ה"סוף" פחות ה"התחלה").</li>
+<li><b>מכפלה סקלרית:</b> \(\vec x\cdot\vec y=x_1y_1+\dots+x_ny_n\), והתוצאה היא מספר.</li>
+<li><b>אורך (נורמה):</b> \(|\vec x|=\sqrt{x_1^2+\dots+x_n^2}\). <b>מרחק:</b> \(|\overrightarrow{AB}|\).</li>
+<li><b>קושי־שוורץ:</b> \(|\vec x\cdot\vec y|\le|\vec x|\,|\vec y|\).</li>
+<li><b>זווית:</b> \(\cos\varphi=\frac{\vec x\cdot\vec y}{|\vec x|\,|\vec y|}\), עם \(\varphi\in[0,\pi]\). וקטורים <b>ניצבים</b> אם ורק אם \(\vec x\cdot\vec y=0\).</li>
+<li><b>היטל</b> של \(\vec y\) על \(\vec x\): ההיטל הסקלרי הוא \(\text{pr}_{\vec x}\vec y=\frac{\vec x\cdot\vec y}{|\vec x|}\). ההיטל הווקטורי הוא אותו מספר כפול וקטור היחידה \(\frac{\vec x}{|\vec x|}\).</li>
+<li><b>קוסינוסים מכוונים</b> (ב־\(\mathbb R^3\)): \(\cos\alpha=\frac{x}{|\vec x|}\), \(\cos\beta=\frac{y}{|\vec x|}\), \(\cos\gamma=\frac{z}{|\vec x|}\), ותמיד \(\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1\).</li>
+</ul>
+</div>
+
+<div class="note"><b>בפשטות:</b> \(\vec x\cdot\vec y=|\vec x||\vec y|\cos\varphi\). חיובי = זווית חדה ("באותו כיוון בערך"), אפס = ניצב, שלילי = זווית קהה.</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>היטל ופירוק לרכיב מקביל ורכיב ניצב</div>
+<div class="wk-q">נתונים \(\vec x=(1,2,2)\) ו־\(\vec y=(3,0,4)\). מצאו את ההיטל של \(\vec y\) על \(\vec x\), ופרקו את \(\vec y\) לסכום של רכיב מקביל ל־\(\vec x\) ורכיב ניצב לו.</div>
+<ol class="wsteps">
+<li><span class="st">מחשבים מכפלה סקלרית ואורך.</span>
+\(\vec x\cdot\vec y=1\cdot3+2\cdot0+2\cdot4=11\), ו־\(|\vec x|=\sqrt{1+4+4}=3\).</li>
+<li><span class="st">ההיטל הסקלרי.</span>
+\[\text{pr}_{\vec x}\vec y=\frac{\vec x\cdot\vec y}{|\vec x|}=\frac{11}3\]
+<p class="why-step">זה האורך (עם סימן) של "הצל" של \(\vec y\) על הישר בכיוון \(\vec x\). הוא חיובי, ולכן הזווית בין הווקטורים חדה.</p></li>
+<li><span class="st">ההיטל הווקטורי.</span>
+כופלים את ההיטל הסקלרי בווקטור היחידה \(\frac{\vec x}{|\vec x|}\):
+\[\vec y_{\parallel}=\frac{11}3\cdot\frac{(1,2,2)}3=\frac{11}9(1,2,2)=\Big(\frac{11}9,\frac{22}9,\frac{22}9\Big)\]</li>
+<li><span class="st">הרכיב הניצב.</span>
+\[\vec y_{\perp}=\vec y-\vec y_{\parallel}=\Big(\frac{16}9,-\frac{22}9,\frac{14}9\Big)\]</li>
+<li><span class="st">בודקים ניצבות.</span>
+\(\vec y_\perp\cdot\vec x=\frac{16-44+28}9=0\). ✓</li>
+</ol>
+<div class="res">\(\vec y=\frac{11}9(1,2,2)+\frac19(16,-22,14)\), וההיטל הסקלרי הוא \(\frac{11}3\).</div>
+</div>
+
+<div class="box ex"><div class="tag">דוגמה: זווית במשולש</div>
+\(A(-1,-2,4),\ B(-4,-2,0),\ C(3,-2,1)\). מחפשים את הזווית ליד \(B\): \(\overrightarrow{BA}=(3,0,4)\), \(\overrightarrow{BC}=(7,0,1)\).
+\[\cos\varphi=\frac{21+4}{5\cdot\sqrt{50}}=\frac{25}{25\sqrt2}=\frac1{\sqrt2}\ \Rightarrow\ \varphi=\frac\pi4\]
+שימו לב: שני הווקטורים צריכים <b>לצאת</b> מ־\(B\).
+</div>
+
+
+<h3>מכפלה וקטורית (רק ב־\(\mathbb R^3\))</h3>
+<figure class="fig" data-fig="cross"><figcaption><b>המכפלה הווקטורית \(\vec a\times\vec b\)</b> ניצבת למקבילית שבנויה על \(\vec a,\vec b\), והאורך שלה שווה לשטח המקבילית. הכיוון לפי כלל יד ימין: מסובבים את \(\vec a\) לכיוון \(\vec b\), והאגודל מצביע לכיוון \(\vec a\times\vec b\).</figcaption></figure>
+<div class="box def"><div class="tag">הגדרה</div>
+\[\vec a\times\vec b=\begin{vmatrix}\vec i&amp;\vec j&amp;\vec k\\a_x&amp;a_y&amp;a_z\\b_x&amp;b_y&amp;b_z\end{vmatrix}=\big(a_yb_z-a_zb_y,\ a_zb_x-a_xb_z,\ a_xb_y-a_yb_x\big)\]
+</div>
+
+<div class="box thm"><div class="tag">תכונות</div>
+<ol>
+<li>\(\vec a\times\vec b\) <b>ניצב</b> גם ל־\(\vec a\) וגם ל־\(\vec b\), והכיוון שלו נקבע לפי כלל יד ימין.</li>
+<li>\(|\vec a\times\vec b|=|\vec a||\vec b|\sin\varphi\), וזה <b>שטח המקבילית</b> שבנויה על שני הווקטורים. שטח משולש הוא חצי מזה.</li>
+<li>\(\vec a\times\vec b=-(\vec b\times\vec a)\). יש פילוג: \((\vec x+\vec y)\times\vec z=\vec x\times\vec z+\vec y\times\vec z\). וגם \((\lambda\vec x)\times\vec y=\lambda(\vec x\times\vec y)\).</li>
+</ol>
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>מכפלה וקטורית: שטח וגובה במשולש</div>
+<div class="wk-q">\(A(3,-3,1)\), \(B(-3,-2,0)\), \(C(1,0,2)\). חשבו את שטח המשולש \(ABC\) ואת הגובה \(BD\) לצלע \(AC\).</div>
+<ol class="wsteps">
+<li><span class="st">בונים שני וקטורים שיוצאים מאותו קודקוד.</span>
+\(\overrightarrow{BA}=A-B=(6,-1,1)\) ו־\(\overrightarrow{BC}=C-B=(4,2,2)\).</li>
+<li><span class="st">מחשבים את המכפלה הווקטורית רכיב אחר רכיב.</span>
+פיתוח הדטרמיננטה לפי השורה הראשונה:
+\[\overrightarrow{BA}\times\overrightarrow{BC}=\begin{vmatrix}\vec i&amp;\vec j&amp;\vec k\\6&amp;-1&amp;1\\4&amp;2&amp;2\end{vmatrix}
+=\vec i\,\big((-1)\cdot2-1\cdot2\big)-\vec j\,\big(6\cdot2-1\cdot4\big)+\vec k\,\big(6\cdot2-(-1)\cdot4\big)\]
+\[=(-4,\,-8,\,16)\]
+<p class="why-step">המינוס לפני \(\vec j\) הוא חלק מפיתוח הדטרמיננטה, ושכחתו היא הטעות הנפוצה ביותר בחישוב.</p></li>
+<li><span class="st">בודקים ניצבות.</span>
+\((-4,-8,16)\cdot(6,-1,1)=-24+8+16=0\) ו־\((-4,-8,16)\cdot(4,2,2)=-16-16+32=0\). ✓</li>
+<li><span class="st">מחשבים את השטח.</span>
+\(|(-4,-8,16)|=\sqrt{16+64+256}=\sqrt{336}=4\sqrt{21}\). זה שטח המקבילית, והמשולש הוא חציה:
+\[S_{ABC}=\tfrac12\cdot4\sqrt{21}=2\sqrt{21}\]</li>
+<li><span class="st">מחשבים את הגובה משתי נוסחאות לשטח.</span>
+\(S=\frac12|AC|\cdot BD\), עם \(\overrightarrow{AC}=(-2,3,1)\) ו־\(|AC|=\sqrt{14}\):
+\[BD=\frac{2S}{|AC|}=\frac{4\sqrt{21}}{\sqrt{14}}=4\sqrt{\tfrac32}=2\sqrt6\]</li>
+</ol>
+<div class="res">\(S_{ABC}=2\sqrt{21}\), \(\ BD=2\sqrt6\)</div>
+</div>
+
+<div class="box ex"><div class="tag">וקטור ניצב לשני וקטורים נתונים</div>
+מחפשים \(\vec x\) שניצב ל־\(\vec a=(2,-1,1)\) ול־\(\vec b=(1,-3,2)\), ובנוסף \(\vec x\cdot(1,1,-3)=13\). כל וקטור שניצב לשניהם הוא כפולה של \(\vec a\times\vec b=(1,-3,-5)\), כלומר \(\vec x=\alpha(1,-3,-5)\). מהתנאי השלישי: \(13\alpha=13\), ולכן \(\vec x=(1,-3,-5)\).
+</div>
+
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>בזווית במשולש: שני הווקטורים צריכים <b>לצאת</b> מאותו קודקוד.</li>
+<li>\(\vec a\times\vec b\ne\vec b\times\vec a\): הסדר משנה את הסימן.</li>
+<li>במכפלה וקטורית בדטרמיננטה: לשכוח את המינוס ברכיב האמצעי.</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">מה המשמעות הגאומטרית של \(|\vec a\times\vec b|\)?</p>
+<div class="opts"><button class="opt">הזווית בין הווקטורים</button><button class="opt">האורך של \(\vec a+\vec b\)</button><button class="opt">שטח המקבילית שבנויה על \(\vec a,\vec b\)</button><button class="opt">ההיטל של \(\vec a\) על \(\vec b\)</button></div>
+<div class="exp">\(|\vec a\times\vec b|=|\vec a||\vec b|\sin\varphi\), וזה שטח המקבילית. שטח המשולש הוא חצי מזה.</div></div>
+<div class="quiz" data-correct="0"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\vec u=(1,2,-1)\), \(\vec v=(3,-1,1)\). מה הזווית ביניהם?</p>
+<div class="opts"><button class="opt">\(\frac\pi2\)</button><button class="opt">\(0\)</button><button class="opt">\(\frac\pi4\)</button><button class="opt">\(\pi\)</button></div>
+<div class="exp">\(\vec u\cdot\vec v=3-2-1=0\), ולכן הם ניצבים.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>מכפלה סקלרית</b> → אורך, זווית, ניצבות, היטל. <b>מכפלה וקטורית</b> → וקטור ניצב לשניים, ושטח מקבילית.
+</div>
+<a class="next" href="chapter-8.html"><span class="arr">←</span><span><b>הלאה: ישרים ומישורים.</b> עם הכלים האלה אפשר לתאר את האובייקטים הישרים במרחב: ישר = נקודה + כיוון, מישור = נקודה + נורמל.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-6.html"><small>→ הקודם</small><span>6. אינטגרלים לא אמיתיים</span></a><a class="pg pg-next" href="chapter-8.html"><small>הבא ←</small><span>8. ישרים ומישורים</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

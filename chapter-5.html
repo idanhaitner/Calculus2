@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. שימושים: שטח, נפח, אורך עקומה · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html" class="on" aria-current="page"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="#c5">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c5" class="chapter" data-part="A">
+<header class="ch-head"><div class="ch-num">5</div><div><div class="ch-kicker">פרק חמישי</div><h2>שימושים: שטח, נפח, אורך עקומה</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> אינטגרל = גבול של סכום חתיכות קטנות (<a class="xref" href="chapter-1.html">פרק 1</a>), ואיך מחשבים אותו בפועל (<a class="xref" href="chapter-2.html">פרקים <bdi dir="ltr">2–4</bdi></a>).</p>
+<ul class="goals"><li>שטח בין עקומות</li><li>נפח לפי שטח חתך</li><li>גוף סיבוב: דיסקות וטבעות</li><li>קליפות גליליות</li><li>אורך עקומה</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+כל הנוסחאות בפרק הזה נבנות <b>באותה דרך בדיוק</b>, ולכן לא צריך לשנן אותן, אלא להבין את המתכון:
+<ol class="steps">
+<li>חותכים את הגוף לחתיכה דקה ברוחב \(dx\).</li>
+<li>מחשבים את הגודל של חתיכה אחת: רצועה (שטח), דיסקה (נפח), קטע ישר (אורך).</li>
+<li>מסכמים את כל החתיכות, כלומר אינטגרל.</li>
+</ol>
+לכן כל נוסחה בפרק אפשר לשחזר מהמתכון בתוך דקה. זה גם הבסיס לאינטגרלים כפולים (<a class="xref" href="chapter-17.html">פרק 17</a>): שם החתיכות הן מלבנים קטנים במישור.
+</div>
+
+<h3>שטח בין שתי עקומות</h3>
+<figure class="fig" data-fig="areabetween"><figcaption><b>רצועה אנכית דקה</b> בין העקומה העליונה \(f\) לתחתונה \(g\): השטח שלה \(\big(f(x)-g(x)\big)dx\). מסכמים מנקודת החיתוך השמאלית לימנית. כשהעקומות מתחלפות (מי מעל מי), מפצלים בנקודת החיתוך.</figcaption></figure>
+<div class="card thm"><span class="pill">נוסחה</span>
+\[S=\int_a^b\big|f(x)-g(x)\big|\,dx\]
+<span class="plain">מוצאים נקודות חיתוך, מחלקים לפיהן את הקטע, ובכל חלק מחשבים "העליונה פחות התחתונה". לפעמים קל יותר לחתוך ברצועות <b>אופקיות</b> ולאנטגרל לפי \(y\): "הימנית פחות השמאלית".</span>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>שטח בין עקומות שמתחלפות</div>
+<div class="wk-q">חשבו את השטח הכלוא בין \(y=x^3\) ל־\(y=x\).</div>
+<ol class="wsteps">
+<li><span class="st">מוצאים נקודות חיתוך.</span>
+\(x^3=x\iff x(x-1)(x+1)=0\), ולכן \(x\in\{-1,0,1\}\). התחום הכלוא הוא \([-1,1]\), והוא מתחלק לשני תת־קטעים.</li>
+<li><span class="st">קובעים בכל תת־קטע איזו עקומה עליונה.</span>
+בודקים נקודה אחת בכל תת־קטע. ב־\(x=\frac12\): \(x=\frac12\gt\frac18=x^3\), ולכן ב־\([0,1]\) הישר עליון. ב־\(x=-\frac12\): \(-\frac12\lt-\frac18\), ולכן ב־\([-1,0]\) העקומה \(x^3\) עליונה.
+<p class="why-step">בין שתי נקודות חיתוך סמוכות ההפרש \(f-g\) אינו מחליף סימן (הוא רציף ואינו מתאפס), ולכן נקודת בדיקה אחת מספיקה.</p></li>
+<li><span class="st">כותבים "עליונה פחות תחתונה" בכל חלק.</span>
+\[S=\int_{-1}^{0}\big(x^3-x\big)\,dx+\int_{0}^{1}\big(x-x^3\big)\,dx\]
+<p class="why-step">אינטגרל אחד של \(x-x^3\) על כל \([-1,1]\) היה נותן 0: שני החלקים זהים בשטחם ומנוגדים בסימנם.</p></li>
+<li><span class="st">מחשבים.</span>
+\[\int_0^1(x-x^3)\,dx=\frac12-\frac14=\frac14,\qquad\int_{-1}^0(x^3-x)\,dx=\Big[\frac{x^4}4-\frac{x^2}2\Big]_{-1}^{0}=0-\Big(\frac14-\frac12\Big)=\frac14\]</li>
+</ol>
+<div class="res">\(S=\frac14+\frac14=\frac12\)</div>
+</div>
+
+
+<h3>נפח לפי שטח חתך</h3>
+<div class="card thm"><span class="pill">עקרון קבלירי</span>
+אם \(S(x)\) הוא שטח החתך של הגוף במישור הניצב לציר \(x\) בנקודה \(x\), אז
+\[V=\int_a^b S(x)\,dx .\]
+<span class="plain">פורסים את הגוף כמו כיכר לחם. לכל פרוסה נפח של בערך \(S(x)\cdot dx\), וסוכמים.</span>
+<b>דוגמה, כדור:</b> החתך הוא עיגול ברדיוס \(\sqrt{R^2-x^2}\), כלומר \(S(x)=\pi(R^2-x^2)\), ולכן \(V=\int_{-R}^R\pi(R^2-x^2)dx=\frac43\pi R^3\).
+</div>
+
+<h3>גוף סיבוב</h3>
+<figure class="fig" data-fig="revolve"><figcaption><b>גוף סיבוב של \(f(x)=\sqrt x\) סביב ציר \(x\).</b> כל חתך ניצב לציר הוא <b>דיסקה</b> ברדיוס \(f(x)\), ולכן שטח החתך \(\pi f(x)^2\). הזיזו את זווית הסיבוב כדי לראות איך הגוף נוצר, וגררו כדי לסובב את המבט.</figcaption></figure>
+<div class="card thm"><span class="pill">שיטת הדיסקות והטבעות</span>
+\[V_x=\pi\int_a^b f(x)^2\,dx\qquad\text{(סיבוב סביב ציר }x)\]
+אם מסובבים את השטח <b>בין</b> \(f\ge g\ge0\), כל חתך הוא <b>טבעת</b>: \(V=\pi\int_a^b\big(f^2-g^2\big)dx\).<br>
+סביב ציר \(y\), כשהעקומה כתובה כ־\(x=h(y)\): \(V_y=\pi\int_c^d h(y)^2\,dy\).
+<span class="plain">זה בדיוק עקרון קבלירי עם \(S(x)=\pi r^2\), כש־\(r=f(x)\).</span>
+</div>
+<div class="card thm"><span class="pill">שיטת הקליפות הגליליות</span>
+כשמסובבים את השטח שמתחת ל־\(y=f(x)\ge0\), \(0\le a\le x\le b\), <b>סביב ציר \(y\)</b>:
+\[V_y=2\pi\int_a^b x\,f(x)\,dx\]
+<span class="plain">רצועה אנכית במרחק \(x\) מהציר מסתובבת ויוצרת "גליל חלול" דק: היקף \(2\pi x\), גובה \(f(x)\), עובי \(dx\). פותחים אותו ללוח, והנפח הוא \(2\pi x\cdot f(x)\cdot dx\). היתרון: לא צריך להפוך את הפונקציה.</span>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>גוף סיבוב: טבעות סביב ציר \(x\) וקליפות סביב ציר \(y\)</div>
+<div class="wk-q">התחום \(D\) כלוא בין \(y=x\) ל־\(y=x^2\). חשבו את נפח הגוף שנוצר כש־\(D\) מסתובב (א) סביב ציר \(x\); (ב) סביב ציר \(y\).</div>
+<ol class="wsteps">
+<li><span class="st">מתארים את התחום.</span>
+חיתוך: \(x=x^2\iff x\in\{0,1\}\). ב־\([0,1]\) מתקיים \(x\ge x^2\), ולכן \(y=x\) היא העקומה העליונה.</li>
+<li><span class="st">(א) מזהים את צורת החתך בסיבוב סביב ציר \(x\).</span>
+חתך ניצב לציר \(x\) בנקודה \(x\) הוא <b>טבעת</b>: רדיוס חיצוני \(R=x\) (העקומה הרחוקה מהציר) ורדיוס פנימי \(r=x^2\). שטח החתך \(\pi(R^2-r^2)\).</li>
+<li><span class="st">(א) מאנטגרלים.</span>
+\[V_x=\pi\int_0^1\big(x^2-x^4\big)\,dx=\pi\Big(\frac13-\frac15\Big)=\frac{2\pi}{15}\]
+<p class="why-step">מחסרים ריבועים של רדיוסים, ולא את ריבוע ההפרש: \(\pi(R^2-r^2)\ne\pi(R-r)^2\).</p></li>
+<li><span class="st">(ב) בוחרים שיטה לסיבוב סביב ציר \(y\).</span>
+התחום מתואר בנוחות כפונקציה של \(x\), ולכן קליפות מתאימות: רצועה אנכית במרחק \(x\) מהציר, בגובה \(x-x^2\), יוצרת קליפה שנפחה \(2\pi x\,(x-x^2)\,dx\).</li>
+<li><span class="st">(ב) מאנטגרלים.</span>
+\[V_y=2\pi\int_0^1x\big(x-x^2\big)\,dx=2\pi\Big(\frac13-\frac14\Big)=\frac{\pi}{6}\]</li>
+<li><span class="st">(ב) בודקים בשיטה השנייה.</span>
+בטבעות סביב ציר \(y\) הופכים את הפונקציות: \(x=\sqrt y\) (רחוקה מהציר) ו־\(x=y\) (קרובה), עם \(y\in[0,1]\):
+\[\pi\int_0^1\big((\sqrt y)^2-y^2\big)\,dy=\pi\Big(\frac12-\frac13\Big)=\frac\pi6\ \checkmark\]</li>
+</ol>
+<div class="res">\(V_x=\dfrac{2\pi}{15},\qquad V_y=\dfrac{\pi}{6}\)</div>
+</div>
+<div class="box warn"><div class="tag">מלכודת</div>
+בסיבוב סביב ציר \(y\) צריך <b>להפוך את הפונקציה</b> (לבטא את \(x\) בעזרת \(y\)) <b>ולהחליף את גבולות האינטגרציה</b> לערכי \(y\).
+</div>
+
+
+<h3>אורך עקומה</h3>
+<figure class="fig" data-fig="arclen"><figcaption><b>אורך עקומה כגבול של מצולעים.</b> מחברים \(n\) נקודות על הגרף בקווים ישרים. אורך כל קטע הוא \(\sqrt{\Delta x^2+\Delta y^2}=\sqrt{1+\big(\tfrac{\Delta y}{\Delta x}\big)^2}\,\Delta x\). כש־\(n\) גדל, סכום האורכים שואף לאורך העקומה.</figcaption></figure>
+<div class="card thm"><span class="pill">נוסחה · עבור \(f\) גזירה ברציפות</span>
+\[L=\int_a^b\sqrt{1+\big(f'(x)\big)^2}\,dx\]
+<span class="plain">מהשרטוט: לפי לגרנז׳ \(\frac{\Delta y}{\Delta x}=f'(c_i)\) לאיזו \(c_i\) בקטע, ולכן סכום אורכי הקטעים הוא בדיוק סכום רימן של \(\sqrt{1+f'^2}\).</span>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>אורך עקומה</div>
+<div class="wk-q">חשבו את אורך העקומה \(y=\ln(\cos x)\) עבור \(0\le x\le\frac\pi4\).</div>
+<ol class="wsteps">
+<li><span class="st">בודקים תנאים וגוזרים.</span>
+\(\cos x\gt0\) בקטע, ולכן \(f\) גזירה ברציפות שם. \(f'(x)=\frac{-\sin x}{\cos x}=-\tan x\).</li>
+<li><span class="st">מפשטים את הביטוי מתחת לשורש.</span>
+\[\sqrt{1+f'(x)^2}=\sqrt{1+\tan^2x}=\sqrt{\frac1{\cos^2x}}=\frac1{\cos x}\]
+<p class="why-step">בשאלות אורך עקומה הפונקציה נבחרת כך ש־\(1+f'^2\) יהיה ריבוע שלם. כדאי לחפש את הזהות שהופכת אותו לכזה.</p></li>
+<li><span class="st">מציבים בנוסחה.</span>
+\[L=\int_0^{\pi/4}\frac{dx}{\cos x}=\ln\Big|\frac1{\cos x}+\tan x\Big|\,\Big|_0^{\pi/4}\]
+<p class="why-step">הפונקציה הקדומה של \(\frac1{\cos x}\) מופיעה ב<a class="xref" href="chapter-4.html">פרק 4</a>, בטבלת האינטגרלים ב־\(\theta\).</p></li>
+<li><span class="st">מציבים גבולות.</span>
+ב־\(\frac\pi4\): \(\frac1{\cos}=\sqrt2\), \(\tan=1\). ב־0: \(\frac1{\cos}=1\), \(\tan=0\), ו־\(\ln1=0\).</li>
+</ol>
+<div class="res">\(L=\ln\big(1+\sqrt2\big)\)</div>
+<p class="small" style="margin:0 18px 14px">אותה נוסחה נותנת את היקף המעגל: עבור \(f=\sqrt{R^2-x^2}\) מתקבל \(\sqrt{1+f'^2}=\frac{R}{\sqrt{R^2-x^2}}\), ו־\(L=2\int_{-R}^R\frac{R\,dx}{\sqrt{R^2-x^2}}=2R\arcsin\frac xR\Big|_{-R}^{R}=2\pi R\).</p>
+</div>
+
+<div class="card thm"><span class="pill">להשלמה · שטח פנים של גוף סיבוב</span>
+\[A=2\pi\int_a^b f(x)\sqrt{1+f'(x)^2}\,dx\]
+<span class="plain">כל קטע קטן של העקומה, באורך \(\sqrt{1+f'^2}\,dx\), מסתובב ויוצר "סרט" שהיקפו \(2\pi f(x)\).</span>
+</div>
+
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>בנפח של שטח בין עקומות: \(\pi\int(f^2-g^2)\), <b>לא</b> \(\pi\int(f-g)^2\).</li>
+<li>לשכוח את \(\pi\) (דיסקות) או את \(2\pi\) (קליפות).</li>
+<li>בשטח: לשכוח לפצל בנקודות החיתוך, ואז אזורים עם סימנים הפוכים מבטלים זה את זה.</li>
+<li>באורך עקומה: \(\sqrt{1+f'^2}\), לא \(\sqrt{1+f^2}\).</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">מסובבים את \(y=x^2\), \(0\le x\le1\), סביב ציר \(x\). מה הנפח?</p>
+<div class="opts"><button class="opt">\(\frac\pi3\)</button><button class="opt">\(\frac\pi5\)</button><button class="opt">\(\frac\pi2\)</button><button class="opt">\(\frac{2\pi}5\)</button></div>
+<div class="exp">\(\pi\int_0^1(x^2)^2dx=\pi\int_0^1x^4dx=\frac\pi5\). את \(f\) מעלים בריבוע.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>חתיכה קטנה × סכום = אינטגרל.</b> רצועה \((f-g)dx\) נותנת שטח; דיסקה \(\pi f^2dx\) או קליפה \(2\pi xf\,dx\) נותנות נפח; קטע \(\sqrt{1+f'^2}dx\) נותן אורך.
+</div>
+<a class="next" href="chapter-6.html"><span class="arr">←</span><span><b>הלאה: אינטגרלים לא אמיתיים.</b> עד עכשיו הקטע היה סופי והפונקציה חסומה. מה קורה כשהשטח נמשך עד אינסוף, או כשהגרף "מתפוצץ"? לפעמים השטח בכל זאת סופי.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-4.html"><small>→ הקודם</small><span>4. שברים חלקיים והצבות טריגונומטריות</span></a><a class="pg pg-next" href="chapter-6.html"><small>הבא ←</small><span>6. אינטגרלים לא אמיתיים</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

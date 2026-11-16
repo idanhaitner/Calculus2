@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. האינטגרל המסוים · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html" class="on" aria-current="page"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="#c1">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<div class="part-head" id="partA"><div class="k">חלק א׳ · פרקים <bdi dir="ltr">1–6</bdi></div><h2>אינטגרלים במשתנה אחד</h2>
+<p>השאלה של החלק הזה: <b>כמה הצטבר?</b> שטח מתחת לגרף, מרחק מתוך מהירות, נפח של גוף. נגדיר את האינטגרל כגבול של סכומי מלבנים (<a class="xref" href="#c1">פרק 1</a>), נמצא קיצור דרך לחישוב שלו דרך נגזרות (<a class="xref" href="chapter-2.html">פרק 2</a>), נלמד טכניקות חישוב (<a class="xref" href="chapter-3.html">פרקים <bdi dir="ltr">3–4</bdi></a>), נשתמש בו (<a class="xref" href="chapter-5.html">פרק 5</a>) ונרחיב אותו לקטעים אינסופיים (<a class="xref" href="chapter-6.html">פרק 6</a>).</p></div>
+
+<section id="c1" class="chapter" data-part="A">
+<header class="ch-head"><div class="ch-num">1</div><div><div class="ch-kicker">פרק ראשון</div><h2>האינטגרל המסוים</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> מחדו״א 1, גבולות של סדרות, רציפות, סופרמום ואינפימום, וסכומים כמו \(\sum k=\frac{n(n+1)}2\).</p>
+<ul class="goals"><li>שטח עם סימן</li><li>חלוקה וסכומי דרבו</li><li>סכומי רימן</li><li>מתי פונקציה אינטגרבילית</li><li>גבול של סכום = אינטגרל</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+בחדו״א 1 שאלנו <b>"כמה מהר משהו משתנה?"</b> (נגזרת). עכשיו שואלים את השאלה ההפוכה: <b>"כמה הצטבר?"</b>. אם יודעים את המהירות בכל רגע, כמה קילומטרים נסענו? אם יודעים את הגובה של גרף בכל נקודה, מה השטח מתחתיו?
+<br>לשטח של מלבן יש נוסחה (רוחב × גובה), אבל לשטח מתחת לעקומה אין. הרעיון של רימן: <b>לחתוך את השטח להרבה מלבנים דקים</b>, לחבר את השטחים שלהם, ולהקטין את הרוחב עד שהשגיאה נעלמת. על הרעיון הזה בנוי הפרק כולו.
+</div>
+
+<figure class="fig" data-fig="riemann"><figcaption><b>סכומי רימן ודרבו של \(f(x)=1+\sin x+\frac x2\) בקטע \([0.3,5]\).</b> הגדילו את \(n\) ובחרו איפה לוקחים את גובה המלבן. שימו לב: כש־\(n\) גדל, הסכום העליון והתחתון "נסגרים" על אותו מספר. המספר הזה הוא האינטגרל.</figcaption></figure>
+
+<h3>שלב 1: לחלק את הקטע</h3>
+<div class="card def"><span class="pill">הגדרה · חלוקה</span>
+<b>חלוקה</b> של \([a,b]\) היא סדרה סופית של נקודות \(P:\ a=x_0\lt x_1\lt\dots\lt x_n=b\). אורכי התת־קטעים: \(\Delta x_i=x_i-x_{i-1}\).<br>
+<b>פרמטר החלוקה</b> (רוחב התת־קטע הכי רחב): \(\lambda(P)=\max_i\Delta x_i\). לפעמים מסמנים \(|P|\).<br>
+<b>חלוקה מסומנת</b>: חלוקה יחד עם נקודה \(t_i\in[x_{i-1},x_i]\) בכל תת־קטע.
+<span class="plain">חותכים את הקטע לפרוסות. \(\lambda(P)\) אומר כמה עבה הפרוסה הכי עבה. "חלוקה עדינה" = \(\lambda(P)\) קטן.</span>
+</div>
+
+<h3>שלב 2: לבנות מלבנים</h3>
+<div class="card def"><span class="pill">הגדרה · סכומי דרבו וסכום רימן</span>
+תהי \(f\) <b>חסומה</b> ב־\([a,b]\). בכל תת־קטע נסמן \(M_i=\sup f\), \(m_i=\inf f\):
+\[\overline{S}(f,P)=\sum_{i=1}^n M_i\,\Delta x_i\ \ \text{(סכום עליון)},\qquad \underline{S}(f,P)=\sum_{i=1}^n m_i\,\Delta x_i\ \ \text{(סכום תחתון)}\]
+\[S(f,P,t)=\sum_{i=1}^n f(t_i)\,\Delta x_i\quad\text{(סכום רימן)}\]
+תמיד מתקיים \(\underline{S}\le S\le\overline{S}\).
+<span class="plain">הסכום העליון בונה מלבנים שנוגעים בגרף מלמעלה ("מכסים יותר מדי"), התחתון בונה מלבנים שנוגעים מלמטה ("מכסים פחות מדי"), וסכום רימן הוא כל דבר באמצע. השטח האמיתי כלוא ביניהם.</span>
+</div>
+<div class="note"><b>למה חסומה?</b> אם \(f\) לא חסומה, \(\sup\) או \(\inf\) יכולים להיות אינסופיים, והמלבנים לא מוגדרים. לכן "אינטגרבילית" תמיד כוללת "חסומה".</div>
+
+<h3>שלב 3: לעדן, ולקבל את האינטגרל</h3>
+<div class="card def"><span class="pill">הגדרה · אינטגרביליות רימן</span>
+\(f\) חסומה נקראת <b>אינטגרבילית</b> ב־\([a,b]\) אם קיים מספר \(I\) כך שלכל \(\varepsilon\gt0\) קיים \(\delta\gt0\), כך שלכל חלוקה מסומנת עם \(\lambda(P)\lt\delta\):
+\[\big|S(f,P,t)-I\big|\lt\varepsilon .\]
+מסמנים \(I=\int_a^bf(x)\,dx=\lim_{\lambda(P)\to0}S(f,P,t)\).
+<span class="plain">לא משנה איך חותכים ואיזו נקודה בוחרים בכל פרוסה: אם הפרוסות מספיק דקות, הסכום קרוב ל־\(I\) כמה שרוצים.</span>
+</div>
+<div class="card thm"><span class="pill">משפט · קריטריון דרבו</span>
+\(f\) חסומה אינטגרבילית ב־\([a,b]\) אם ורק אם לכל \(\varepsilon\gt0\) קיימת חלוקה \(P\) כך ש־
+\[\overline{S}(f,P)-\underline{S}(f,P)\lt\varepsilon .\]
+<span class="plain">בשרטוט למעלה: השטח של "המדרגות הצבעוניות" בין העליון לתחתון. אם אפשר להקטין אותו כרצוננו, הפונקציה אינטגרבילית.</span>
+</div>
+<div class="card thm"><span class="pill">משפטים · מי אינטגרבילית?</span>
+<ul>
+<li>כל פונקציה <b>רציפה</b> בקטע סגור היא אינטגרבילית. (בהוכחה: רציפות במידה שווה, משפט קנטור.)</li>
+<li>כל פונקציה <b>מונוטונית</b> בקטע סגור היא אינטגרבילית.</li>
+<li>פונקציה <b>חסומה עם מספר סופי של נקודות אי־רציפות</b> היא אינטגרבילית. שינוי ערך בנקודה אחת לא משנה את האינטגרל.</li>
+</ul>
+</div>
+
+<div class="exr"><div class="exr-h"><span class="n">דוגמה</span>פונקציה שאינה אינטגרבילית: דירכלה</div>
+<div class="exr-q">\(D(x)=1\) אם \(x\in\mathbb Q\), ו־\(D(x)=0\) אחרת. האם \(D\) אינטגרבילית ב־\([a,b]\)?</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p>בכל תת־קטע, קצר ככל שיהיה, יש גם רציונליים וגם אי־רציונליים. לכן בכל חלוקה \(M_i=1\) ו־\(m_i=0\):</p>
+\[\overline S(D,P)=\sum1\cdot\Delta x_i=b-a,\qquad \underline S(D,P)=\sum0\cdot\Delta x_i=0 .\]
+<p class="why-step">ההפרש \(b-a\) לא קטן אף פעם, ולכן לפי קריטריון דרבו \(D\) <b>אינה</b> אינטגרבילית (למרות שהיא חסומה).</p>
+</div></div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>חישוב אינטגרל לפי ההגדרה: \(\int_0^bx^2\,dx\)</div>
+<div class="wk-q">חשבו את \(\int_0^b x^2\,dx\) (עבור \(b\gt0\)) כגבול של סכומי רימן. נתון: \(\sum_{k=1}^nk^2=\frac{n(n+1)(2n+1)}6\).</div>
+<ol class="wsteps">
+<li><span class="st">מבטיחים שהאינטגרל קיים.</span>
+\(x^2\) רציפה ב־\([0,b]\), ולכן אינטגרבילית. מכאן שהגבול של סכומי רימן זהה <b>לכל</b> סדרת חלוקות מסומנות עם \(\lambda(P)\to0\).
+<p class="why-step">בלי הצעד הזה אסור לבחור חלוקה מסוימת: הגבול לאורך חלוקה אחת אינו מוכיח שהגבול הכללי קיים.</p></li>
+<li><span class="st">בוחרים חלוקה ונקודות נוחות.</span>
+חלוקה אחידה ל־\(n\) חלקים: \(x_i=\frac{ib}n\), \(\Delta x_i=\frac bn\), ו־\(\lambda(P)=\frac bn\to0\). בכל תת־קטע בוחרים את הקצה הימני, \(t_i=x_i\).</li>
+<li><span class="st">כותבים את סכום רימן.</span>
+\[S_n=\sum_{i=1}^n f(t_i)\,\Delta x_i=\sum_{i=1}^n\Big(\frac{ib}{n}\Big)^2\cdot\frac{b}{n}=\frac{b^3}{n^3}\sum_{i=1}^n i^2\]
+<p class="why-step">כל מה שאינו תלוי באינדקס \(i\) יוצא מחוץ לסכום, ונשאר סכום מוכר.</p></li>
+<li><span class="st">מציבים את הנוסחה לסכום.</span>
+\[S_n=\frac{b^3}{n^3}\cdot\frac{n(n+1)(2n+1)}{6}=\frac{b^3}{6}\cdot\Big(1+\frac1n\Big)\Big(2+\frac1n\Big)\]</li>
+<li><span class="st">משאיפים \(n\to\infty\).</span>
+\[\int_0^bx^2\,dx=\lim_{n\to\infty}S_n=\frac{b^3}6\cdot1\cdot2=\frac{b^3}3\]</li>
+</ol>
+<div class="res">\(\displaystyle\int_0^bx^2\,dx=\frac{b^3}{3}\)</div>
+<p class="small" style="margin:0 18px 14px">באותה שיטה מחשבים \(\int_0^1e^xdx=e-1\), בעזרת סכום של סדרה הנדסית והגבול \(\lim_{h\to0}\frac{e^h-1}h=1\).</p>
+</div>
+
+<h3>תכונות האינטגרל</h3>
+<figure class="fig" data-fig="signedarea"><figcaption><b>שטח עם סימן.</b> האינטגרל סופר שטח מעל ציר \(x\) בפלוס ושטח מתחתיו במינוס. כאן \(\int_0^{2\pi}\sin x\,dx=0\): שתי הגבעות מבטלות זו את זו. כדי לקבל שטח גאומטרי מחשבים \(\int|f|\).</figcaption></figure>
+<div class="card thm"><span class="pill">תכונות</span>
+<ol>
+<li><b>לינאריות:</b> \(\int(\alpha f+\beta g)=\alpha\int f+\beta\int g\).</li>
+<li><b>מונוטוניות:</b> אם \(f\le g\) בכל הקטע, אז \(\int_a^b f\le\int_a^b g\). בפרט \(\big|\int_a^bf\big|\le\int_a^b|f|\).</li>
+<li><b>אדיטיביות:</b> \(\int_a^b f=\int_a^c f+\int_c^b f\).</li>
+<li><b>היפוך גבולות:</b> \(\int_b^a f=-\int_a^b f\), ו־\(\int_a^af=0\).</li>
+<li><b>חסמים:</b> אם \(m\le f\le M\) בקטע, אז \(m(b-a)\le\int_a^b f\le M(b-a)\).</li>
+</ol>
+<span class="plain">תכונה 5 אומרת: השטח נמצא בין המלבן הנמוך למלבן הגבוה. משתמשים בה כדי <b>להעריך</b> אינטגרל בלי לחשב אותו.</span>
+</div>
+
+<figure class="fig" data-fig="mvt"><figcaption><b>משפט הערך הממוצע האינטגרלי.</b> המלבן הכחול הכהה בגובה \(f(c)\) מכסה בדיוק את אותו שטח כמו העקומה: מה ש"עודף" מעל המלבן ממלא בדיוק את מה שחסר מתחתיו.</figcaption></figure>
+<div class="card thm"><span class="pill">משפט הערך הממוצע האינטגרלי</span>
+אם \(f\) רציפה ב־\([a,b]\), קיימת \(c\in[a,b]\) כך ש־
+\[\int_a^b f(x)\,dx=f(c)(b-a)\qquad\Longleftrightarrow\qquad f(c)=\frac{1}{b-a}\int_a^b f(x)\,dx\]
+<span class="plain">לכל פונקציה רציפה יש "גובה ממוצע", והפונקציה באמת מגיעה אליו באיזו נקודה.</span>
+<p class="small">הוכחה: לפי ויירשטראס יש ל־\(f\) מינימום \(m\) ומקסימום \(M\). לפי תכונת החסמים, הממוצע נמצא בין \(m\) ל־\(M\), ולפי משפט ערך הביניים \(f\) מקבלת אותו.</p>
+</div>
+
+<h3>טכניקות עם סכומי רימן</h3>
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>פונקציה שערכיה ידועים רק ברציונליים</div>
+<div class="exr-q">תהא \(f:[a,b]\to\mathbb R\) <b>אינטגרבילית</b>, עם \(f(x)=c\) לכל \(x\in\mathbb Q\) (באי־רציונליים לא ידוע). כאשר \(a,b\in\mathbb Q\), חשבו את \(\int_a^bf\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">הנתון "אינטגרבילית" אומר שסכומי רימן מתכנסים לאינטגרל <b>לכל</b> בחירה של נקודות. אז בוחרים את הבחירה שנוחה לנו: נקודות רציונליות, שבהן אנחנו יודעים את הערך.</p>
+<p>חלוקה אחידה \(x_i=a+\frac{b-a}ni\) (כולן רציונליות כי \(a,b\in\mathbb Q\)) ו־\(t_i=x_i\):</p>
+\[S(f,P)=\sum_{i=1}^n c\cdot\frac{b-a}{n}=c(b-a)\ \Longrightarrow\ \int_a^bf=\lim S(f,P)=\boxed{c(b-a)}\]
+</div></div>
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>\(\int_0^1\sqrt x\,dx\) עם חלוקה לא אחידה</div>
+<div class="exr-q">חשבו את \(\int_0^1\sqrt x\,dx\) בעזרת סכומי רימן.</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">בחלוקה אחידה מקבלים \(\sqrt{i/n}\), שאין דרך לסכם. לכן בוחרים את הנקודות כך שהשורש ייצא נקי: \(x_i=\big(\frac in\big)^2\), ואז \(\sqrt{x_i}=\frac in\). זו עדיין חלוקה לגיטימית, ו־\(\lambda(P)\le\frac{2n-1}{n^2}\to0\).</p>
+\[S=\sum_{i=0}^{n-1}\underbrace{\frac in}_{f(t_i)}\underbrace{\frac{(i+1)^2-i^2}{n^2}}_{\Delta x_i}=\frac1{n^3}\sum_{i=0}^{n-1}(2i^2+i)=\frac{2(n-1)n(2n-1)}{6n^3}+\frac{(n-1)n}{2n^3}\xrightarrow{n\to\infty}\boxed{\frac23}\]
+</div></div>
+
+<div class="card tip"><span class="pill">טכניקה · גבול של סכום כאינטגרל</span>
+כשמבקשים \(\lim_{n\to\infty}\) של סכום מהצורה \(\frac1n\sum f\big(\frac kn\big)\), מזהים בו סכום רימן:
+<ol class="steps">
+<li>מזהים את <b>רוחב הפרוסה</b> \(\Delta x\) (בדרך כלל \(\frac1n\) או \(\frac{b-a}n\)).</li>
+<li>מזהים את <b>הנקודות</b> \(t_k\) (למשל \(\frac kn\) או \(\frac{2k}n\)), ומהן את הקטע \([a,b]\): התחום שבו הן נעות כש־\(k\) רץ מ־1 עד \(n\).</li>
+<li>מזהים את \(f\) ומציינים שהיא רציפה, ולכן אינטגרבילית.</li>
+<li>הגבול שווה ל־\(\int_a^bf\).</li>
+</ol>
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>גבול של סכום כאינטגרל</div>
+<div class="wk-q">חשבו \(\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^n\ln\Big(1+\frac kn\Big)\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים את רוחב הפרוסה.</span>
+הגורם \(\frac1n\) מחוץ לסכום הוא \(\Delta x\). אם \(\Delta x=\frac{b-a}n=\frac1n\), אורך הקטע הוא 1.</li>
+<li><span class="st">מזהים את הנקודות ואת הקטע.</span>
+בתוך הפונקציה מופיע \(\frac kn\). כש־\(k\) רץ מ־1 עד \(n\), הנקודות \(\frac kn\) נעות מ־\(\frac1n\) עד 1, כלומר הן הקצוות הימניים של חלוקה אחידה של \([0,1]\).</li>
+<li><span class="st">מזהים את הפונקציה ומצדיקים אינטגרביליות.</span>
+\(f(x)=\ln(1+x)\), רציפה ב־\([0,1]\) ולכן אינטגרבילית. הסכום הוא סכום רימן \(\sum f(t_k)\Delta x\) עם \(\lambda(P)=\frac1n\to0\), ולכן
+\[\lim_{n\to\infty}\frac1n\sum_{k=1}^n\ln\Big(1+\frac kn\Big)=\int_0^1\ln(1+x)\,dx\]</li>
+<li><span class="st">מחשבים את האינטגרל.</span>
+בחלקים, עם \(u=\ln(1+x)\), \(v'=1\), ובחירה נוחה \(v=x+1\):
+\[\int_0^1\ln(1+x)\,dx=(x+1)\ln(1+x)\Big|_0^1-\int_0^1(x+1)\cdot\frac1{1+x}\,dx=2\ln2-1\]
+<p class="why-step">הבחירה \(v=x+1\) במקום \(v=x\) מותרת, כי \(v\) הוא פונקציה קדומה כלשהי של \(v'\). היא מבטלת את המכנה באינטגרל שנשאר.</p></li>
+</ol>
+<div class="res">\(\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^n\ln\Big(1+\frac kn\Big)=2\ln2-1\)</div>
+<p class="small" style="margin:0 18px 14px">כשהנקודות הן \(\frac{2k}n\), הקטע הוא \([0,2]\) ו־\(\Delta x=\frac2n\). למשל \(\lim\sum_{k=1}^n\frac2n\cdot\frac{2k/n}{1+(2k/n)^2}=\int_0^2\frac{x}{1+x^2}dx=\frac12\ln5\).</p>
+</div>
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>גבול של סדרה כסכום רימן</div>
+<div class="exr-q">\(f:[0,1]\to(1,\infty)\) גזירה ברציפות, \(f(0)=3\), \(f(1)=4\). הוכיחו ש־\(a_n=\frac1n\sum_{k=1}^n\frac{f'(k/n)}{f(k/n)}\) מתכנסת וחשבו את גבולה.</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">\(\frac1n\) הוא \(\Delta x\), הנקודות \(\frac kn\) רצות ב־\([0,1]\), והפונקציה היא \(g=\frac{f'}{f}\).</p>
+<p>\(f'\) רציפה ו־\(f\gt1\) לא מתאפסת, ולכן \(g\) רציפה ובפרט אינטגרבילית. \(a_n\) הוא סכום רימן של \(g\) עם חלוקה אחידה, ולכן:</p>
+\[a_n\xrightarrow{n\to\infty}\int_0^1\frac{f'(x)}{f(x)}dx=\ln f(x)\Big|_0^1=\ln4-\ln3=\boxed{\ln\tfrac43}\]
+</div></div>
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>הוכח או הפרך</div>
+<div class="exr-q"><b>(א)</b> אם \(f\le g\le h\) ו־\(f,h\) אינטגרביליות, אז \(g\) אינטגרבילית.<br><b>(ב)</b> אם קיימת חלוקה \(P\) שבה \(\overline S(f,P)=\underline S(f,P)\), אז \(f\) קבועה.</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p><b>(א) לא נכון.</b> \(f=0\), \(h=1\), ו־\(g\) פונקציית דירכלה.</p>
+<p><b>(ב) נכון.</b> \(\sum(M_i-m_i)\Delta x_i=0\) וכל המחוברים אי־שליליים, ולכן \(M_i=m_i\) לכל \(i\): \(f\) קבועה בכל תת־קטע. תת־קטעים סמוכים חולקים נקודת קצה, ולכן כל הקבועים שווים.</p>
+</div></div>
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לבחור נקודות "נוחות" בסכום רימן <b>לפני</b> שהראיתם שהפונקציה אינטגרבילית. הבחירה החופשית מותרת רק אחרי שיודעים שהגבול קיים.</li>
+<li>בחלוקה לא אחידה, לבדוק \(\lambda(P)\to0\) ולא רק \(n\to\infty\).</li>
+<li>בגבול של סכום: לטעות בקטע. אם הנקודות הן \(\frac{2k}n\), הקטע הוא \([0,2]\) ו־\(\Delta x=\frac2n\).</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(f(x)=1\) עבור \(x\) רציונלי ו־\(0\) אחרת, בקטע \([0,1]\). מה נכון?</p>
+<div class="opts"><button class="opt">אינטגרבילית, והאינטגרל 1</button><button class="opt">אינטגרבילית, והאינטגרל 0</button><button class="opt">לא אינטגרבילית: סכומי רימן תלויים בבחירת הנקודות</button><button class="opt">לא אינטגרבילית כי היא לא חסומה</button></div>
+<div class="exp">נקודות רציונליות נותנות סכום 1, ונקודות אי־רציונליות נותנות 0. שני גבולות שונים, ולכן היא לא אינטגרבילית. היא כן חסומה.</div></div>
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^n\Big(\frac kn\Big)^2=\ ?\)</p>
+<div class="opts"><button class="opt">\(\frac12\)</button><button class="opt">\(\frac13\)</button><button class="opt">\(1\)</button><button class="opt">\(\infty\)</button></div>
+<div class="exp">זה סכום רימן של \(x^2\) על \([0,1]\) עם \(\Delta x=\frac1n\). לכן הגבול הוא \(\int_0^1x^2dx=\frac13\).</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+האינטגרל הוא <b>הגבול של סכומי מלבנים</b> כשהחלוקה מתעדנת. פונקציה אינטגרבילית כשהסכום העליון והתחתון נפגשים, וכל פונקציה רציפה היא כזו.
+</div>
+<a class="next" href="chapter-2.html"><span class="arr">←</span><span><b>הלאה: המשפט היסודי.</b> חישוב לפי ההגדרה ארוך, כפי שהראה החישוב עם \(\sum i^2\). בפרק הבא נגלה קיצור דרך: האינטגרל קשור לנגזרת, ולכן אפשר לחשב אותו בעזרת <b>פונקציה קדומה</b>.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="index.html"><small>→ הקודם</small><span>מפת הקורס</span></a><a class="pg pg-next" href="chapter-2.html"><small>הבא ←</small><span>2. המשפט היסודי של החדו״א</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

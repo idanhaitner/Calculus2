@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15. נקודות קיצון · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html" class="on" aria-current="page"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="#c15">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c15" class="chapter" data-part="C">
+<header class="ch-head"><div class="ch-num">15</div><div><div class="ch-kicker">פרק חמישה־עשר</div><h2>נקודות קיצון</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> הגרדיאנט ומשמעותו (<a class="xref" href="chapter-13.html">פרק 13</a>), קומפקטיות וויירשטראס (<a class="xref" href="chapter-10.html">פרקים <bdi dir="ltr">10–11</bdi></a>), ומבחן הנגזרת השנייה במשתנה אחד.</p>
+<ul class="goals"><li>נקודה קריטית</li><li>פרמה</li><li>מטריצת הסיאן</li><li>מינימום / מקסימום / אוכף</li><li>קיצון מוחלט בתחום</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+אופטימיזציה היא אחת הסיבות העיקריות ללמוד חדו״א: למזער עלות, למקסם נפח, למצוא את הנקודה הקרובה ביותר. במשתנה אחד: \(f'=0\), ואז \(f''\) מכריעה. בשני משתנים אותו דבר בדיוק, עם תוספת אחת: בנוסף ל"בור" ול"הר" יש סוג שלישי, <b>אוכף</b>, שבו בכיוון אחד עולים ובכיוון אחר יורדים. את ההכרעה עושה <b>מטריצת ההסיאן</b>, שהיא ה"נגזרת השנייה" של \(f\).
+</div>
+
+<figure class="fig" data-fig="extrema"><figcaption><b>שלושת סוגי הנקודות הקריטיות.</b> בכולן \(\nabla f=\vec0\) (המישור המשיק אופקי). בחרו סוג: <b>מינימום</b> \(x^2+y^2\) (קווי גובה אליפסות סביב בור), <b>מקסימום</b> \(-x^2-y^2\), <b>אוכף</b> \(x^2-y^2\) (קווי גובה היפרבולות, ובאמצע שני ישרים שנחתכים).</figcaption></figure>
+
+<div class="box def"><div class="tag">הגדרות</div>
+<ul>
+<li><b>מקסימום/מינימום מקומי</b> ב־\(x_0\): יש סביבה של \(x_0\) שבה \(f(x_0)\ge f(x)\) (או \(\le\)).</li>
+<li><b>גלובלי (מוחלט):</b> אותו דבר, אבל לכל \(x\) בתחום.</li>
+<li><b>נקודה קריטית:</b> נקודה <b>פנימית</b> שבה \(\nabla f=\vec0\), או שבה \(f\) לא דיפרנציאבילית.</li>
+<li><b>נקודת אוכף:</b> נקודה קריטית שאינה מקסימום ואינה מינימום, כמו "אוכף של סוס".</li>
+</ul>
+</div>
+<div class="box thm"><div class="tag">משפט פרמה</div>
+אם \(f\) דיפרנציאבילית ב־\(x_0\) ויש בה קיצון מקומי, אז \(\nabla f(x_0)=\vec0\).<br>
+<span class="small">ההוכחה: אם \(\nabla f\neq0\), בכיוון \(\nabla f\) הפונקציה עולה ובכיוון \(-\nabla f\) היא יורדת, וזו סתירה לקיצון.</span>
+</div>
+
+
+<h3>סיווג נקודות קריטיות: מטריצת ההסיאן</h3>
+<div class="box def"><div class="tag">הסיאן</div>
+\[H_f=\begin{pmatrix}f_{xx}&amp;f_{xy}\\f_{yx}&amp;f_{yy}\end{pmatrix}\]
+<b>משפט שוורץ:</b> אם הנגזרות השניות רציפות, \(f_{xy}=f_{yx}\), ולכן המטריצה סימטרית.<br>
+<b>טיילור מסדר 2:</b> \(f(x_0+h)\approx f(x_0)+\nabla f(x_0)\cdot h+\frac12h^tH_f(x_0)h\). בנקודה קריטית האיבר הלינארי מתאפס, ולכן ה<b>סימן של \(h^tHh\)</b> קובע את סוג הנקודה.
+</div>
+<div class="box thm"><div class="tag">משפט הסיווג</div>
+<div class="tablewrap"><table>
+<tr><th>\(H_f(x_0)\)</th><th>ערכים עצמיים</th><th>מסקנה</th></tr>
+<tr><td>מוגדרת חיובית</td><td>כולם חיוביים</td><td>מינימום מקומי</td></tr>
+<tr><td>מוגדרת שלילית</td><td>כולם שליליים</td><td>מקסימום מקומי</td></tr>
+<tr><td>לא מוגדרת</td><td>גם חיוביים וגם שליליים</td><td>נקודת אוכף</td></tr>
+<tr><td>\(\det H=0\)</td><td>יש ערך עצמי 0</td><td><b>המבחן לא מכריע</b>, בודקים ידנית</td></tr>
+</table></div>
+<b>קריטריון סילבסטר</b> (בעזרת המינורים הראשיים \(A_1,A_2,A_3,\dots\), כלומר הדטרמיננטות של הריבועים בפינה השמאלית העליונה):
+<ul>
+<li>מוגדרת חיובית: כל המינורים חיוביים, \(+,+,+,\dots\)</li>
+<li>מוגדרת שלילית: הסימנים מתחלפים, \(-,+,-,\dots\)</li>
+</ul>
+</div>
+<div class="box tip"><div class="tag">שליפה מהירה ל־2 משתנים</div>
+מחשבים \(D=f_{xx}f_{yy}-f_{xy}^2\) בנקודה הקריטית:
+<ul>
+<li><b>מינימום</b> אם \(D\gt0\) וגם \(f_{xx}\gt0\)</li>
+<li><b>מקסימום</b> אם \(D\gt0\) וגם \(f_{xx}\lt0\)</li>
+<li><b>אוכף</b> אם \(D\lt0\)</li>
+<li><b>לא ידוע</b> אם \(D=0\)</li>
+</ul>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>מציאת נקודות קריטיות וסיווגן</div>
+<div class="wk-q">מצאו וסווגו את הנקודות הקריטיות של \(f(x,y)=x^3+y^3-3xy\).</div>
+<ol class="wsteps">
+<li><span class="st">מחשבים את הגרדיאנט.</span>
+\(f\) פולינום, ולכן דיפרנציאבילית בכל \(\mathbb R^2\), והנקודות הקריטיות הן רק פתרונות של \(\nabla f=\vec0\):
+\[f_x=3x^2-3y=0,\qquad f_y=3y^2-3x=0\]</li>
+<li><span class="st">פותרים את המערכת.</span>
+מהמשוואה הראשונה \(y=x^2\). מציבים בשנייה: \(x^4=x\), כלומר \(x(x^3-1)=0\), ולכן \(x=0\) או \(x=1\). הנקודות: \((0,0)\) ו־\((1,1)\).
+<p class="why-step">מחלצים משתנה ממשוואה אחת ומציבים בשנייה. מחלקים במשתנה רק אחרי שבודקים בנפרד את המקרה שהוא 0, כדי לא לאבד פתרונות.</p></li>
+<li><span class="st">מחשבים את ההסיאן.</span>
+\[f_{xx}=6x,\qquad f_{yy}=6y,\qquad f_{xy}=-3,\qquad D=f_{xx}f_{yy}-f_{xy}^2=36xy-9\]</li>
+<li><span class="st">מסווגים את \((0,0)\).</span>
+\(D(0,0)=-9\lt0\), ולכן ההסיאן אינו מוגדר: <b>נקודת אוכף</b>. בדיקה: \(f(x,x)=2x^3-3x^2\lt0\) ו־\(f(x,-x)=3x^2\gt0\) ליד הראשית.</li>
+<li><span class="st">מסווגים את \((1,1)\).</span>
+\(D(1,1)=27\gt0\) ו־\(f_{xx}(1,1)=6\gt0\), ולכן ההסיאן מוגדר חיובית: <b>מינימום מקומי</b>, עם \(f(1,1)=-1\).</li>
+<li><span class="st">האם המינימום גלובלי?</span>
+לא. \(f(x,0)=x^3\to-\infty\) כאשר \(x\to-\infty\), ולכן \(f\) אינה חסומה מלרע.</li>
+</ol>
+<div class="res">\((0,0)\) נקודת אוכף; \((1,1)\) מינימום מקומי (לא גלובלי), \(f(1,1)=-1\).</div>
+</div>
+<div class="box ex"><div class="tag">כשהמבחן אינו מספיק</div>
+<p><b>\(f=x^2+y^2+(xy)^3\):</b> הנקודות הקריטיות הן \((0,0)\) ו־\(\pm\big(\sqrt[4]{\tfrac23},-\sqrt[4]{\tfrac23}\big)\). ב־\((0,0)\): \(H=\text{diag}(2,2)\), מוגדרת חיובית, ולכן <b>מינימום</b>. בשתי האחרות: \(H=\begin{pmatrix}-2&amp;6\\6&amp;-2\end{pmatrix}\) עם ערכים עצמיים \(4,-8\), ולכן <b>אוכף</b>.</p>
+<p><b>\(f=x^4-y^4\) לעומת \(x^4+y^4\):</b> בשתיהן \(H(0,0)=0\), והמבחן לא מכריע. ב־\(x^4-y^4\) יש ערכים חיוביים על ציר \(x\) ושליליים על ציר \(y\), ולכן אוכף. ב־\(x^4+y^4\ge0=f(0,0)\), ולכן מינימום.</p>
+<p><b>\(f=\frac{x^2-y^2}{x^2+y^2+xy+1}\):</b> במקום לחשב הסיאן מסובך, בודקים לפי ההגדרה: \(f(x,0)\gt0\) ו־\(f(0,y)\lt0\) ליד הראשית, ו־\(f(0,0)=0\). לכן \((0,0)\) אוכף.</p>
+</div>
+<div class="box tip"><div class="tag">טיפ</div>
+כשההסיאן מסובך או ש־\(\det H=0\), <b>בדקו ישירות לפי ההגדרה</b>: הציבו נקודות קרובות (על הצירים, על \(y=x\)) והשוו ל־\(f(x_0)\). אם יש ערכים גדולים וגם קטנים, זו נקודת אוכף.
+</div>
+
+
+<h3>קיצון גלובלי (מוחלט) בתחום</h3>
+<div class="box tip"><div class="tag">אלגוריתם לתחום קומפקטי</div>
+<ol class="steps">
+<li><b>ויירשטראס:</b> \(f\) רציפה והתחום קומפקטי, ולכן מקסימום ומינימום קיימים. מציינים זאת במפורש.</li>
+<li><b>בפנים:</b> מוצאים נקודות קריטיות (\(\nabla f=0\), או נקודות שבהן \(f\) לא דיפרנציאבילית).</li>
+<li><b>על השפה:</b> מבטאים את השפה בפרמטר (למשל \(y^2=1-x^2\) על מעגל) ומקבלים בעיה במשתנה אחד, או משתמשים בכופלי לגרנז׳. לא לשכוח <b>פינות</b> וקצוות.</li>
+<li><b>משווים</b> את ערכי \(f\) בכל הנקודות החשודות. הגדול ביותר הוא המקסימום, והקטן ביותר המינימום.</li>
+</ol>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>קיצון מוחלט בתחום קומפקטי עם פינות</div>
+<div class="wk-q">מצאו את המקסימום והמינימום המוחלטים של \(f(x,y)=x^2-2xy+2y\) במלבן \(D=[0,3]\times[0,2]\).</div>
+<ol class="wsteps">
+<li><span class="st">קיום.</span>
+\(f\) רציפה ו־\(D\) סגור וחסום, ולכן לפי ויירשטראס \(f\) מקבלת ב־\(D\) מקסימום ומינימום.</li>
+<li><span class="st">נקודות קריטיות בפנים.</span>
+\(f_x=2x-2y=0\) ו־\(f_y=-2x+2=0\) נותנים \(x=y=1\). הנקודה \((1,1)\) בפנים, ו־\(f(1,1)=1\).
+<p class="why-step">בשלב הזה לא צריך לסווג את הנקודה בעזרת ההסיאן: מספיק לרשום את ערך הפונקציה בה ולהשוות בסוף.</p></li>
+<li><span class="st">השפה, צלע אחר צלע.</span>
+על כל צלע \(f\) הופכת לפונקציה של משתנה אחד בקטע סגור:
+<ul>
+<li>\(y=0,\ 0\le x\le3\): \(f=x^2\). ערכים קיצוניים \(0\) ב־\((0,0)\) ו־\(9\) ב־\((3,0)\).</li>
+<li>\(x=3,\ 0\le y\le2\): \(f=9-4y\), יורדת. ערכים \(9\) ב־\((3,0)\) ו־\(1\) ב־\((3,2)\).</li>
+<li>\(y=2,\ 0\le x\le3\): \(f=x^2-4x+4=(x-2)^2\). מינימום \(0\) ב־\((2,2)\), ובקצוות \(4\) ב־\((0,2)\) ו־\(1\) ב־\((3,2)\).</li>
+<li>\(x=0,\ 0\le y\le2\): \(f=2y\). ערכים \(0\) ב־\((0,0)\) ו־\(4\) ב־\((0,2)\).</li>
+</ul>
+<p class="why-step">בכל צלע בודקים גם נקודות קריטיות פנימיות של הפונקציה החד־ממדית (כמו \((2,2)\)) וגם את קצות הצלע, שהם פינות המלבן.</p></li>
+<li><span class="st">משווים את כל הערכים.</span>
+החשודות וערכיהן: \((1,1)\mapsto1\), \((0,0)\mapsto0\), \((3,0)\mapsto9\), \((3,2)\mapsto1\), \((2,2)\mapsto0\), \((0,2)\mapsto4\).</li>
+</ol>
+<div class="res">מקסימום \(9\) ב־\((3,0)\); מינימום \(0\) ב־\((0,0)\) וב־\((2,2)\).</div>
+</div>
+<div class="box ex"><div class="tag">שפה עקומה: \(f=\frac{2x^2+y^2}{x^2+y^2+1}\) בעיגול \(x^2+y^2\le1\)</div>
+בפנים: \(\nabla f=0\) רק ב־\((0,0)\), ושם \(f=0\).<br>
+על השפה \(x^2+y^2=1\): \(f=\frac{2x^2+(1-x^2)}{2}=\frac{x^2+1}{2}\) עבור \(x\in[-1,1]\). החשודות הן \((0,\pm1)\) עם \(f=\frac12\), ו־\((\pm1,0)\) עם \(f=1\).<br>
+<b>מקסימום 1</b> ב־\((\pm1,0)\), <b>מינימום 0</b> ב־\((0,0)\).
+</div>
+<div class="box ex"><div class="tag">דוגמה: מרחק מינימלי</div>
+מחפשים את הנקודה על \(\{(x,\frac1x):x\gt0\}\) הקרובה ביותר לראשית. <b>טריק:</b> במקום למזער את המרחק, ממזערים את <b>ריבוע</b> המרחק, וכך השורש נעלם. \(g(x)=x^2+\frac1{x^2}\), \(g'=2x-\frac2{x^3}=0\), ולכן \(x=1\). הנקודה היא \((1,1)\) והמרחק \(\sqrt2\).
+</div>
+<div class="box ex"><div class="tag">בעיה מילולית: תיבה</div>
+בין כל התיבות עם שטח פנים נתון \(S\), למי יש נפח מקסימלי? \(V=xyz\) עם \(2(xy+xz+yz)=S\). מחלצים את \(z\), גוזרים ומשווים ל־0, ומקבלים \(x=y=z\). כלומר <b>קובייה</b>.
+</div>
+<div class="box warn"><div class="tag">מלכודת: תחום לא חסום</div>
+אז אי אפשר להשתמש בויירשטראס ישירות. צריך להראות למשל ש־\(f\to\infty\) רחוק מהראשית, ואז לצמצם לכדור סגור (ראו <a class="xref" href="chapter-22.html#c22-e1">תרגיל 1 בפרק 22</a>).
+</div>
+
+
+<div class="quiz" data-correct="0"><div class="tag">בדוק את עצמך</div>
+<p class="q">בנקודה קריטית \(f_{xx}=2\), \(f_{yy}=8\), \(f_{xy}=3\). מה סוג הנקודה?</p>
+<div class="opts"><button class="opt">מינימום מקומי</button><button class="opt">מקסימום מקומי</button><button class="opt">אוכף</button><button class="opt">אי אפשר לדעת</button></div>
+<div class="exp">\(D=2\cdot8-3^2=7\gt0\) ו־\(f_{xx}=2\gt0\), ולכן מינימום.</div></div>
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(f=x^2-y^2\). מה הנקודה \((0,0)\)?</p>
+<div class="opts"><button class="opt">מינימום</button><button class="opt">מקסימום</button><button class="opt">אוכף</button><button class="opt">לא נקודה קריטית</button></div>
+<div class="exp">\(\nabla f=(0,0)\) ו־\(D=2\cdot(-2)-0=-4\lt0\), ולכן אוכף. על ציר \(x\) הפונקציה עולה, ועל ציר \(y\) היא יורדת.</div></div>
+<div class="quiz" data-correct="3"><div class="tag">בדוק את עצמך</div>
+<p class="q">בנקודה קריטית יצא \(\det H_f=0\). מה עושים?</p>
+<div class="opts"><button class="opt">זו נקודת אוכף</button><button class="opt">זה מינימום</button><button class="opt">זו לא נקודה קריטית</button><button class="opt">המבחן לא מכריע, ובודקים ידנית לפי ההגדרה</button></div>
+<div class="exp">דוגמה: \(x^4+y^4\) ו־\(x^4-y^4\). בשתיהן \(H=0\), אבל באחת יש מינימום ובשנייה אוכף.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>מוצאים</b> נקודות עם \(\nabla f=\vec0\), <b>מסווגים</b> לפי \(D=f_{xx}f_{yy}-f_{xy}^2\) (חיובי: קיצון לפי סימן \(f_{xx}\); שלילי: אוכף; אפס: בודקים ידנית). בתחום קומפקטי: פנים + שפה + השוואה.
+</div>
+<a class="next" href="chapter-16.html"><span class="arr">←</span><span><b>הלאה: כופלי לגרנז׳.</b> על השפה של תחום, או כשיש אילוץ כמו "על המעגל", \(\nabla f=\vec0\) כבר לא התנאי הנכון. נלמד שיטה שמשתמשת בגרדיאנט גם של הפונקציה וגם של האילוץ.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-14.html"><small>→ הקודם</small><span>14. משפט הפונקציה הסתומה</span></a><a class="pg pg-next" href="chapter-16.html"><small>הבא ←</small><span>16. כופלי לגרנז׳</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. אינטגרלים לא אמיתיים · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html" class="on" aria-current="page"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="#c6">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c6" class="chapter" data-part="A">
+<header class="ch-head"><div class="ch-num">6</div><div><div class="ch-kicker">פרק שישי</div><h2>אינטגרלים לא אמיתיים</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> אינטגרל מסוים על קטע סופי של פונקציה חסומה (<a class="xref" href="chapter-1.html">פרקים <bdi dir="ltr">1–2</bdi></a>), גבולות של פונקציות, וטורים מחדו״א 1.</p>
+<ul class="goals"><li>קטע אינסופי</li><li>פונקציה לא חסומה</li><li>\(\int\frac1{x^p}\)</li><li>מבחני השוואה</li><li>התכנסות בהחלט</li><li>מבחן האינטגרל לטורים</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+ההגדרה של רימן דורשת <b>קטע סופי</b> ו<b>פונקציה חסומה</b>. אבל הרבה שאלות טבעיות שוברות את זה: מה השטח מתחת ל־\(\frac1{x^2}\) מ־1 עד אינסוף? (בהסתברות, למשל, \(\int_{-\infty}^\infty e^{-x^2}\).) הפתרון: מחשבים עד נקודה "בטוחה" \(t\), ושולחים את \(t\) לנקודה הבעייתית. אם הגבול קיים וסופי, האינטגרל <b>מתכנס</b>. אחרת הוא <b>מתבדר</b>.
+<br>ההפתעה: שטח שנמשך לאינסוף יכול להיות סופי. השאלה המרכזית בפרק היא <b>מתי</b>.
+</div>
+
+<figure class="fig" data-fig="improper"><figcaption><b>\(\int\frac{dx}{x^p}\): מתי השטח סופי?</b> בחרו \(p\) והזיזו את הגבול \(R\) (באינסוף) או \(\varepsilon\) (ליד 0). עבור \(p\gt1\) השטח עד אינסוף מתייצב על \(\frac1{p-1}\). עבור \(p\lt1\) השטח ליד 0 מתייצב על \(\frac1{1-p}\). עבור \(p=1\) הוא גדל בלי סוף בשני המקרים.</figcaption></figure>
+
+<h3>שני סוגים של "בעיה"</h3>
+<div class="box def"><div class="tag">סוג 1: קטע אינסופי</div>
+\[\int_a^\infty f(x)dx=\lim_{t\to\infty}\int_a^t f(x)dx\]
+\(\int_{-\infty}^\infty f\) <b>מתכנס רק אם שני החלקים</b> \(\int_{-\infty}^a f\) ו־\(\int_a^\infty f\) מתכנסים, ואז הוא שווה לסכומם.
+</div>
+
+<div class="box ex"><div class="tag">דוגמה</div>
+\(\int_{-\infty}^\infty\frac{dx}{1+x^2}=\lim_{t\to-\infty}\big(-\arctan t\big)+\lim_{t\to\infty}\arctan t=\frac\pi2+\frac\pi2=\pi\)
+</div>
+
+<div class="box warn"><div class="tag">מלכודת: \(\int_{-\infty}^\infty x^3dx\)</div>
+לכל \(a\) מתקיים \(\int_{-a}^a x^3dx=0\), כי \(x^3\) אי־זוגית. ובכל זאת האינטגרל <b>מתבדר</b>, כי \(\int_0^\infty x^3dx=\infty\). אסור לחשב גבול סימטרי \(\lim_{a\to\infty}\int_{-a}^a\).
+</div>
+
+<p><b>זוגיות:</b> אם \(f\) אי־זוגית ו־\(\int_0^\infty f\) מתכנס, אז \(\int_{-\infty}^\infty f=0\). אם \(f\) זוגית, אז \(\int_{-\infty}^\infty f=2\int_0^\infty f\).</p>
+
+<div class="box def"><div class="tag">סוג 2: פונקציה לא חסומה</div>
+אם \(f\) לא חסומה ליד \(b\): \(\int_a^bf=\lim_{t\to b^-}\int_a^tf\). אם היא לא חסומה ליד \(a\), לוקחים \(t\to a^+\).<br>
+אם \(f\) לא חסומה בנקודה \(c\) <b>בתוך</b> הקטע, מפצלים: \(\int_a^b=\int_a^c+\int_c^b\), ושני החלקים צריכים להתכנס.
+</div>
+
+<div class="box ex"><div class="tag">דוגמה</div>
+\(\int_2^5\frac{dx}{\sqrt{x-2}}=\lim_{t\to2^+}2\sqrt{x-2}\Big|_t^5=2\sqrt3\), מתכנס.
+</div>
+
+<div class="box warn"><div class="tag">מלכודת קלאסית: \(\int_0^3\frac{dx}{x-1}\)</div>
+"פתרון" נאיבי: \(\ln|x-1|\big|_0^3=\ln2\). <b>זה שגוי.</b> הפונקציה לא חסומה ב־\(x=1\), שנמצאת <u>בתוך</u> הקטע. מפצלים, ו־\(\int_0^1\frac{dx}{x-1}=\lim_{t\to1^-}\ln|t-1|=-\infty\), ולכן האינטגרל מתבדר.<br>
+<b>לפני כל אינטגרל מסוים, בדקו אם יש בקטע נקודה שבה הפונקציה מתפוצצת.</b>
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>חישוב אינטגרל לא אמיתי עם שתי נקודות בעייתיות</div>
+<div class="wk-q">חשבו \(\displaystyle\int_0^\infty\frac{dx}{(1+x)\sqrt x}\).</div>
+<ol class="wsteps">
+<li><span class="st">מאתרים את הנקודות הבעייתיות.</span>
+הקטע אינסופי (בעיה ב־\(\infty\)), והפונקציה אינה חסומה ליד \(x=0\), כי \(\sqrt x\to0\) במכנה.</li>
+<li><span class="st">מפצלים כך שבכל חלק יש בעיה אחת.</span>
+\[\int_0^\infty=\int_0^1+\int_1^\infty\]
+האינטגרל מתכנס רק אם <b>שני</b> החלקים מתכנסים. נקודת הפיצול 1 שרירותית; כל נקודה חיובית מתאימה.</li>
+<li><span class="st">מוצאים פונקציה קדומה.</span>
+עם \(t=\sqrt x\), \(x=t^2\), \(dx=2t\,dt\):
+\[\int\frac{dx}{(1+x)\sqrt x}=\int\frac{2t\,dt}{(1+t^2)\,t}=2\arctan t+C=2\arctan\sqrt x+C\]</li>
+<li><span class="st">מחשבים כל חלק כגבול.</span>
+\[\int_0^1=\lim_{\varepsilon\to0^+}2\arctan\sqrt x\Big|_\varepsilon^1=2\cdot\frac\pi4-0=\frac\pi2\]
+\[\int_1^\infty=\lim_{R\to\infty}2\arctan\sqrt x\Big|_1^R=2\cdot\frac\pi2-2\cdot\frac\pi4=\frac\pi2\]
+<p class="why-step">הגבול נלקח רק בקצה הבעייתי. בקצה השני מציבים כרגיל.</p></li>
+<li><span class="st">מסכמים.</span>
+שני הגבולות קיימים וסופיים, ולכן האינטגרל מתכנס, וערכו הוא סכומם.</li>
+</ol>
+<div class="res">\(\displaystyle\int_0^\infty\frac{dx}{(1+x)\sqrt x}=\pi\)</div>
+</div>
+
+
+<h3>האינטגרלים שמשווים אליהם (חובה לזכור)</h3>
+<div class="tablewrap"><table>
+<tr><th>אינטגרל</th><th>מתכנס כאשר</th><th>ערך</th></tr>
+<tr><td>\(\int_1^\infty\frac{dx}{x^p}\)</td><td>\(p\gt 1\)</td><td>\(\frac1{p-1}\)</td></tr>
+<tr><td>\(\int_0^1\frac{dx}{x^p}\)</td><td>\(p\lt 1\)</td><td>\(\frac1{1-p}\)</td></tr>
+<tr><td>\(\int_0^\infty e^{-x}dx\)</td><td>תמיד</td><td>\(1\)</td></tr>
+</table></div>
+<p class="small">בפשטות: באינסוף צריך שהפונקציה תדעך <b>מהר</b> (\(p\gt1\)), וליד אפס צריך שהיא תתפוצץ <b>לאט</b> (\(p\lt1\)). עבור \(p=1\) מתבדר בשני המקרים.</p>
+
+
+<h3>מבחני התכנסות</h3>
+<p>לרוב אי אפשר לחשב את הפונקציה הקדומה, אבל צריך רק לדעת <b>אם</b> האינטגרל מתכנס. הרעיון: להשוות לפונקציה שאנחנו כבר מכירים, בדרך כלל \(\frac1{x^p}\) או \(e^{-x}\).</p>
+<figure class="fig" data-fig="compare"><figcaption><b>מבחן ההשוואה בתמונה.</b> אם \(0\le g\le f\), השטח מתחת ל־\(g\) מוכל בשטח מתחת ל־\(f\). אם הגדול סופי, גם הקטן סופי. אם הקטן אינסופי, גם הגדול אינסופי. (אם הגדול אינסופי, על הקטן אי אפשר לדעת כלום.)</figcaption></figure>
+<div class="box thm"><div class="tag">מבחן ההשוואה</div>
+אם \(0\le g(x)\le f(x)\) לכל \(x\) גדול מספיק:
+<ul>
+<li>\(\int f\) מתכנס, ולכן גם \(\int g\) מתכנס. (הגדול מתכנס, אז גם הקטן.)</li>
+<li>\(\int g\) מתבדר, ולכן גם \(\int f\) מתבדר. (הקטן מתבדר, אז גם הגדול.)</li>
+</ul>
+</div>
+
+<div class="box thm"><div class="tag">מבחן ההשוואה הגבולי</div>
+אם \(f,g\gt 0\) ו־\(L=\lim\frac{f(x)}{g(x)}\) (בנקודה הבעייתית):
+<ul>
+<li>אם \(0\lt L\lt\infty\), שני האינטגרלים <b>מתנהגים אותו דבר</b>.</li>
+<li>אם \(L=0\) ו־\(\int g\) מתכנס, גם \(\int f\) מתכנס.</li>
+<li>אם \(L=\infty\) ו־\(\int g\) מתבדר, גם \(\int f\) מתבדר.</li>
+</ul>
+</div>
+
+<div class="box thm"><div class="tag">התכנסות בהחלט</div>
+אם \(\int|f|\) מתכנס, גם \(\int f\) מתכנס. זה הכלי לפונקציות שמחליפות סימן (עם \(\sin\) או \(\cos\)).
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>בדיקת התכנסות במבחן ההשוואה הגבולי</div>
+<div class="wk-q">האם \(\displaystyle\int_0^\infty\frac{\arctan x}{x^{3/2}}\,dx\) מתכנס?</div>
+<ol class="wsteps">
+<li><span class="st">מאתרים בעיות ומפצלים.</span>
+בעיה ב־\(\infty\), ובעיה אפשרית ב־0 (המכנה מתאפס). מפצלים ל־\(\int_0^1+\int_1^\infty\). האינטגרנד חיובי ב־\((0,\infty)\), ולכן מותר להשתמש במבחני ההשוואה.</li>
+<li><span class="st">ליד 0: מזהים את האיבר הדומיננטי.</span>
+כאשר \(x\to0\), \(\arctan x\approx x\), ולכן \(f(x)\approx\frac{x}{x^{3/2}}=\frac1{x^{1/2}}\). משווים ל־\(g(x)=\frac1{\sqrt x}\):
+\[L=\lim_{x\to0^+}\frac{f(x)}{g(x)}=\lim_{x\to0^+}\frac{\arctan x}{x}=1\]
+\(0\lt L\lt\infty\), ו־\(\int_0^1\frac{dx}{x^{1/2}}\) מתכנס כי \(p=\frac12\lt1\). לכן \(\int_0^1f\) מתכנס.
+<p class="why-step">הסימן \(\approx\) משמש רק כדי לנחש את \(g\). ההוכחה עצמה היא חישוב הגבול \(L\).</p></li>
+<li><span class="st">באינסוף: מזהים את האיבר הדומיננטי.</span>
+כאשר \(x\to\infty\), \(\arctan x\to\frac\pi2\), ולכן \(f(x)\approx\frac{\pi/2}{x^{3/2}}\). משווים ל־\(g(x)=\frac1{x^{3/2}}\):
+\[L=\lim_{x\to\infty}\frac{f(x)}{g(x)}=\lim_{x\to\infty}\arctan x=\frac\pi2\]
+\(0\lt L\lt\infty\), ו־\(\int_1^\infty\frac{dx}{x^{3/2}}\) מתכנס כי \(p=\frac32\gt1\). לכן \(\int_1^\infty f\) מתכנס.</li>
+<li><span class="st">מסכמים.</span>
+שני החלקים מתכנסים, ולכן האינטגרל כולו מתכנס.</li>
+</ol>
+<div class="res">האינטגרל מתכנס.</div>
+</div>
+
+<div class="box ex"><div class="tag">דוגמאות</div>
+<ul>
+<li>\(\int_0^\infty e^{-x^2}dx\) מתכנס: עבור \(x\ge1\) מתקיים \(x^2\ge x\), ולכן \(e^{-x^2}\le e^{-x}\), ו־\(\int e^{-x}\) מתכנס.</li>
+<li>\(\int_1^\infty\frac{1+e^{-x}}{x}dx\) מתבדר: \(\frac{1+e^{-x}}{x}\ge\frac1x\), ו־\(\int_1^\infty\frac{dx}{x}\) מתבדר.</li>
+<li>\(\int_0^\infty e^{-x}\sin(x^2)dx\) מתכנס בהחלט: \(|e^{-x}\sin(x^2)|\le e^{-x}\).</li>
+</ul>
+</div>
+
+<div class="box thm"><div class="tag">מבחן האינטגרל לטורים</div>
+אם \(f\) רציפה, חיובית ויורדת ב־\([1,\infty)\) ו־\(a_n=f(n)\), אז \(\sum_{n=1}^\infty a_n\) מתכנס <b>אם ורק אם</b> \(\int_1^\infty f(x)dx\) מתכנס. לדוגמה, \(\sum\frac1{n^p}\) מתכנס אם ורק אם \(p\gt1\).
+</div>
+
+<div class="box warn"><div class="tag">מלכודת</div>
+אם \(\int_a^\infty f\) מתכנס, זה <b>לא</b> אומר ש־\(f(x)\to0\). דוגמה נגדית: "משולשים" בגובה 1 סביב כל \(n\), עם בסיס \(\frac1{2^{n-1}}\). סכום השטחים הוא \(\sum\frac1{2^n}=1\), אבל \(f(n)=1\) לכל \(n\). (אם \(f\) גם <b>מונוטונית</b>, אז כן נובע ש־\(f\to0\).)
+</div>
+
+<div class="box tip"><div class="tag">טיפ: שלבי עבודה עם אינטגרל לא אמיתי</div>
+<ol class="steps">
+<li>מאתרים את כל הנקודות הבעייתיות: \(\pm\infty\) ונקודות שבהן הפונקציה לא חסומה.</li>
+<li>מפצלים כך שבכל אינטגרל יש <b>בעיה אחת בלבד</b>, בקצה.</li>
+<li>בכל חלק משווים ל־\(\frac{1}{x^p}\) המתאים: מה האיבר הדומיננטי ליד הנקודה הבעייתית?</li>
+<li>אם צריך ערך מדויק, מחשבים פונקציה קדומה ולוקחים גבול.</li>
+</ol>
+</div>
+
+
+<h3>מקרים מיוחדים</h3>
+<div class="box ex"><div class="tag">כשהגבול אינו קיים</div>
+<ul>
+<li>\(\int_0^\infty\cos x\,dx=\lim\sin b\), ו<b>הגבול לא קיים</b>. לכן האינטגרל מתבדר, אף שהפונקציה חסומה.</li>
+<li>\(\int_{-\infty}^\infty\sin x\,dx\): "0 בגלל סימטריה" זו <b>טעות</b>. לפי ההגדרה \(\lim_{a\to-\infty}(\cos a-1)\) לא קיים, ולכן מתבדר.</li>
+</ul>
+</div>
+
+<div class="box ex"><div class="tag">השוואה כשמופיעה פונקציה טריגונומטרית</div>
+<ul>
+<li>\(\int_1^\infty\sin\Big(\frac{1000}{\sqrt{x^2+1}}\Big)dx\): עבור \(x\) גדול הארגומנט קטן, ו־\(\sin u\approx u\). השוואה גבולית עם \(g=\frac{1000}{\sqrt{x^2+1}}\) נותנת \(L=1\), ו־\(g\) מתנהגת כמו \(\frac{1000}x\), שמתבדרת. לכן <b>מתבדר</b>.</li>
+<li>\(\int_1^\infty\frac{\sin(2x^3)}{9x^2-1}dx\): \(\Big|\frac{\sin(2x^3)}{9x^2-1}\Big|\le\frac1{9x^2-1}\le\frac1{x^2}\). לכן <b>מתכנס בהחלט</b>, ומכאן מתכנס.</li>
+</ul>
+</div>
+
+<div class="box tip"><div class="tag">טריק: \(\sin\) של משהו קטן</div>
+כשמופיע \(\sin(\text{משהו ששואף ל־0})\), משתמשים ב־\(\lim_{u\to0}\frac{\sin u}{u}=1\) ומשווים בהשוואה הגבולית ל"משהו" עצמו. אותו דבר עם \(\ln(1+u)\approx u\) ו־\(e^u-1\approx u\).
+</div>
+
+<div class="box ex"><div class="tag">מבחן האינטגרל לטורים</div>
+<ul>
+<li>\(\sum_{n=2}^\infty\frac1{n\ln n\cdot\ln(\ln n)}\): עם \(t=\ln(\ln x)\) האינטגרל הוא \(\lim\ln\big(\ln(\ln b)\big)=\infty\). לכן הטור <b>מתבדר</b>.</li>
+<li>\(\sum\frac{\sqrt n}{1+n}\): קודם מראים שהפונקציה יורדת (\(f'\lt0\) עבור \(x\gt1\)). עם \(t=\sqrt x\) האינטגרל הוא \(2[t-\arctan t]\to\infty\). לכן <b>מתבדר</b>.</li>
+</ul>
+<span class="small">לא לשכוח לבדוק את התנאים: \(f\) חיובית, רציפה ו<b>מונוטונית יורדת</b>.</span>
+</div>
+
+<div class="box ex"><div class="tag">תרגיל הוכחה</div>
+<b>אם \(f\) אינטגרבילית ב־\([a,b]\) ו־\(f(x)\gt C\gt0\), אז גם \(\frac1f\) אינטגרבילית.</b><br>
+רעיון: \(\Big|\frac1{f(x)}-\frac1{f(y)}\Big|=\frac{|f(y)-f(x)|}{f(x)f(y)}\le\frac{1}{C^2}|f(x)-f(y)|\). לכן ההפרש בין דרבו עליון לתחתון של \(\frac1f\) קטן מ־\(\frac1{C^2}\) כפול ההפרש של \(f\), שאפשר להקטין כרצוננו.
+</div>
+
+
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\int_0^1\frac{dx}{\sqrt x}=\ ?\)</p>
+<div class="opts"><button class="opt">מתבדר</button><button class="opt">\(1\)</button><button class="opt">\(2\)</button><button class="opt">\(\frac12\)</button></div>
+<div class="exp">\(p=\frac12\lt1\) ליד 0, ולכן מתכנס. \(\lim_{\varepsilon\to0^+}2\sqrt x\big|_\varepsilon^1=2\).</div></div>
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\int_{-\infty}^\infty x\,dx\):</p>
+<div class="opts"><button class="opt">שווה 0, כי \(x\) אי־זוגית</button><button class="opt">מתבדר</button><button class="opt">שווה \(\infty\)</button><button class="opt">שווה \(\frac12\)</button></div>
+<div class="exp">צריך ששני החלקים יתכנסו בנפרד, אבל \(\int_0^\infty x\,dx=\infty\). גבול סימטרי אסור.</div></div>
+<div class="quiz" data-correct="0"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\int_1^\infty\frac{\cos x}{x^2}dx\):</p>
+<div class="opts"><button class="opt">מתכנס בהחלט, בהשוואה ל־\(\frac1{x^2}\)</button><button class="opt">מתבדר, כי \(\cos\) לא שואף ל־0</button><button class="opt">אי אפשר לדעת, כי הפונקציה מחליפה סימן</button><button class="opt">מתכנס רק בתנאי</button></div>
+<div class="exp">\(\big|\frac{\cos x}{x^2}\big|\le\frac1{x^2}\), ו־\(\int_1^\infty\frac{dx}{x^2}\) מתכנס. מתכנס בהחלט, ולכן מתכנס.</div></div>
+<div class="quiz" data-correct="3"><div class="tag">בדוק את עצמך</div>
+<p class="q">הטור \(\displaystyle\sum_{n=2}^\infty\frac{1}{n\ln n}\):</p>
+<div class="opts"><button class="opt">מתכנס, כי המכנה גדול מ־\(n\)</button><button class="opt">מתכנס ל־1</button><button class="opt">אי אפשר לבדוק במבחן האינטגרל</button><button class="opt">מתבדר</button></div>
+<div class="exp">\(\int_2^\infty\frac{dx}{x\ln x}=\lim\ln(\ln x)\big|_2^b=\infty\), ולפי מבחן האינטגרל הטור מתבדר. מכנה "קצת" יותר גדול מ־\(n\) לא מספיק.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+אינטגרל לא אמיתי = <b>גבול</b> של אינטגרלים רגילים. כל בעיה מטפלים בנפרד, ומשווים ל־\(\frac1{x^p}\): באינסוף צריך \(p\gt1\), ליד 0 צריך \(p\lt1\).
+</div>
+<a class="next" href="chapter-7.html"><span class="arr">←</span><span><b>הלאה: חלק ב׳, וקטורים וגאומטריה.</b> סיימנו עם משתנה אחד. כדי לעבור לפונקציות של כמה משתנים צריך קודם שפה למרחב: וקטורים, אורכים, זוויות, ישרים ומישורים. הכלים האלה יחזרו בגרדיאנט, במישור המשיק ובכופלי לגרנז׳.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-5.html"><small>→ הקודם</small><span>5. שימושים: שטח, נפח, אורך עקומה</span></a><a class="pg pg-next" href="chapter-7.html"><small>הבא ←</small><span>7. וקטורים ב־ℝⁿ</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

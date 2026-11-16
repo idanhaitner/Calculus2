@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. שברים חלקיים והצבות טריגונומטריות · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html" class="on" aria-current="page"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="#c4">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c4" class="chapter" data-part="A">
+<header class="ch-head"><div class="ch-num">4</div><div><div class="ch-kicker">פרק רביעי</div><h2>שברים חלקיים והצבות טריגונומטריות</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> הצבה ובחלקים (<a class="xref" href="chapter-3.html">פרק 3</a>), \(\int\frac{dx}{1+x^2}=\arctan x\), \(\int\frac{f'}{f}=\ln|f|\), וזהויות טריגונומטריות.</p>
+<ul class="goals"><li>פונקציות רציונליות</li><li>חילוק ארוך</li><li>פירוק לשברים חלקיים</li><li>השלמה לריבוע</li><li>הצבות טריגונומטריות</li><li>הצבה אוניברסלית</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+<b>פונקציות רציונליות</b> (מנה של פולינומים) הן הסוג היחיד של פונקציות שתמיד אפשר לאנטגרל עד הסוף, בעזרת מתכון קבוע. התשובה תמיד מורכבת מפולינום, \(\ln\) ו־\(\arctan\). בנוסף, הרבה אינטגרלים אחרים <b>מגיעים</b> לפונקציה רציונלית אחרי הצבה: למשל כל פונקציה רציונלית של \(\sin x,\cos x\) (הצבה אוניברסלית).
+<br><b>הצבות טריגונומטריות</b> פותרות את המקרה של \(\sqrt{a^2\pm x^2}\): זהות טריגונומטרית אחת מעלימה את השורש. זה גם מה שנדרש לשטח של עיגול ואליפסה (<a class="xref" href="chapter-5.html">פרק 5</a>) ולאינטגרלים בקואורדינטות קוטביות (<a class="xref" href="chapter-19.html">פרק 19</a>).
+</div>
+
+<h3>פונקציות רציונליות ושברים חלקיים</h3>
+<p>הרעיון: את \(\frac1{(x+1)(x+2)}\) קשה לאנטגרל, אבל את \(\frac1{x+1}-\frac1{x+2}\) קל מאוד. פירוק לשברים חלקיים הוא <b>ההפך מהבאה למכנה משותף</b>: מפרקים שבר מסובך לסכום של שברים פשוטים, שלכל אחד מהם יש אינטגרל מוכן.</p>
+<figure class="fig" data-fig="pftree"><figcaption><b>המתכון לפונקציה רציונלית \(\frac{P(x)}{Q(x)}\).</b> כל מסלול מסתיים באחד משלושה אינטגרלים מוכנים: \(\ln\), חזקה שלילית, או \(\arctan\) (אחרי השלמה לריבוע).</figcaption></figure>
+<ol class="steps">
+<li><b>אם \(\deg P\ge\deg Q\)</b>, עושים <b>חילוק ארוך</b>: \(\frac{P}{Q}=M(x)+\frac{r(x)}{Q(x)}\), כאשר \(\deg r\lt\deg Q\). לדוגמה: \(\frac{x^4+x^3}{x^2+2}=x^2+x-2+\frac{-2x+4}{x^2+2}\).</li>
+<li><b>מפרקים את המכנה</b> לגורמים לינאריים \((ax+b)\) ולגורמים ריבועיים בלי שורשים (\(b^2-4ac\lt 0\)).</li>
+<li><b>כותבים את הפירוק</b> לפי סוג הגורמים (טבלה למטה).</li>
+<li><b>מוצאים את המקדמים</b>: כופלים במכנה ומשווים מקדמים, או מציבים ערכים של \(x\).</li>
+<li><b>מאנטגרלים כל שבר</b> בנפרד.</li>
+</ol>
+<div class="tablewrap"><table>
+<tr><th>גורם במכנה</th><th>מה כותבים בפירוק</th></tr>
+<tr><td>\((ax+b)\) לינארי, פשוט</td><td>\(\frac{A}{ax+b}\)</td></tr>
+<tr><td>\((ax+b)^m\) לינארי שחוזר</td><td>\(\frac{B_1}{ax+b}+\frac{B_2}{(ax+b)^2}+\dots+\frac{B_m}{(ax+b)^m}\)</td></tr>
+<tr><td>\((ax^2+bx+c)\) ריבועי, פשוט</td><td>\(\frac{Ax+B}{ax^2+bx+c}\)</td></tr>
+<tr><td>\((ax^2+bx+c)^m\) ריבועי שחוזר</td><td>\(\frac{A_1x+B_1}{ax^2+bx+c}+\dots+\frac{A_mx+B_m}{(ax^2+bx+c)^m}\)</td></tr>
+</table></div>
+<h4>האינטגרלים של השברים היסודיים</h4>
+<ul>
+<li>\(\int\frac{A}{x-\alpha}dx=A\ln|x-\alpha|+C\)</li>
+<li>\(\int\frac{A}{(x-\alpha)^n}dx=A\frac{(x-\alpha)^{1-n}}{1-n}+C\) עבור \(n\ge 2\)</li>
+<li>\(\int\frac{Ax+B}{x^2+px+q}dx\): <b>משלימים לריבוע</b> \(x^2+px+q=(x+\frac p2)^2+\alpha^2\), מציבים \(t=x+\frac p2\), ומפצלים לחלק שנותן \(\ln\) ולחלק שנותן \(\arctan\):
+\[=\frac A2\ln(x^2+px+q)+\Big(B-\frac{pA}{2}\Big)\frac{2}{\sqrt{4q-p^2}}\arctan\frac{2x+p}{\sqrt{4q-p^2}}+C\]</li>
+<li>אם הגורם הריבועי חוזר (בחזקה \(n\)), מגיעים ל־\(\int\frac{dt}{(t^2+\alpha^2)^n}\) ופותרים עם ההצבה \(t=\alpha\tan\theta\).</li>
+</ul>
+<p>בארבע הדוגמאות הבאות כל מקרה בטבלה מטופל מתחילתו ועד סופו.</p>
+
+<div class="wk" id="c4-pf1"><div class="wk-h"><span class="n">דוגמה מלאה · מקרה 1</span>גורמים לינאריים שונים</div>
+<div class="wk-q">חשבו \(\displaystyle\int\frac{x^2+2x-1}{x(2x-1)(x+2)}\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">בודקים מעלות.</span>
+מעלת המונה היא 2 ומעלת המכנה היא 3. השבר אמיתי, ולכן אין צורך בחילוק ארוך.</li>
+<li><span class="st">מפרקים את המכנה ורושמים את צורת הפירוק.</span>
+המכנה כבר מפורק לשלושה גורמים לינאריים שונים, ולכל אחד מתאים מקדם קבוע:
+\[\frac{x^2+2x-1}{x(2x-1)(x+2)}=\frac{A}{x}+\frac{B}{2x-1}+\frac{C}{x+2}\]</li>
+<li><span class="st">כופלים במכנה המשותף.</span>
+\[x^2+2x-1=A(2x-1)(x+2)+Bx(x+2)+Cx(2x-1)\]
+<p class="why-step">זו זהות בין פולינומים: היא נכונה לכל \(x\), ולכן מותר להציב בה כל ערך.</p></li>
+<li><span class="st">מציבים את שורשי המכנה.</span>
+כל שורש מאפס שניים משלושת האיברים בצד ימין:
+<ul>
+<li>\(x=0\): \(\ -1=A\cdot(-1)\cdot2\), ולכן \(A=\frac12\).</li>
+<li>\(x=\frac12\): \(\ \frac14+1-1=B\cdot\frac12\cdot\frac52\), כלומר \(\frac14=\frac54B\), ולכן \(B=\frac15\).</li>
+<li>\(x=-2\): \(\ 4-4-1=C\cdot(-2)\cdot(-5)\), ולכן \(C=-\frac1{10}\).</li>
+</ul></li>
+<li><span class="st">בודקים בנקודה נוספת.</span>
+ב־\(x=1\): צד שמאל \(=2\). צד ימין \(=\frac12\cdot1\cdot3+\frac15\cdot3+\big(-\frac1{10}\big)\cdot1=\frac32+\frac35-\frac1{10}=2\). ✓</li>
+<li><span class="st">מאנטגרלים כל שבר.</span>
+\[\int\frac{1/2}{x}dx+\int\frac{1/5}{2x-1}dx-\int\frac{1/10}{x+2}dx=\tfrac12\ln|x|+\tfrac1{10}\ln|2x-1|-\tfrac1{10}\ln|x+2|+C\]
+<p class="why-step">ב־\(\int\frac{dx}{2x-1}\) מתקבל \(\frac12\ln|2x-1|\): המקדם של \(x\) במכנה מתחלק החוצה.</p></li>
+</ol>
+<div class="res">\(\displaystyle\tfrac12\ln|x|+\tfrac1{10}\ln|2x-1|-\tfrac1{10}\ln|x+2|+C\)</div>
+</div>
+
+<div class="wk" id="c4-pf2"><div class="wk-h"><span class="n">דוגמה מלאה · מקרה 2</span>גורם לינארי חוזר</div>
+<div class="wk-q">חשבו \(\displaystyle\int\frac{-x+2}{x(x-1)^2}\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">רושמים את צורת הפירוק.</span>
+הגורם \((x-1)\) מופיע בחזקה 2, ולכן הוא תורם <b>שני</b> שברים, אחד לכל חזקה:
+\[\frac{-x+2}{x(x-1)^2}=\frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}\]
+<p class="why-step">אם כותבים רק \(\frac{C}{(x-1)^2}\), אין מספיק מקדמים חופשיים, ומערכת המשוואות לא תהיה פתירה.</p></li>
+<li><span class="st">כופלים במכנה המשותף.</span>
+\[-x+2=A(x-1)^2+Bx(x-1)+Cx\]</li>
+<li><span class="st">מציבים שורשים.</span>
+\(x=0\): \(2=A\). &nbsp; \(x=1\): \(1=C\).</li>
+<li><span class="st">משווים מקדם אחד כדי למצוא את המקדם שנותר.</span>
+לשורש הכפול יש רק ערך הצבה אחד, ולכן את \(B\) מוצאים מהשוואת מקדמים. המקדם של \(x^2\): בצד שמאל 0, ובצד ימין \(A+B\). לכן \(B=-A=-2\).</li>
+<li><span class="st">מאנטגרלים.</span>
+\[\int\Big(\frac2x-\frac2{x-1}+\frac1{(x-1)^2}\Big)dx=2\ln|x|-2\ln|x-1|-\frac1{x-1}+C\]
+<p class="why-step">השבר עם החזקה השנייה אינו נותן \(\ln\): \(\int(x-1)^{-2}dx=-(x-1)^{-1}\).</p></li>
+</ol>
+<div class="res">\(\displaystyle 2\ln\Big|\frac{x}{x-1}\Big|-\frac1{x-1}+C\)</div>
+</div>
+
+<div class="wk" id="c4-pf3"><div class="wk-h"><span class="n">דוגמה מלאה · מקרה 3</span>גורם ריבועי שאין לו שורשים</div>
+<div class="wk-q">חשבו \(\displaystyle\int\frac{x^2}{(x+1)(x^2+1)}\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">בודקים מעלות וגורמים.</span>
+מעלת המונה 2 קטנה ממעלת המכנה 3. ל־\(x^2+1\) אין שורשים ממשיים (\(\Delta=-4\lt0\)), ולכן הוא גורם ריבועי אי־פריק.</li>
+<li><span class="st">רושמים את צורת הפירוק.</span>
+מעל גורם ריבועי המונה הוא פולינום ממעלה ראשונה, לא קבוע:
+\[\frac{x^2}{(x+1)(x^2+1)}=\frac{A}{x+1}+\frac{Bx+C}{x^2+1}\]</li>
+<li><span class="st">כופלים ומוצאים מקדמים.</span>
+\[x^2=A(x^2+1)+(Bx+C)(x+1)\]
+\(x=-1\): \(1=2A\), ולכן \(A=\frac12\). מקדם \(x^2\): \(1=A+B\), ולכן \(B=\frac12\). מקדם חופשי: \(0=A+C\), ולכן \(C=-\frac12\). בדיקה במקדם \(x\): \(B+C=0\). ✓</li>
+<li><span class="st">מפצלים את השבר הריבועי.</span>
+\[\frac{\frac12x-\frac12}{x^2+1}=\frac14\cdot\frac{2x}{x^2+1}-\frac12\cdot\frac1{x^2+1}\]
+<p class="why-step">החלק הראשון הוא מהצורה \(\frac{g'}{g}\) ונותן \(\ln\). החלק השני הוא \(\frac1{x^2+1}\) ונותן \(\arctan\). כל שבר ריבועי מתפצל כך.</p></li>
+<li><span class="st">מאנטגרלים.</span>
+\[\frac12\ln|x+1|+\frac14\ln(x^2+1)-\frac12\arctan x+C\]</li>
+</ol>
+<div class="res">\(\displaystyle\tfrac12\ln|x+1|+\tfrac14\ln(x^2+1)-\tfrac12\arctan x+C\)</div>
+</div>
+
+<div class="wk" id="c4-pf4"><div class="wk-h"><span class="n">דוגמה מלאה · מקרה 4</span>מונה ממעלה גבוהה: חילוק ארוך והשלמה לריבוע</div>
+<div class="wk-q">חשבו \(\displaystyle\int\frac{x^3+x}{x^2+x+1}\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">בודקים מעלות.</span>
+מעלת המונה 3 גדולה ממעלת המכנה 2, ולכן מתחילים בחילוק ארוך.</li>
+<li><span class="st">מבצעים חילוק ארוך.</span>
+\(x^3\div x^2=x\): \(\ x^3+x-x(x^2+x+1)=-x^2\).<br>
+\(-x^2\div x^2=-1\): \(\ -x^2-(-1)(x^2+x+1)=x+1\).<br>
+המנה היא \(x-1\) והשארית \(x+1\), ממעלה קטנה מ־2:
+\[\frac{x^3+x}{x^2+x+1}=x-1+\frac{x+1}{x^2+x+1}\]</li>
+<li><span class="st">בודקים אם המכנה מתפרק.</span>
+\(\Delta=1-4=-3\lt0\), ולכן אין שורשים ואין פירוק נוסף. השבר שנותר כבר בצורת <a class="xref" href="#c4-pf3">מקרה 3</a>.</li>
+<li><span class="st">מפצלים את המונה לנגזרת המכנה ועוד קבוע.</span>
+הנגזרת של המכנה היא \(2x+1\), ו־\(x+1=\frac12(2x+1)+\frac12\):
+\[\frac{x+1}{x^2+x+1}=\frac12\cdot\frac{2x+1}{x^2+x+1}+\frac12\cdot\frac{1}{x^2+x+1}\]</li>
+<li><span class="st">משלימים לריבוע בשבר השני.</span>
+\(x^2+x+1=\big(x+\frac12\big)^2+\frac34=\big(x+\frac12\big)^2+\big(\frac{\sqrt3}2\big)^2\). לפי \(\int\frac{dt}{t^2+a^2}=\frac1a\arctan\frac ta\):
+\[\int\frac{dx}{(x+\frac12)^2+\frac34}=\frac2{\sqrt3}\arctan\frac{2x+1}{\sqrt3}\]</li>
+<li><span class="st">מחברים את כל החלקים.</span>
+\[\int(x-1)\,dx+\frac12\ln(x^2+x+1)+\frac12\cdot\frac2{\sqrt3}\arctan\frac{2x+1}{\sqrt3}\]</li>
+</ol>
+<div class="res">\(\displaystyle\frac{x^2}2-x+\frac12\ln(x^2+x+1)+\frac1{\sqrt3}\arctan\frac{2x+1}{\sqrt3}+C\)</div>
+</div>
+
+<div class="box tip"><div class="tag">טיפ: קיצורי דרך</div>
+<ul>
+<li><b>מציאת מקדמים.</b> הצבת שורשי המכנה נותנת מיד את המקדמים של הגורמים הלינאריים. השוואת מקדמים נדרשת רק למה שנשאר: שורשים כפולים וגורמים ריבועיים.</li>
+<li><b>לפעמים אין צורך בפירוק.</b> אחרי חילוק ארוך כדאי לבדוק אם השארית היא \(\frac{g'}g\) עד כדי קבוע. למשל \(\frac{x^3}{x^2-1}=x+\frac{x}{x^2-1}\), והחלק השני הוא \(\frac12\cdot\frac{2x}{x^2-1}\). לכן \(\int\frac{x^3}{x^2-1}dx=\frac{x^2}2+\frac12\ln|x^2-1|+C\).</li>
+<li><b>גורם ריבועי בחזקה.</b> \(\int\frac{dx}{(x^2+a^2)^n}\) נפתר בהצבה \(x=a\tan\theta\) (<a class="xref" href="#c4-t2c">סוג 2 בהצבות הטריגונומטריות, דוגמה (ג)</a>).</li>
+</ul>
+</div>
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל מסכם</span>כל המקרים יחד: גורם לינארי חוזר וגורם ריבועי</div>
+<div class="exr-q">חשבו \(\displaystyle\int\frac{12x+5}{x^2(x^2+2x+5)}\,dx\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">מעלת המונה 1 קטנה ממעלת המכנה 4, אז אין חילוק. \(x^2\) הוא גורם לינארי חוזר, ול־\(x^2+2x+5\) אין שורשים (\(\Delta=4-20\lt0\)).</p>
+\[\frac{12x+5}{x^2(x^2+2x+5)}=\frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+2x+5}\]
+<p>אחרי כפל במכנה והשוואת מקדמים: \(x^3:\ A+C=0\), \(x^2:\ 2A+B+D=0\), \(x^1:\ 5A+2B=12\), \(x^0:\ 5B=5\). לכן \(B=1,\ A=2,\ C=-2,\ D=-5\).</p>
+\[\int=2\ln|x|-\frac1x-\int\frac{2x+5}{x^2+2x+5}dx\]
+<p class="why-step">בשבר האחרון מפצלים את המונה ל"נגזרת המכנה" (\(2x+2\)) ועוד שארית (3), ומשלימים לריבוע: \(x^2+2x+5=(x+1)^2+4\).</p>
+\[\int\frac{2x+2}{x^2+2x+5}dx+3\int\frac{dx}{(x+1)^2+2^2}=\ln(x^2+2x+5)+\frac32\arctan\frac{x+1}2\]
+\[\int\frac{12x+5}{x^2(x^2+2x+5)}dx=\boxed{2\ln|x|-\frac1x-\ln(x^2+2x+5)-\frac32\arctan\frac{x+1}2+C}\]
+</div></div>
+
+<h3>הצבות טריגונומטריות</h3>
+<p>כשמופיע \(\sqrt{a^2-x^2}\), נזכרים ב־\(1-\sin^2\theta=\cos^2\theta\): אם \(x=a\sin\theta\), השורש הופך ל־\(a\cos\theta\) ו"נעלם". זו בעצם <b>הצבה הפוכה</b>: במקום להציב \(t=g(x)\), מציבים \(x=g(\theta)\).</p>
+<figure class="fig" data-fig="trigsub"><figcaption><b>למה \(x=a\sin\theta\) עובד:</b> נקודה על חצי מעגל ברדיוס \(a\). אם הזווית היא \(\theta\), אז \(x=a\sin\theta\) והגובה הוא בדיוק \(\sqrt{a^2-x^2}=a\cos\theta\). הזיזו את \(\theta\) וראו שהמשולש נשאר ישר־זווית.</figcaption></figure>
+<div class="tablewrap"><table>
+<tr><th>כשמופיע</th><th>מציבים</th><th>הזהות שמעלימה את השורש</th></tr>
+<tr><td>\(\sqrt{a^2-x^2}\)</td><td>\(x=a\sin\theta,\ -\frac\pi2\le\theta\le\frac\pi2\)</td><td>\(1-\sin^2\theta=\cos^2\theta\)</td></tr>
+<tr><td>\(\sqrt{a^2+x^2}\)</td><td>\(x=a\tan\theta,\ -\frac\pi2\lt\theta\lt\frac\pi2\)</td><td>\(1+\tan^2\theta=\frac1{\cos^2\theta}\)</td></tr>
+<tr><td>\(\sqrt{x^2-a^2}\)</td><td>\(x=\frac{a}{\cos\theta},\ 0\le\theta\lt\frac\pi2\)</td><td>\(\frac1{\cos^2\theta}-1=\tan^2\theta\)</td></tr>
+</table></div>
+<div class="box tip"><div class="tag">טיפ</div>
+כדי לחזור ל־\(x\), ציירו <b>משולש ישר־זווית</b>. למשל אם \(\sin\theta=\frac x3\), היתר הוא 3, הניצב שמול הזווית הוא \(x\), והניצב השני הוא \(\sqrt{9-x^2}\). מהמשולש קוראים ישר את \(\cos\theta\), \(\tan\theta\) וכו׳.
+</div>
+
+<h4>המתכון בחמישה שלבים</h4>
+<ol class="steps">
+<li><b>מזהים את הצורה</b> של מה שמתחת לשורש (אם צריך, קודם <b>משלימים לריבוע</b>), ובוחרים הצבה מהטבלה.</li>
+<li><b>מחשבים את \(dx\)</b> (הטבלה למטה). זו הטעות הכי נפוצה: לשכוח להחליף את \(dx\).</li>
+<li><b>מפשטים את השורש</b> לפי הזהות (הטבלה למטה). תחום \(\theta\) נבחר כך שאין ערך מוחלט.</li>
+<li><b>פותרים אינטגרל טריגונומטרי</b> ב־\(\theta\), בדרך כלל עם הכלים של פרק 3.</li>
+<li><b>חוזרים ל־\(x\)</b> בעזרת המשולש. באינטגרל מסוים עדיף להחליף את הגבולות ל־\(\theta\), ואז לא צריך לחזור בכלל.</li>
+</ol>
+
+<div class="tablewrap"><table>
+<tr><th>הצבה</th><th>\(dx\)</th><th>השורש הופך ל־</th></tr>
+<tr><td>\(x=a\sin\theta\)</td><td>\(a\cos\theta\,d\theta\)</td><td>\(\sqrt{a^2-x^2}=a\cos\theta\)</td></tr>
+<tr><td>\(x=a\tan\theta\)</td><td>\(\frac{a}{\cos^2\theta}\,d\theta\)</td><td>\(\sqrt{a^2+x^2}=\frac{a}{\cos\theta}\)</td></tr>
+<tr><td>\(x=\frac{a}{\cos\theta}\)</td><td>\(\frac{a\sin\theta}{\cos^2\theta}\,d\theta\)</td><td>\(\sqrt{x^2-a^2}=a\tan\theta\)</td></tr>
+</table></div>
+
+<div class="diagram" aria-label="שלושת המשולשים של ההצבות הטריגונומטריות">
+<svg viewBox="0 0 720 200" style="direction:ltr;width:100%;max-width:720px;height:auto" role="img">
+<g style="fill:none;stroke:var(--text);stroke-width:1.6">
+<path d="M20 160 L190 160 L190 50 Z"/><path d="M180 160 V150 H190"/>
+<path d="M240 160 L410 160 L410 50 Z"/><path d="M400 160 V150 H410"/>
+<path d="M460 160 L630 160 L630 50 Z"/><path d="M620 160 V150 H630"/>
+</g>
+<g style="fill:var(--text);font-family:'KaTeX_Main','Times New Roman',serif;font-size:17px">
+<text x="105" y="26" text-anchor="middle" style="fill:var(--accent);font-weight:700">x = a·sin θ</text>
+<text x="325" y="26" text-anchor="middle" style="fill:var(--accent);font-weight:700">x = a·tan θ</text>
+<text x="545" y="26" text-anchor="middle" style="fill:var(--accent);font-weight:700">x = a / cos θ</text>
+<text x="50" y="156" font-style="italic">θ</text><text x="270" y="156" font-style="italic">θ</text><text x="490" y="156" font-style="italic">θ</text>
+<text x="96" y="96" text-anchor="end" font-style="italic">a</text>
+<text x="198" y="110" font-style="italic">x</text>
+<text x="105" y="184" text-anchor="middle">√(a² − x²)</text>
+<text x="316" y="96" text-anchor="end">√(a² + x²)</text>
+<text x="418" y="110" font-style="italic">x</text>
+<text x="325" y="184" text-anchor="middle" font-style="italic">a</text>
+<text x="536" y="96" text-anchor="end" font-style="italic">x</text>
+<text x="638" y="110">√(x² − a²)</text>
+<text x="545" y="184" text-anchor="middle" font-style="italic">a</text>
+</g>
+</svg>
+<div class="small">מהמשולש קוראים: \(\sin\theta=\frac{\text{מול}}{\text{יתר}}\), \(\cos\theta=\frac{\text{ליד}}{\text{יתר}}\), \(\tan\theta=\frac{\text{מול}}{\text{ליד}}\).</div>
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>הצבה טריגונומטרית לפי חמשת השלבים</div>
+<div class="wk-q">חשבו \(\displaystyle\int\frac{\sqrt{9-x^2}}{x^2}\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים את הצורה ובוחרים הצבה.</span>
+מתחת לשורש מופיע \(a^2-x^2\) עם \(a=3\). לפי הטבלה מציבים \(x=3\sin\theta\), עם \(-\frac\pi2\le\theta\le\frac\pi2\).
+<p class="why-step">הצבה רגילה \(t=9-x^2\) אינה מתאימה כאן: היא דורשת גורם \(x\) במונה, ובמקומו יש \(x^2\) במכנה.</p></li>
+<li><span class="st">מחשבים את \(dx\).</span>
+\(dx=3\cos\theta\,d\theta\).</li>
+<li><span class="st">מפשטים את השורש.</span>
+\[\sqrt{9-x^2}=\sqrt{9-9\sin^2\theta}=3\sqrt{\cos^2\theta}=3\cos\theta\]
+<p class="why-step">בתחום \(-\frac\pi2\le\theta\le\frac\pi2\) מתקיים \(\cos\theta\ge0\), ולכן \(\sqrt{\cos^2\theta}=\cos\theta\) בלי ערך מוחלט. זו הסיבה שתחום \(\theta\) קבוע בטבלה.</p></li>
+<li><span class="st">כותבים ופותרים את האינטגרל ב־\(\theta\).</span>
+\[\int\frac{3\cos\theta}{9\sin^2\theta}\cdot3\cos\theta\,d\theta=\int\frac{\cos^2\theta}{\sin^2\theta}\,d\theta=\int\cot^2\theta\,d\theta\]
+בעזרת \(\cot^2\theta=\frac{1}{\sin^2\theta}-1\):
+\[\int\Big(\frac1{\sin^2\theta}-1\Big)d\theta=-\cot\theta-\theta+C\]</li>
+<li><span class="st">חוזרים ל־\(x\) בעזרת המשולש.</span>
+\(\sin\theta=\frac x3\): במשולש היתר 3, הניצב שמול \(\theta\) הוא \(x\), והניצב שליד \(\theta\) הוא \(\sqrt{9-x^2}\). לכן
+\[\cot\theta=\frac{\text{ליד}}{\text{מול}}=\frac{\sqrt{9-x^2}}{x},\qquad\theta=\arcsin\frac x3\]</li>
+</ol>
+<div class="res">\(\displaystyle\int\frac{\sqrt{9-x^2}}{x^2}\,dx=-\frac{\sqrt{9-x^2}}{x}-\arcsin\frac x3+C\)</div>
+</div>
+
+<div class="box thm"><div class="tag">אינטגרלים ב־\(\theta\) שחוזרים כל הזמן</div>
+\[\int\cos^2\theta\,d\theta=\frac\theta2+\frac{\sin2\theta}4=\frac\theta2+\frac{\sin\theta\cos\theta}2\]
+\[\int\sin^2\theta\,d\theta=\frac\theta2-\frac{\sin\theta\cos\theta}2\]
+\[\int\frac{d\theta}{\cos^2\theta}=\tan\theta,\qquad\int\tan^2\theta\,d\theta=\tan\theta-\theta\]
+\[\int\frac{d\theta}{\sin^2\theta}=-\cot\theta\]
+\[\int\frac{d\theta}{\cos\theta}=\ln\Big|\frac1{\cos\theta}+\tan\theta\Big|+C\]
+<span class="small">הוכחה לאחרון: \(\int\frac{d\theta}{\cos\theta}=\int\frac{\cos\theta\,d\theta}{1-\sin^2\theta}\), ועם \(t=\sin\theta\) ושברים חלקיים מקבלים \(\frac12\ln\frac{1+\sin\theta}{1-\sin\theta}\). זה אותו דבר, כי \(\frac{1+\sin\theta}{1-\sin\theta}=\frac{(1+\sin\theta)^2}{\cos^2\theta}\).</span><br>
+<b>טיפ חשוב:</b> לפני שחוזרים ל־\(x\), כותבים \(\sin2\theta=2\sin\theta\cos\theta\). את \(\sin\theta\) ו־\(\cos\theta\) קוראים מהמשולש, ואת \(\sin2\theta\) אי אפשר לקרוא ישר.
+</div>
+
+<div class="box ex" id="c4-t1"><div class="tag">סוג 1: \(\sqrt{a^2-x^2}\), מציבים \(x=a\sin\theta\)</div>
+<p><b>(א) \(\int\sqrt{1-x^2}\,dx\), האינטגרל הכי חשוב.</b> \(x=\sin\theta\), \(dx=\cos\theta\,d\theta\), \(\sqrt{1-x^2}=\cos\theta\):
+\[\int\cos\theta\cdot\cos\theta\,d\theta=\int\cos^2\theta\,d\theta=\frac\theta2+\frac{\sin\theta\cos\theta}2+C\]
+חוזרים: \(\theta=\arcsin x\), \(\sin\theta=x\), \(\cos\theta=\sqrt{1-x^2}\):
+\[\int\sqrt{1-x^2}\,dx=\frac12\arcsin x+\frac12x\sqrt{1-x^2}+C\]
+<span class="small">בדיקת שפיות: \(\int_0^1\sqrt{1-x^2}dx=\frac12\cdot\frac\pi2=\frac\pi4\), רבע משטח עיגול היחידה. ✓</span></p>
+<p><b>(ב) \(\int\frac{x^2}{\sqrt{4-x^2}}dx\).</b> \(x=2\sin\theta\), \(dx=2\cos\theta\,d\theta\), \(\sqrt{4-x^2}=2\cos\theta\):
+\[\int\frac{4\sin^2\theta}{2\cos\theta}\cdot2\cos\theta\,d\theta=4\int\sin^2\theta\,d\theta=2\theta-2\sin\theta\cos\theta+C\]
+מהמשולש: \(\sin\theta=\frac x2\), \(\cos\theta=\frac{\sqrt{4-x^2}}2\):
+\[=2\arcsin\frac x2-\frac{x\sqrt{4-x^2}}2+C\]</p>
+<p><b>(ג) \(\int\frac{dx}{x^2\sqrt{9-x^2}}\).</b> \(x=3\sin\theta\), \(dx=3\cos\theta\,d\theta\), \(\sqrt{9-x^2}=3\cos\theta\):
+\[\int\frac{3\cos\theta}{9\sin^2\theta\cdot3\cos\theta}d\theta=\frac19\int\frac{d\theta}{\sin^2\theta}=-\frac19\cot\theta+C\]
+מהמשולש: \(\cot\theta=\frac{\text{ליד}}{\text{מול}}=\frac{\sqrt{9-x^2}}{x}\), ולכן התוצאה \(-\frac{\sqrt{9-x^2}}{9x}+C\).</p>
+<p><b>(ד) מסוים, עם החלפת גבולות: \(\int_0^{3/2}\frac{dx}{(9-x^2)^{3/2}}\).</b> \(x=3\sin\theta\). הגבולות: \(x=0\Rightarrow\theta=0\), ו־\(x=\frac32\Rightarrow\sin\theta=\frac12\Rightarrow\theta=\frac\pi6\). \((9-x^2)^{3/2}=27\cos^3\theta\):
+\[\int_0^{\pi/6}\frac{3\cos\theta}{27\cos^3\theta}d\theta=\frac19\int_0^{\pi/6}\frac{d\theta}{\cos^2\theta}=\frac19\tan\theta\Big|_0^{\pi/6}=\frac1{9\sqrt3}\]
+לא חזרנו ל־\(x\) בכלל, כי הגבולות כבר ב־\(\theta\).</p>
+<p><b>(ה) שימוש: שטח אליפסה \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\).</b> החצי העליון הוא \(y=\frac ba\sqrt{a^2-x^2}\), ולכן השטח הוא \(2\cdot\frac ba\int_{-a}^a\sqrt{a^2-x^2}dx\). עם \(x=a\sin\theta\), \(\theta\) רץ מ־\(-\frac\pi2\) עד \(\frac\pi2\):
+\[2\cdot\frac ba\cdot a^2\int_{-\pi/2}^{\pi/2}\cos^2\theta\,d\theta=2ab\cdot\frac\pi2=\pi ab\]</p>
+</div>
+
+<div class="box ex" id="c4-t2"><div class="tag">סוג 2: \(\sqrt{a^2+x^2}\), מציבים \(x=a\tan\theta\)</div>
+<p><b>(א) \(\int\frac{dx}{(1+x^2)^{3/2}}\).</b> \(x=\tan\theta\), \(dx=\frac{d\theta}{\cos^2\theta}\), \(1+x^2=\frac1{\cos^2\theta}\), ולכן \((1+x^2)^{3/2}=\frac1{\cos^3\theta}\):
+\[\int\cos^3\theta\cdot\frac{d\theta}{\cos^2\theta}=\int\cos\theta\,d\theta=\sin\theta+C\]
+מהמשולש (ניצבים \(x\) ו־1, יתר \(\sqrt{1+x^2}\)): \(\sin\theta=\frac{x}{\sqrt{1+x^2}}\). התוצאה \(\frac{x}{\sqrt{1+x^2}}+C\).</p>
+<p id="c4-t2b"><b>(ב) \(\int\frac{dx}{\sqrt{x^2+4}}\).</b> \(x=2\tan\theta\), \(dx=\frac{2\,d\theta}{\cos^2\theta}\), \(\sqrt{x^2+4}=\frac2{\cos\theta}\):
+\[\int\frac{\cos\theta}{2}\cdot\frac{2\,d\theta}{\cos^2\theta}=\int\frac{d\theta}{\cos\theta}=\ln\Big|\frac1{\cos\theta}+\tan\theta\Big|+C\]
+מהמשולש: \(\frac1{\cos\theta}=\frac{\sqrt{x^2+4}}2\), \(\tan\theta=\frac x2\). לכן התוצאה \(\ln\big|\frac{x+\sqrt{x^2+4}}2\big|+C=\ln\big(x+\sqrt{x^2+4}\big)+C'\). (את \(-\ln2\) מכניסים לקבוע.)</p>
+<p id="c4-t2c"><b>(ג) גורם ריבועי בחזקה, הקשר לשברים חלקיים: \(\int\frac{dx}{(1+x^2)^2}\).</b> \(x=\tan\theta\):
+\[\int\cos^4\theta\cdot\frac{d\theta}{\cos^2\theta}=\int\cos^2\theta\,d\theta=\frac\theta2+\frac{\sin\theta\cos\theta}2+C\]
+מהמשולש: \(\sin\theta\cos\theta=\frac{x}{\sqrt{1+x^2}}\cdot\frac1{\sqrt{1+x^2}}=\frac{x}{1+x^2}\), ולכן
+\[\int\frac{dx}{(1+x^2)^2}=\frac12\arctan x+\frac{x}{2(1+x^2)}+C\]
+\[\int_0^1\frac{dx}{(1+x^2)^2}=\frac\pi8+\frac14\]</p>
+<p><b>(ד) עם \(x^2\) מחוץ לשורש: \(\int\frac{dx}{x^2\sqrt{1+x^2}}\).</b> \(x=\tan\theta\):
+\[\begin{aligned}\int\frac{1}{\tan^2\theta}\cdot\cos\theta\cdot\frac{d\theta}{\cos^2\theta}&=\int\frac{\cos\theta}{\sin^2\theta}d\theta\overset{t=\sin\theta}{=}-\frac1{\sin\theta}+C\\&=-\frac{\sqrt{1+x^2}}{x}+C\end{aligned}\]</p>
+</div>
+
+<div class="box ex" id="c4-t3"><div class="tag">סוג 3: \(\sqrt{x^2-a^2}\), מציבים \(x=\frac{a}{\cos\theta}\)</div>
+<p>כאן \(dx=\frac{a\sin\theta}{\cos^2\theta}d\theta\), ו־\(\sqrt{x^2-a^2}=a\tan\theta\). (נניח \(x\gt a\).)</p>
+<p><b>(א) \(\int\frac{dx}{x^2\sqrt{x^2-1}}\).</b> \(x=\frac1{\cos\theta}\), \(\sqrt{x^2-1}=\tan\theta\):
+\[\int\cos^2\theta\cdot\frac{1}{\tan\theta}\cdot\frac{\sin\theta}{\cos^2\theta}d\theta=\int\cos\theta\,d\theta=\sin\theta+C\]
+מהמשולש (יתר \(x\), ליד 1, מול \(\sqrt{x^2-1}\)): \(\sin\theta=\frac{\sqrt{x^2-1}}x\). התוצאה \(\frac{\sqrt{x^2-1}}x+C\).</p>
+<p><b>(ב) \(\int\frac{\sqrt{x^2-9}}{x}dx\).</b> \(x=\frac3{\cos\theta}\), \(\sqrt{x^2-9}=3\tan\theta\):
+\[\int3\tan\theta\cdot\frac{\cos\theta}3\cdot\frac{3\sin\theta}{\cos^2\theta}d\theta=3\int\tan^2\theta\,d\theta=3\tan\theta-3\theta+C\]
+מהמשולש: \(\tan\theta=\frac{\sqrt{x^2-9}}3\), ו־\(\cos\theta=\frac3x\), כלומר \(\theta=\arccos\frac3x\):
+\[=\sqrt{x^2-9}-3\arccos\frac3x+C\]</p>
+<p><b>(ג) \(\int\frac{dx}{x\sqrt{x^2-16}}\).</b> \(x=\frac4{\cos\theta}\), \(\sqrt{x^2-16}=4\tan\theta\):
+\[\int\frac{\cos\theta}{4}\cdot\frac{1}{4\tan\theta}\cdot\frac{4\sin\theta}{\cos^2\theta}d\theta=\frac14\int d\theta=\frac\theta4+C=\frac14\arccos\frac4x+C\]</p>
+</div>
+
+<div class="box ex"><div class="tag">השלמה לריבוע לפני ההצבה</div>
+<p><b>(א) \(\int\sqrt{3-2x-x^2}\,dx\).</b> משלימים: \(3-2x-x^2=4-(x+1)^2\). מציבים \(u=x+1\), ומקבלים \(\int\sqrt{4-u^2}\,du\), <a class="xref" href="#c4-t1">סוג 1</a>. עם \(u=2\sin\theta\):
+\[\begin{aligned}4\int\cos^2\theta\,d\theta&=2\theta+2\sin\theta\cos\theta+C\\&=2\arcsin\frac{x+1}2+\frac{(x+1)\sqrt{3-2x-x^2}}2+C\end{aligned}\]</p>
+<p><b>(ב) \(\int\frac{dx}{\sqrt{x^2-6x+13}}\).</b> משלימים: \(x^2-6x+13=(x-3)^2+4\). עם \(u=x-3\) זה בדיוק <a class="xref" href="#c4-t2b">סוג 2 (ב)</a>, ולכן התוצאה \(\ln\big(x-3+\sqrt{x^2-6x+13}\big)+C\).</p>
+<p><b>(ג) \(\int\frac{dx}{(x^2+2x+2)^{2}}\).</b> \((x+1)^2+1\). עם \(u=x+1\) זה <a class="xref" href="#c4-t2c">סוג 2 (ג)</a>: \(\frac12\arctan(x+1)+\frac{x+1}{2(x^2+2x+2)}+C\).</p>
+</div>
+
+<div class="box warn"><div class="tag">⚠️ טעויות נפוצות ומלכודות</div>
+<ul>
+<li><b>לא תמיד צריך טריגו.</b> אם מחוץ לשורש יש \(x\) (בחזקה אי־זוגית), הצבה רגילה מהירה יותר. למשל \(\int\frac{x\,dx}{\sqrt{9-x^2}}\): עם \(t=9-x^2\) מקבלים \(-\sqrt{9-x^2}+C\) בשורה אחת. גם \(\int x^3\sqrt{1-x^2}dx\) נפתר עם \(t=1-x^2\) ו־\(x^2=1-t\).</li>
+<li><b>לשכוח את \(dx\)</b>. ההצבה היא \(x=a\sin\theta\), ולכן גם \(dx\) משתנה.</li>
+<li><b>באינטגרל מסוים</b>: או שמחליפים את הגבולות ל־\(\theta\), או שחוזרים ל־\(x\). לא שניהם וגם לא שום דבר מהם.</li>
+<li><b>לבלבל בין \(\sqrt{a^2+x^2}\) ל־\(\sqrt{x^2-a^2}\)</b>: הסימן בין האיברים קובע. כשיש \(+\), מציבים \(\tan\). כשה־\(x^2\) הוא החיובי ויש מינוס, מציבים \(\frac{a}{\cos\theta}\).</li>
+<li><b>\(\sqrt{a^2-x^2}\) מוגדר רק ל־\(|x|\le a\)</b>, ולכן \(\theta=\arcsin\frac xa\) תמיד מוגדר. אם הגבולות של האינטגרל יוצאים מהתחום, יש טעות בתרגיל או בהצבה.</li>
+</ul>
+</div>
+
+
+<h3>הצבה אוניברסלית</h3>
+<figure class="fig" data-fig="weier"><figcaption><b>מאיפה מגיע \(t=\tan\frac x2\)?</b> מעבירים קו מהנקודה \((-1,0)\) דרך הנקודה \((\cos x,\sin x)\) על מעגל היחידה. הזווית בקודקוד היא \(\frac x2\) (זווית היקפית), והקו פוגש את ציר \(y\) בגובה \(t=\tan\frac x2\). כך כל נקודה על המעגל מתוארת בעזרת מספר אחד \(t\), ו־\(\sin x,\cos x\) הופכים לשברים רציונליים ב־\(t\).</figcaption></figure>
+<div class="box thm"><div class="tag">הצבה אוניברסלית (ויירשטראס)</div>
+לאינטגרל של <b>פונקציה רציונלית של \(\sin x,\cos x\)</b> אפשר תמיד להציב \(t=\tan\frac x2\):
+\[\sin x=\frac{2t}{1+t^2},\qquad\cos x=\frac{1-t^2}{1+t^2},\qquad dx=\frac{2\,dt}{1+t^2}\]
+ההצבה הופכת את האינטגרל לפונקציה רציונלית של \(t\), ואותה פותרים בשברים חלקיים. היא עובדת תמיד, אבל החישוב ארוך, ולכן כדאי לבדוק קודם אם הצבה פשוטה יותר (למשל \(t=\sin x\) או \(t=\cos x\)) מספיקה.
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>הצבה אוניברסלית</div>
+<div class="wk-q">חשבו \(\displaystyle\int\frac{dx}{2+\cos x}\).</div>
+<ol class="wsteps">
+<li><span class="st">מוודאים שהשיטה מתאימה.</span>
+האינטגרנד הוא מנה של ביטויים ב־\(\cos x\), ואין גורם \(\sin x\) שישמש כנגזרת להצבה \(t=\cos x\). לכן משתמשים בהצבה האוניברסלית.</li>
+<li><span class="st">גוזרים את נוסחאות ההצבה.</span>
+נסמן \(t=\tan\frac x2\). לפי זהויות הזווית הכפולה, ובחלוקה ב־\(\cos^2\frac x2+\sin^2\frac x2=1\):
+\[\cos x=\frac{\cos^2\frac x2-\sin^2\frac x2}{\cos^2\frac x2+\sin^2\frac x2}=\frac{1-t^2}{1+t^2},\qquad \sin x=\frac{2\sin\frac x2\cos\frac x2}{\cos^2\frac x2+\sin^2\frac x2}=\frac{2t}{1+t^2}\]
+ומ־\(x=2\arctan t\) מקבלים \(dx=\frac{2\,dt}{1+t^2}\).
+<p class="why-step">החלוקה של מונה ומכנה ב־\(\cos^2\frac x2\) היא מה שהופך כל ביטוי ל־\(\tan\frac x2\).</p></li>
+<li><span class="st">מציבים ומפשטים את המכנה.</span>
+\[2+\cos x=2+\frac{1-t^2}{1+t^2}=\frac{2(1+t^2)+1-t^2}{1+t^2}=\frac{3+t^2}{1+t^2}\]</li>
+<li><span class="st">כותבים את האינטגרל ב־\(t\).</span>
+\[\int\frac{1+t^2}{3+t^2}\cdot\frac{2\,dt}{1+t^2}=\int\frac{2\,dt}{t^2+3}\]
+<p class="why-step">הגורם \(1+t^2\) מתבטל כמעט תמיד בין \(dx\) למכנה. מה שנשאר הוא פונקציה רציונלית של \(t\).</p></li>
+<li><span class="st">פותרים את האינטגרל הרציונלי.</span>
+המכנה \(t^2+(\sqrt3)^2\) הוא גורם ריבועי אי־פריק:
+\[2\int\frac{dt}{t^2+(\sqrt3)^2}=\frac2{\sqrt3}\arctan\frac{t}{\sqrt3}+C\]</li>
+<li><span class="st">חוזרים ל־\(x\).</span>
+מציבים \(t=\tan\frac x2\). התוצאה תקפה בכל קטע שבו \(\tan\frac x2\) מוגדר, כלומר \(-\pi\lt x\lt\pi\) והזזות שלו.</li>
+</ol>
+<div class="res">\(\displaystyle\int\frac{dx}{2+\cos x}=\frac2{\sqrt3}\arctan\Big(\frac{\tan\frac x2}{\sqrt3}\Big)+C\)</div>
+</div>
+
+<div class="box tip"><div class="tag">וריאציה: חזקות זוגיות בלבד</div>
+כשמופיעות רק <b>חזקות זוגיות</b> של \(\sin x\) ו־\(\cos x\), נוח יותר להציב \(t=\tan x\), עם \(\sin^2x=\frac{t^2}{1+t^2}\), \(\cos^2x=\frac1{1+t^2}\) ו־\(dx=\frac{dt}{1+t^2}\). החישוב קצר יותר, כי המעלות של \(t\) נמוכות יותר. למשל \(\int\frac{dx}{\sin^4x}=\int\frac{(1+t^2)^2}{t^4}\cdot\frac{dt}{1+t^2}=\int\frac{1+t^2}{t^4}dt=-\frac1{3t^3}-\frac1t+C\), כאשר \(t=\tan x\).
+</div>
+
+
+<h3>תרגול מסכם: זהו את השיטה ופתרו</h3>
+<div class="box idea"><div class="tag">💡 איך לתרגל</div>
+לפני שפותחים רמז, שאלו את עצמכם רק שאלה אחת: <b>איזו שיטה?</b> (סדר החשיבה בתחילת <a class="xref" href="chapter-3.html">פרק 3</a> עוזר.) הרמז אומר מה להציב. הפתרון מראה את כל הדרך.
+</div>
+
+<div class="wq"><div class="wq-title">תרגיל 1</div>
+<div class="wq-q">\(\displaystyle\int\frac{dx}{x^2\sqrt{4-x^2}}\)</div>
+<details class="hint"><summary>רמז</summary><div>\(\sqrt{a^2-x^2}\) עם \(a=2\), ואין \(x\) "חופשי" במונה. מציבים \(x=2\sin\theta\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(x=2\sin\theta\), \(dx=2\cos\theta\,d\theta\), \(\sqrt{4-x^2}=2\cos\theta\):</p>
+\[\int\frac{2\cos\theta\,d\theta}{4\sin^2\theta\cdot2\cos\theta}=\frac14\int\frac{d\theta}{\sin^2\theta}=-\frac14\cot\theta+C\]
+<p>מהמשולש: \(\cot\theta=\frac{\sqrt{4-x^2}}{x}\). התוצאה: \(-\dfrac{\sqrt{4-x^2}}{4x}+C\).</p>
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 2</div>
+<div class="wq-q">\(\displaystyle\int_0^3\frac{dx}{(9+x^2)^{3/2}}\)</div>
+<details class="hint"><summary>רמז</summary><div>\(x=3\tan\theta\). החליפו את הגבולות: \(x=3\) נותן \(\tan\theta=1\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(x=3\tan\theta\), \(dx=\frac{3\,d\theta}{\cos^2\theta}\), \(9+x^2=\frac9{\cos^2\theta}\), ולכן \((9+x^2)^{3/2}=\frac{27}{\cos^3\theta}\). הגבולות: \(0\to0\), \(3\to\frac\pi4\).</p>
+\[\int_0^{\pi/4}\frac{\cos^3\theta}{27}\cdot\frac{3\,d\theta}{\cos^2\theta}=\frac19\int_0^{\pi/4}\cos\theta\,d\theta=\frac19\sin\theta\Big|_0^{\pi/4}=\frac{\sqrt2}{18}\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 3</div>
+<div class="wq-q">\(\displaystyle\int\frac{\sqrt{x^2-4}}{x^2}dx\qquad(x\gt2)\)</div>
+<details class="hint"><summary>רמז</summary><div>\(x=\frac2{\cos\theta}\). בסוף תגיעו ל־\(\int\frac{\sin^2\theta}{\cos\theta}d\theta\). כתבו \(\sin^2=1-\cos^2\) ופצלו.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(x=\frac2{\cos\theta}\), \(dx=\frac{2\sin\theta}{\cos^2\theta}d\theta\), \(\sqrt{x^2-4}=2\tan\theta\), \(\frac1{x^2}=\frac{\cos^2\theta}4\):</p>
+\[\begin{aligned}\int2\tan\theta\cdot\frac{\cos^2\theta}4\cdot\frac{2\sin\theta}{\cos^2\theta}d\theta&=\int\frac{\sin^2\theta}{\cos\theta}d\theta=\int\Big(\frac1{\cos\theta}-\cos\theta\Big)d\theta\\&=\ln\Big|\frac1{\cos\theta}+\tan\theta\Big|-\sin\theta+C\end{aligned}\]
+<p>מהמשולש (יתר \(x\), ליד 2, מול \(\sqrt{x^2-4}\)): \(\frac1{\cos\theta}=\frac x2\), \(\tan\theta=\frac{\sqrt{x^2-4}}2\), \(\sin\theta=\frac{\sqrt{x^2-4}}x\):</p>
+\[=\ln\big(x+\sqrt{x^2-4}\big)-\frac{\sqrt{x^2-4}}{x}+C\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 4 (אתגר)</div>
+<div class="wq-q">\(\displaystyle\int\sqrt{1+x^2}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>\(x=\tan\theta\) מביא ל־\(\int\frac{d\theta}{\cos^3\theta}\). את זה פותרים בחלקים, עם \(g=\frac1{\cos\theta}\) ו־\(f'=\frac1{\cos^2\theta}\), וטריק החזרה.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(x=\tan\theta\), \(dx=\frac{d\theta}{\cos^2\theta}\), \(\sqrt{1+x^2}=\frac1{\cos\theta}\), ולכן \(I=\int\frac{d\theta}{\cos^3\theta}\). נסמן \(\sec\theta=\frac1{\cos\theta}\).</p>
+<p>בחלקים, עם \(g=\sec\theta\), \(g'=\sec\theta\tan\theta\), \(f'=\sec^2\theta\), \(f=\tan\theta\):</p>
+\[\begin{aligned}I&=\sec\theta\tan\theta-\int\sec\theta\tan^2\theta\,d\theta=\sec\theta\tan\theta-\int\sec\theta(\sec^2\theta-1)d\theta\\&=\sec\theta\tan\theta-I+\int\sec\theta\,d\theta\end{aligned}\]
+\[2I=\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|\]
+\[I=\tfrac12\big(\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|\big)+C\]
+<p>חוזרים: \(\tan\theta=x\), \(\sec\theta=\sqrt{1+x^2}\):</p>
+\[\int\sqrt{1+x^2}\,dx=\frac12x\sqrt{1+x^2}+\frac12\ln\big(x+\sqrt{1+x^2}\big)+C\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 5</div>
+<div class="wq-q">\(\displaystyle\int x^3\sqrt{1-x^2}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>אפשר עם \(x=\sin\theta\), אבל יש דרך קצרה: יש \(x\) במונה, אז \(t=1-x^2\). את \(x^2\) שנשאר כותבים כ־\(1-t\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(t=1-x^2\), \(dt=-2x\,dx\), ו־\(x^2=1-t\). כותבים \(x^3dx=x^2\cdot x\,dx\):</p>
+\[\begin{aligned}\int x^2\sqrt{1-x^2}\,x\,dx&=-\frac12\int(1-t)\sqrt t\,dt=-\frac12\Big(\frac23t^{3/2}-\frac25t^{5/2}\Big)+C\\&=-\frac13(1-x^2)^{3/2}+\frac15(1-x^2)^{5/2}+C\end{aligned}\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 6</div>
+<div class="wq-q">\(\displaystyle\int\frac{x+1}{\sqrt{x^2+2x+5}}\,dx\qquad\text{ו־}\qquad\int\frac{dx}{\sqrt{x^2+2x+5}}\)</div>
+<details class="hint"><summary>רמז</summary><div>הראשון: המונה הוא חצי מנגזרת הביטוי שבשורש. השני: משלימים לריבוע \((x+1)^2+4\) ומציבים \(x+1=2\tan\theta\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>הראשון:</b> \(t=x^2+2x+5\), \(dt=2(x+1)dx\): \(\frac12\int t^{-1/2}dt=\sqrt{x^2+2x+5}+C\). בלי טריגו.</p>
+<p><b>השני:</b> \(u=x+1\), ואז \(\int\frac{du}{\sqrt{u^2+4}}\). עם \(u=2\tan\theta\) (בדיוק כמו <a class="xref" href="#c4-t2b">סוג 2 (ב)</a>):</p>
+\[=\ln\big(x+1+\sqrt{x^2+2x+5}\big)+C\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 7</div>
+<div class="wq-q">\(\displaystyle\int_0^\pi\sin^4x\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>שתי חזקות זוגיות (\(\cos^0\)), אז זהות הזווית הכפולה פעמיים, כמו ב־\(\cos^4\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+\[\begin{aligned}\sin^4x&=\Big(\frac{1-\cos2x}2\Big)^2=\frac14\Big(1-2\cos2x+\frac{1+\cos4x}2\Big)\\&=\frac38-\frac12\cos2x+\frac18\cos4x\end{aligned}\]
+\[\int_0^\pi\sin^4x\,dx=\Big[\frac{3x}8-\frac{\sin2x}4+\frac{\sin4x}{32}\Big]_0^\pi=\frac{3\pi}8\]
+<p class="small">בדיקה עם וליס: \(\int_0^\pi=2W_4=2\cdot\frac34\cdot\frac12\cdot\frac\pi2=\frac{3\pi}8\). ✓</p>
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 8</div>
+<div class="wq-q">\(\displaystyle\int e^{2x}\sin x\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>פעמיים בחלקים, ובשתי הפעמים \(f'=e^{2x}\). האינטגרל המקורי חוזר, ומעבירים אגף.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>נסמן את האינטגרל ב־\(I\). בחלקים עם \(g=\sin x\), \(f=\frac12e^{2x}\):</p>
+\[\begin{aligned}I&=\frac12e^{2x}\sin x-\frac12\int e^{2x}\cos x\,dx\\&=\frac12e^{2x}\sin x-\frac12\Big(\frac12e^{2x}\cos x+\frac12\int e^{2x}\sin x\,dx\Big)\\&=\frac12e^{2x}\sin x-\frac14e^{2x}\cos x-\frac14I\end{aligned}\]
+\[\frac54I=\frac{e^{2x}(2\sin x-\cos x)}4\ \Rightarrow\ I=\frac{e^{2x}(2\sin x-\cos x)}5+C\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 9</div>
+<div class="wq-q">\(\displaystyle\int\frac{dx}{1+\cos x}\)</div>
+<details class="hint"><summary>רמז</summary><div>פונקציה רציונלית של \(\cos x\), אז הצבה אוניברסלית \(t=\tan\frac x2\). (או: \(1+\cos x=2\cos^2\frac x2\).)</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(1+\cos x=1+\frac{1-t^2}{1+t^2}=\frac{2}{1+t^2}\), ו־\(dx=\frac{2\,dt}{1+t^2}\):</p>
+\[\int\frac{1+t^2}{2}\cdot\frac{2\,dt}{1+t^2}=\int dt=\tan\frac x2+C\]
+</div></details></div>
+
+<div class="wq"><div class="wq-title">תרגיל 10</div>
+<div class="wq-q">\(\displaystyle\int_0^1\frac{x^2}{\sqrt{2-x^2}}\,dx\)</div>
+<details class="hint"><summary>רמז</summary><div>\(x=\sqrt2\sin\theta\). הגבול העליון: \(\sin\theta=\frac1{\sqrt2}\), כלומר \(\theta=\frac\pi4\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(x=\sqrt2\sin\theta\), \(dx=\sqrt2\cos\theta\,d\theta\), \(\sqrt{2-x^2}=\sqrt2\cos\theta\). הגבולות: \(0\to0\), \(1\to\frac\pi4\).</p>
+\[\int_0^{\pi/4}\frac{2\sin^2\theta}{\sqrt2\cos\theta}\cdot\sqrt2\cos\theta\,d\theta=2\int_0^{\pi/4}\sin^2\theta\,d\theta=\Big[\theta-\sin\theta\cos\theta\Big]_0^{\pi/4}=\frac\pi4-\frac12\]
+</div></details></div>
+
+
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">ב־\(\int\frac{dx}{\sqrt{4+x^2}}\) מציבים:</p>
+<div class="opts"><button class="opt">\(x=2\sin\theta\)</button><button class="opt">\(x=\frac{2}{\cos\theta}\)</button><button class="opt">\(x=2\tan\theta\)</button><button class="opt">\(t=4+x^2\)</button></div>
+<div class="exp">\(\sqrt{a^2+x^2}\) מבקש \(x=a\tan\theta\), כי \(4+4\tan^2\theta=\frac{4}{\cos^2\theta}\). (\(t=4+x^2\) לא עובד, כי אין \(x\) במונה.)</div></div>
+<div class="quiz" data-correct="3"><div class="tag">בדוק את עצמך</div>
+<p class="q">איך נראה הפירוק לשברים חלקיים של \(\frac{1}{x^2(x+1)}\)?</p>
+<div class="opts"><button class="opt">\(\frac Ax+\frac B{x+1}\)</button><button class="opt">\(\frac A{x^2}+\frac B{x+1}\)</button><button class="opt">\(\frac{Ax+B}{x^2}+\frac{C}{(x+1)^2}\)</button><button class="opt">\(\frac Ax+\frac B{x^2}+\frac C{x+1}\)</button></div>
+<div class="exp">\(x^2\) הוא גורם לינארי שחוזר פעמיים, ולכן צריך גם \(\frac Ax\) וגם \(\frac B{x^2}\).</div></div>
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">ב־\(\int\frac{dx}{x\sqrt{x^2-16}}\) מציבים:</p>
+<div class="opts"><button class="opt">\(x=4\sin\theta\)</button><button class="opt">\(x=4\tan\theta\)</button><button class="opt">\(x=\frac4{\cos\theta}\)</button><button class="opt">\(t=x^2-16\)</button></div>
+<div class="exp">הצורה \(\sqrt{x^2-a^2}\) עם \(a=4\), ולכן \(x=\frac4{\cos\theta}\). אחרי ההצבה הכול מצטמצם ל־\(\frac14\int d\theta\).</div></div>
+<div class="quiz" data-correct="3"><div class="tag">בדוק את עצמך</div>
+<p class="q">אחרי ההצבה \(x=2\sin\theta\) ב־\(\int_0^{\sqrt2}\frac{dx}{\sqrt{4-x^2}}\), מה הגבולות החדשים?</p>
+<div class="opts"><button class="opt">\(0\) עד \(\sqrt2\)</button><button class="opt">\(0\) עד \(\frac\pi2\)</button><button class="opt">\(0\) עד \(\frac\pi3\)</button><button class="opt">\(0\) עד \(\frac\pi4\)</button></div>
+<div class="exp">\(\sin\theta=\frac{\sqrt2}2\), ולכן \(\theta=\frac\pi4\). האינטגרל הוא \(\int_0^{\pi/4}d\theta=\frac\pi4\).</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>מנה של פולינומים:</b> חילוק ארוך → פירוק המכנה → שברים חלקיים → \(\ln\), חזקות, \(\arctan\). <b>שורש של ביטוי ריבועי:</b> משלימים לריבוע ומציבים \(\sin\), \(\tan\) או \(\frac1{\cos}\) לפי הסימנים. <b>רציונלית ב־\(\sin,\cos\):</b> \(t=\tan\frac x2\).
+</div>
+<a class="next" href="chapter-5.html"><span class="arr">←</span><span><b>הלאה: שימושים.</b> עכשיו שאנחנו יודעים לחשב אינטגרלים, נשתמש בהם: שטח בין עקומות, נפח של גוף סיבוב, אורך של עקומה ושטח פנים. בכולם אותו רעיון: לחתוך לחתיכות קטנות, לחשב כל חתיכה, ולסכם.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-3.html"><small>→ הקודם</small><span>3. שיטות אינטגרציה: הצבה ובחלקים</span></a><a class="pg pg-next" href="chapter-5.html"><small>הבא ←</small><span>5. שימושים: שטח, נפח, אורך עקומה</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

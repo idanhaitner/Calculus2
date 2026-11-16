@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12. נגזרות חלקיות ודיפרנציאביליות · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html" class="on" aria-current="page"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="#c12">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c12" class="chapter" data-part="C">
+<header class="ch-head"><div class="ch-num">12</div><div><div class="ch-kicker">פרק שנים־עשר</div><h2>נגזרות חלקיות ודיפרנציאביליות</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> גבולות בכמה משתנים (<a class="xref" href="chapter-11.html">פרק 11</a>), נגזרת וישר משיק במשתנה אחד, משוואת מישור (<a class="xref" href="chapter-8.html">פרק 8</a>).</p>
+<ul class="goals"><li>נגזרת חלקית</li><li>קירוב לינארי</li><li>דיפרנציאביליות</li><li>היררכיית התנאים</li><li>גרדיאנט ויעקוביאן</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+במשתנה אחד, "גזירה" אומרת שמקרוב הגרף נראה כמו <b>ישר</b> (הישר המשיק). בשני משתנים אנחנו רוצים שמקרוב הגרף ייראה כמו <b>מישור</b>. הנגזרות החלקיות \(f_x,f_y\) הן השיפועים בשני כיוונים בלבד (לאורך הצירים). אם יש מישור משיק, הוא נקבע לגמרי על ידי שני השיפועים האלה. אבל קיום שני שיפועים לא מבטיח שיש מישור, ולכן צריך הגדרה חזקה יותר: <b>דיפרנציאביליות</b>. ממנה נבנה את כל השאר: כלל השרשרת, נגזרת כיוונית, מישור משיק וקיצון.
+</div>
+
+<figure class="fig" data-fig="partials"><figcaption><b>נגזרות חלקיות כפרוסות.</b> חותכים את המשטח במישור \(y=y_0\) (העקומה הכחולה הכהה) ובמישור \(x=x_0\) (העקומה בתכלת). \(f_x\) הוא השיפוע של העקומה הראשונה, ו־\(f_y\) של השנייה. שני הישרים המשיקים (צהובים) פורשים את <b>המישור המשיק</b>.</figcaption></figure>
+
+<div class="box def"><div class="tag">נגזרת חלקית</div>
+מקפיאים את כל המשתנים חוץ מאחד וגוזרים לפיו:
+\[f_x(x_0,y_0)=\lim_{h\to0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h},\qquad f_y(x_0,y_0)=\lim_{h\to0}\frac{f(x_0,y_0+h)-f(x_0,y_0)}{h}\]
+דוגמה: \(f=e^{x(y-1)}\). אז \(f_x=(y-1)e^{x(y-1)}\) ו־\(f_y=xe^{x(y-1)}\).
+</div>
+
+<div class="card def"><span class="pill">בפשטות · מה זה "דיפרנציאבילית"?</span>
+הפונקציה נראית מקרוב כמו <b>מישור</b>: אפשר לקרב אותה בפונקציה לינארית, וטעות הקירוב קטנה יותר מהמרחק. קיום של נגזרות חלקיות לא מספיק לזה, כי הן בודקות רק שני כיוונים.
+</div>
+<div class="box def"><div class="tag">הגדרה: דיפרנציאביליות (פונקציה של 2 משתנים)</div>
+\(f\) דיפרנציאבילית ב־\((a,b)\) אם הנגזרות החלקיות קיימות שם ו־
+\[\lim_{(h,k)\to(0,0)}\frac{f(a+h,b+k)-f(a,b)-f_x(a,b)\,h-f_y(a,b)\,k}{\sqrt{h^2+k^2}}=0\]
+באופן כללי: \(\lim_{H\to0}\frac{f(A+H)-f(A)-\nabla f(A)\cdot H}{\|H\|}=0\). <b>הקירוב הלינארי</b> הוא \(L_A(H)=f(A)+\nabla f(A)\cdot H\).
+</div>
+
+<figure class="fig" data-fig="diffchain"><figcaption><b>מה גורר מה.</b> החצים הירוקים תמיד נכונים. החצים האדומים <b>לא</b> מתהפכים, ולידם דוגמה נגדית. הסדר הזה הוא הבסיס לכל שאלת "האם \(f\) דיפרנציאבילית".</figcaption></figure>
+<div class="box thm"><div class="tag">משפטים</div>
+<ul>
+<li>דיפרנציאבילית ב־\(A\), ולכן רציפה ב־\(A\). <b>בצורה הפוכה:</b> אם \(f\) לא רציפה, היא לא דיפרנציאבילית.</li>
+<li>דיפרנציאבילית ב־\(A\), ולכן הנגזרות החלקיות קיימות ו־\(L_A(H)=f_xh_1+f_yh_2\). את הקירוב הלינארי <b>קובעות</b> הנגזרות החלקיות.</li>
+<li><b>תנאי מספיק:</b> אם הנגזרות החלקיות קיימות <b>ורציפות</b> בסביבה, \(f\) דיפרנציאבילית. (ההוכחה משתמשת במשפט הערך הממוצע בשני משתנים.)</li>
+<li>כל פונקציה אלמנטרית דיפרנציאבילית בפנים של תחום ההגדרה של הנגזרות שלה.</li>
+</ul>
+</div>
+<div class="box tip"><div class="tag">אלגוריתם: האם \(f\) דיפרנציאבילית בנקודה מיוחדת?</div>
+<ol class="steps">
+<li><b>רציפות:</b> אם \(f\) לא רציפה בנקודה, היא לא דיפרנציאבילית וסיימנו.</li>
+<li><b>נגזרות חלקיות לפי ההגדרה</b> (גבול של משתנה אחד). בנקודה שבה הפונקציה מוגדרת בנפרד <b>אסור</b> לגזור את הנוסחה. אם נגזרת חלקית לא קיימת, \(f\) לא דיפרנציאבילית.</li>
+<li>מציבים בגבול \(\frac{f(a+h,b+k)-f(a,b)-f_xh-f_yk}{\sqrt{h^2+k^2}}\) ובודקים אם הוא 0, בעזרת קוטביות או סנדוויץ׳ (כדי להראות שכן), או שני מסלולים (כדי להראות שלא).</li>
+<li>אם הגבול 0, \(f\) דיפרנציאבילית ומישור המשיק הוא \(z=f(a,b)+f_x(x-a)+f_y(y-b)\).</li>
+</ol>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>בדיקת דיפרנציאביליות בנקודה מיוחדת</div>
+<div class="wk-q">\(f(x,y)=\dfrac{x^2y}{x^2+y^2}\) עבור \((x,y)\ne(0,0)\), ו־\(f(0,0)=0\). האם \(f\) דיפרנציאבילית ב־\((0,0)\)?</div>
+<ol class="wsteps">
+<li><span class="st">רציפות.</span>
+\(\frac{x^2}{x^2+y^2}\le1\), ולכן \(|f(x,y)|\le|y|\to0=f(0,0)\). הפונקציה רציפה, וממשיכים.
+<p class="why-step">אילו \(f\) לא הייתה רציפה, התשובה הייתה "לא" כבר כאן.</p></li>
+<li><span class="st">נגזרות חלקיות לפי ההגדרה.</span>
+\[f_x(0,0)=\lim_{h\to0}\frac{f(h,0)-f(0,0)}h=\lim_{h\to0}\frac{0}{h}=0,\qquad f_y(0,0)=\lim_{k\to0}\frac{f(0,k)-0}k=0\]
+<p class="why-step">בנקודה שבה \(f\) מוגדרת בנפרד אי אפשר לגזור את הנוסחה, כי הנוסחה אינה תקפה שם.</p></li>
+<li><span class="st">מציבים בגבול של ההגדרה.</span>
+\[\frac{f(h,k)-f(0,0)-f_x\,h-f_y\,k}{\sqrt{h^2+k^2}}=\frac{h^2k}{(h^2+k^2)^{3/2}}\]</li>
+<li><span class="st">בודקים אם הגבול הוא 0.</span>
+בקוטביות \(h=r\cos\theta\), \(k=r\sin\theta\):
+\[\frac{r^3\cos^2\theta\sin\theta}{r^3}=\cos^2\theta\sin\theta\]
+הביטוי אינו תלוי ב־\(r\) כלל. לאורך \(\theta=0\) הוא 0, ולאורך \(\theta=\frac\pi4\) הוא \(\frac1{2\sqrt2}\ne0\). לכן הגבול אינו 0 (הוא אפילו אינו קיים).</li>
+<li><span class="st">מסיקים.</span>
+\(f\) רציפה ושתי הנגזרות החלקיות קיימות, אבל אינה דיפרנציאבילית ב־\((0,0)\).
+<p class="why-step">גם נגזרת כיוונית קיימת בכל כיוון: \(D_{\vec v}f(0,0)=\cos^2\theta\sin\theta\) עבור \(\vec v=(\cos\theta,\sin\theta)\). אבל זו אינה פונקציה לינארית של \(\vec v\), ולכן אין מישור משיק.</p></li>
+</ol>
+<div class="res">\(f\) אינה דיפרנציאבילית ב־\((0,0)\).</div>
+</div>
+<div class="box ex"><div class="tag">שתי תוצאות אפשריות נוספות</div>
+<p><b>(1) נגזרות חלקיות קיימות, מסלול אחד מכריע.</b> \(f=|x+y|-|x-y|\) ב־\((0,0)\): \(f(x,0)=0\) ו־\(f(0,y)=0\), ולכן \(f_x=f_y=0\). הביטוי בגבול הוא \(\frac{|h+k|-|h-k|}{\sqrt{h^2+k^2}}\), ועל המסלול \(h=k\) הוא שווה \(\frac{2|h|}{\sqrt2|h|}=\sqrt2\ne0\). לכן \(f\) אינה דיפרנציאבילית.</p>
+<p><b>(2) הגבול מתאפס: הפונקציה דיפרנציאבילית.</b> \(f=e^{-1/(x^2+y^2)}\), עם \(f(0,0)=0\): \(f_x(0,0)=\lim\frac{e^{-1/h^2}}{h}=0\) ובאותו אופן \(f_y(0,0)=0\). הביטוי בגבול בקוטביות הוא \(\frac{e^{-1/r^2}}{r}\to0\), ללא תלות ב־\(\theta\). לכן \(f\) דיפרנציאבילית בכל \(\mathbb R^2\).</p>
+</div>
+<div class="box ex"><div class="tag">קירוב לינארי</div>
+מקרבים את \(f=y+\sin(xy)+\sinh x\) בנקודה \((0.1,0.9)\) בעזרת הנקודה \((0,1)\): \(f(0,1)=1\), \(f_x=y\cos(xy)+\cosh x=2\), \(f_y=1+x\cos(xy)=1\).<br>
+\(L=1+2(x-0)+1(y-1)\), ולכן \(f(0.1,0.9)\approx1+0.2-0.1=1.1\). (הערך האמיתי הוא \(\approx1.09\).)
+</div>
+
+
+<h3>גרדיאנט, מטריצת נגזרות ויעקוביאן</h3>
+<div class="box def"><div class="tag">הגדרות</div>
+<ul>
+<li><b>גרדיאנט:</b> \(\nabla f=(f_{x_1},\dots,f_{x_n})\), וקטור הנגזרות החלקיות.</li>
+<li>עבור \(F=(f_1,\dots,f_m):\mathbb R^n\to\mathbb R^m\), <b>מטריצת הנגזרות</b> \(D_F\) היא מטריצה \(m\times n\) שבשורה ה־\(i\) שלה נמצא \(\nabla f_i\).</li>
+<li><b>יעקוביאן</b> (כש־\(n=m\)): \(J_F=\det D_F\). המשמעות שלו: <b>פי כמה F מגדילה שטח או נפח</b> מקומית. זה בדיוק מה שמשמש בהחלפת משתנים באינטגרל.</li>
+</ul>
+</div>
+<div class="box ex"><div class="tag">דוגמה</div>
+\(F=(x^2+y,\ y^3+xy)\): \(D_F=\begin{pmatrix}2x&amp;1\\y&amp;3y^2+x\end{pmatrix}\). בנקודה \((1,2)\): \(\begin{pmatrix}2&amp;1\\2&amp;13\end{pmatrix}\), ו־\(J=26-2=24\). כלומר עיגול קטן סביב \((1,2)\) עובר לצורה ששטחה בערך פי 24.
+</div>
+
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לגזור את הנוסחה בנקודה שבה הפונקציה מוגדרת בנפרד. שם מחשבים נגזרות חלקיות <b>לפי ההגדרה</b>.</li>
+<li>להסיק דיפרנציאביליות רק מקיום נגזרות חלקיות.</li>
+<li>לשכוח את המכנה \(\sqrt{h^2+k^2}\) בגבול של ההגדרה.</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">איזו גרירה <b>נכונה תמיד</b>?</p>
+<div class="opts"><button class="opt">נגזרות חלקיות קיימות ⇒ דיפרנציאבילית</button><button class="opt">דיפרנציאבילית ⇒ רציפה</button><button class="opt">רציפה ⇒ דיפרנציאבילית</button><button class="opt">נגזרות חלקיות קיימות ⇒ רציפה</button></div>
+<div class="exp">דיפרנציאביליות גוררת רציפות. כל השאר לא נכונים: למשל \(\frac{x^2y}{x^4+y^2}\) עם 0 בראשית, שיש לה נגזרות חלקיות בראשית והיא לא רציפה שם.</div></div>
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(f\) מוגדרת בנפרד ב־\((0,0)\). איך מחשבים את \(f_x(0,0)\)?</p>
+<div class="opts"><button class="opt">גוזרים את הנוסחה ומציבים \((0,0)\)</button><button class="opt">\(f_x(0,0)=0\) תמיד</button><button class="opt">\(\lim_{h\to0}\frac{f(h,0)-f(0,0)}{h}\)</button><button class="opt">\(\lim_{(x,y)\to0}f_x(x,y)\)</button></div>
+<div class="exp">בנקודה מיוחדת עובדים <b>רק לפי ההגדרה</b>. הנוסחה לא תקפה בנקודה הזו.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>דיפרנציאבילית</b> = יש מישור משיק: \(f(A+H)\approx f(A)+\nabla f(A)\cdot H\) עם שגיאה \(o(\|H\|)\). נגזרות חלקיות רציפות ⇐ מספיק. לא רציפה ⇐ לא דיפרנציאבילית.
+</div>
+<a class="next" href="chapter-13.html"><span class="arr">←</span><span><b>הלאה: כלל השרשרת, גרדיאנט ומישור משיק.</b> עכשיו שיש לנו קירוב לינארי, נשתמש בו: איך משתנה \(f\) לאורך מסלול, באיזה כיוון היא עולה הכי מהר, ומה המישור המשיק למשטח.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-11.html"><small>→ הקודם</small><span>11. גבולות ורציפות</span></a><a class="pg pg-next" href="chapter-13.html"><small>הבא ←</small><span>13. כלל השרשרת, גרדיאנט ומישור משיק</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

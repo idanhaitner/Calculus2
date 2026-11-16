@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19. החלפת משתנים ויעקוביאן · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html" class="on" aria-current="page"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="#c19">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c19" class="chapter" data-part="D">
+<header class="ch-head"><div class="ch-num">19</div><div><div class="ch-kicker">פרק תשעה־עשר</div><h2>החלפת משתנים ויעקוביאן</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> הצבה במשתנה אחד (<a class="xref" href="chapter-3.html">פרק 3</a>), יעקוביאן כ"גורם שינוי שטח" (<a class="xref" href="chapter-12.html">פרק 12</a>), קואורדינטות קוטביות (<a class="xref" href="chapter-11.html">פרק 11</a>).</p>
+<ul class="goals"><li>משפט החלפת המשתנים</li><li>\(|J|\) = מקדם השטח</li><li>קואורדינטות קוטביות</li><li>בחירת הצבה לפי התחום</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+על עיגול, ב־\(x,y\), הגבולות מכוערים: \(-\sqrt{1-x^2}\le y\le\sqrt{1-x^2}\). בקואורדינטות קוטביות אותו עיגול הוא פשוט "מלבן": \(0\le r\le1\), \(0\le\theta\le2\pi\). זה הרעיון: <b>בוחרים קואורדינטות שבהן התחום הוא מלבן</b>. המחיר: ריבוע קטן ב־\((u,v)\) הופך לצורה בגודל אחר ב־\((x,y)\), ולכן כופלים ב<b>יעקוביאן</b> \(|J|\), שאומר פי כמה השטח גדל. זו ההכללה של \(dx=g'(t)\,dt\) מהצבה במשתנה אחד.
+</div>
+
+<figure class="fig" data-fig="jacobian"><figcaption><b>מה היעקוביאן עושה.</b> רשת של ריבועים במישור \((r,\theta)\) עוברת למישור \((x,y)\) דרך \(x=r\cos\theta,\ y=r\sin\theta\). הזיזו את המחוון כדי לראות את המעבר. ריבוע קטן ב־\((r,\theta)\) הופך ל"מלבן עקום" ששטחו בערך \(r\cdot\Delta r\Delta\theta\): ככל שמתרחקים מהראשית, אותו ריבוע נמתח יותר. לכן \(|J|=r\).</figcaption></figure>
+
+<div class="box thm"><div class="tag">משפט</div>
+אם \((u,v)\mapsto(x(u,v),y(u,v))\) היא העתקה חח״ע וגזירה ברציפות מ־\(\Omega\) ל־\(D\), עם \(J\neq0\):
+\[\iint_D f(x,y)\,dxdy=\iint_\Omega f\big(x(u,v),y(u,v)\big)\,|J|\,dudv,\qquad J=\frac{\partial(x,y)}{\partial(u,v)}=\begin{vmatrix}x_u&amp;x_v\\y_u&amp;y_v\end{vmatrix}\]
+<b>שימו לב: ערך מוחלט על \(J\).</b>
+</div>
+<div class="box tip"><div class="tag">טריק: היעקוביאן ההפוך</div>
+לפעמים קל לבטא את \(u,v\) בעזרת \(x,y\), ולא להפך. אז מחשבים \(J^*=\frac{\partial(u,v)}{\partial(x,y)}\) ומשתמשים ב־\(J=\frac1{J^*}\), בלי לחלץ את \(x,y\).
+</div>
+<div class="box tip"><div class="tag">איך בוחרים את ההצבה</div>
+<b>מצורת התחום.</b> אם הגבולות הם מהצורה \(xy=2,\ xy=3,\ y=x,\ y=2x\), בוחרים \(u=xy\), \(v=\frac yx\), והתחום החדש הוא <b>מלבן</b>. אם יש \(y-x=1,2\) ו־\(\frac y{x^2}=1,2\), בוחרים \(u=y-x\), \(v=\frac{y}{x^2}\).
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>החלפת משתנים כללית</div>
+<div class="wk-q">חשבו \(\iint_Dy^2\,dx\,dy\), כאשר \(D=\{x\le y\le2x,\ 2\le xy\le3\}\) (ברביע הראשון).</div>
+<ol class="wsteps">
+<li><span class="st">בוחרים משתנים חדשים מצורת השפה.</span>
+השפה מורכבת מזוג ישרים \(\frac yx=1,2\) ומזוג היפרבולות \(xy=2,3\). לכן \(u=xy\) ו־\(v=\frac yx\).</li>
+<li><span class="st">התחום החדש.</span>
+\(D\) הופך למלבן \(\Omega=\{2\le u\le3,\ 1\le v\le2\}\).
+<p class="why-step">זו מטרת ההצבה: בקואורדינטות החדשות הגבולות הם מספרים.</p></li>
+<li><span class="st">היעקוביאן דרך ההעתקה ההפוכה.</span>
+את \(u,v\) קל לגזור לפי \(x,y\), ואת \(x,y\) קשה לחלץ. לכן:
+\[J^*=\frac{\partial(u,v)}{\partial(x,y)}=\begin{vmatrix}y&amp;x\\-\frac y{x^2}&amp;\frac1x\end{vmatrix}=\frac yx+\frac yx=2v,\qquad|J|=\frac1{|J^*|}=\frac1{2v}\]</li>
+<li><span class="st">מבטאים את האינטגרנד ב־\(u,v\).</span>
+\(uv=xy\cdot\frac yx=y^2\).</li>
+<li><span class="st">מחשבים.</span>
+\[\iint_Dy^2\,dx\,dy=\int_1^2\int_2^3uv\cdot\frac1{2v}\,du\,dv=\int_1^2\frac12\Big[\frac{u^2}2\Big]_2^3dv=\int_1^2\frac54\,dv=\frac54\]</li>
+</ol>
+<div class="res">\(\displaystyle\iint_Dy^2\,dx\,dy=\frac54\)</div>
+</div>
+
+
+<h3>קואורדינטות קוטביות</h3>
+<div class="box thm"><div class="tag">נוסחה</div>
+\(x=r\cos\theta,\ y=r\sin\theta\), \(J=r\):
+\[\iint_D f\,dxdy=\iint_\Omega f(r\cos\theta,r\sin\theta)\,\mathbf{r}\,dr\,d\theta\]
+<b>קואורדינטות אליפטיות:</b> \(x=ar\cos\theta,\ y=br\sin\theta\), \(J=abr\).<br>
+<b>מתי:</b> כשהתחום הוא עיגול, טבעת או גזרה, או כשמופיע \(x^2+y^2\).
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>קואורדינטות קוטביות עם מעגלים שאינם ממורכזים</div>
+<div class="wk-q">חשבו את המסה של \(D=\{2x\le x^2+y^2\le4x,\ 0\le y\le x\}\) עם צפיפות \(\rho(x,y)=|y|\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים את השפה.</span>
+\(x^2+y^2=2x\iff(x-1)^2+y^2=1\) ו־\(x^2+y^2=4x\iff(x-2)^2+y^2=4\): שני מעגלים שמשיקים בראשית. \(D\) הוא האזור שביניהם, מתחת לישר \(y=x\) ומעל ציר \(x\).</li>
+<li><span class="st">מתרגמים כל גבול לקוטביות.</span>
+\(x^2+y^2=r^2\) ו־\(x=r\cos\theta\): \(2r\cos\theta\le r^2\le4r\cos\theta\), ואחרי חלוקה ב־\(r\gt0\): \(2\cos\theta\le r\le4\cos\theta\).
+התנאי \(0\le y\le x\) הוא \(0\le\sin\theta\le\cos\theta\), כלומר \(0\le\theta\le\frac\pi4\).
+<p class="why-step">מעגל שעובר בראשית, \(x^2+y^2=2ax\), הוא בקוטביות \(r=2a\cos\theta\).</p></li>
+<li><span class="st">כותבים את האינטגרל עם היעקוביאן.</span>
+\(|y|=r\sin\theta\) בתחום, ו־\(dA=r\,dr\,d\theta\):
+\[\mu=\int_0^{\pi/4}\int_{2\cos\theta}^{4\cos\theta}r\sin\theta\cdot r\,dr\,d\theta\]</li>
+<li><span class="st">האינטגרל הפנימי.</span>
+\[\sin\theta\Big[\frac{r^3}3\Big]_{2\cos\theta}^{4\cos\theta}=\sin\theta\cdot\frac{64-8}{3}\cos^3\theta=\frac{56}3\cos^3\theta\sin\theta\]</li>
+<li><span class="st">האינטגרל החיצוני.</span>
+\[\frac{56}3\int_0^{\pi/4}\cos^3\theta\sin\theta\,d\theta=\frac{56}3\Big[-\frac{\cos^4\theta}4\Big]_0^{\pi/4}=\frac{56}3\cdot\frac14\Big(1-\frac14\Big)=\frac72\]</li>
+</ol>
+<div class="res">\(\mu=\frac72\)</div>
+</div>
+<div class="box warn"><div class="tag">מלכודות</div>
+<ul>
+<li>לשכוח את ה־\(r\) (היעקוביאן). זו הטעות הנפוצה ביותר.</li>
+<li>מעגל שלא ממורכז בראשית, \(x^2+y^2=2ax\), הוא בקוטביות \(r=2a\cos\theta\).</li>
+<li>לשכוח לעדכן את הגבולות לתחום \(\Omega\) החדש.</li>
+</ul>
+</div>
+
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>האינטגרל של גאוס</div>
+<div class="exr-q">חשבו \(\iint_{\mathbb R^2}e^{-(x^2+y^2)}\,dA\), והסיקו את הערך של \(\int_{-\infty}^\infty e^{-x^2}dx\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">ב־\(x,y\) אין פונקציה קדומה ל־\(e^{-x^2}\). בקוטביות היעקוביאן \(r\) נותן בדיוק את מה שחסר להצבה.</p>
+\[\iint_{\mathbb R^2}e^{-(x^2+y^2)}dA=\int_0^{2\pi}\int_0^\infty e^{-r^2}\,r\,dr\,d\theta=2\pi\cdot\Big[-\tfrac12e^{-r^2}\Big]_0^\infty=\boxed{\pi}\]
+<p>מצד שני, \(e^{-(x^2+y^2)}=e^{-x^2}e^{-y^2}\), ולכן לפי פוביני האינטגרל הכפול הוא \(\big(\int_{-\infty}^\infty e^{-x^2}dx\big)^2\). מכאן \(\int_{-\infty}^\infty e^{-x^2}dx=\sqrt\pi\).</p>
+<p class="small">ב<a class="xref" href="chapter-6.html">פרק 6</a> הוכחנו רק שהאינטגרל הזה מתכנס. כאן מצאנו את ערכו. (המעבר לתחום אינסופי דורש הצדקה של גבול, דרך עיגולים \(r\le R\) עם \(R\to\infty\).)</p>
+</div></div>
+
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">מציבים \(u=x+y\), \(v=x-y\). מה \(|J|=\big|\frac{\partial(x,y)}{\partial(u,v)}\big|\)?</p>
+<div class="opts"><button class="opt">\(2\)</button><button class="opt">\(\frac12\)</button><button class="opt">\(1\)</button><button class="opt">\(-2\)</button></div>
+<div class="exp">\(J^*=\begin{vmatrix}1&amp;1\\1&amp;-1\end{vmatrix}=-2\), ולכן \(|J|=\frac{1}{|J^*|}=\frac12\).</div></div>
+<div class="quiz" data-correct="3"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\iint_{x^2+y^2\le4}dx\,dy\) בקוטביות הוא:</p>
+<div class="opts"><button class="opt">\(\int_0^{2\pi}\int_0^2r^2\,dr\,d\theta=\frac{16\pi}3\)</button><button class="opt">\(\int_0^{\pi}\int_0^2r\,dr\,d\theta=2\pi\)</button><button class="opt">\(\int_0^{2\pi}\int_0^4r\,dr\,d\theta=16\pi\)</button><button class="opt">\(\int_0^{2\pi}\int_0^2r\,dr\,d\theta=4\pi\)</button></div>
+<div class="exp">הרדיוס הוא 2 (ולא 4), הזווית מלאה, ולא לשכוח את \(r\): \(2\pi\cdot\frac{4}{2}=4\pi\), השטח של עיגול ברדיוס 2. היעקוביאן הוא \(r\), לא \(r^2\) (\(r^2\sin\varphi\) שייך לכדוריות בתלת־ממד).</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+\(\iint_Df\,dxdy=\iint_\Omega f\cdot|J|\,dudv\). בוחרים הצבה שהופכת את התחום למלבן. קוטביות: \(dA=r\,dr\,d\theta\). <b>לא לשכוח את \(r\).</b>
+</div>
+<a class="next" href="chapter-20.html"><span class="arr">←</span><span><b>הלאה: אינטגרל משולש.</b> אותו דבר עוד ממד אחד למעלה: פונקציה על גוף במרחב. במקום עמודים יש קוביות קטנות, ובמקום קוטביות יש גליליות וכדוריות.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-18.html"><small>→ הקודם</small><span>18. החלפת סדר אינטגרציה</span></a><a class="pg pg-next" href="chapter-20.html"><small>הבא ←</small><span>20. אינטגרל משולש</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13. כלל השרשרת, גרדיאנט ומישור משיק · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html" class="on" aria-current="page"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="#c13">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c13" class="chapter" data-part="C">
+<header class="ch-head"><div class="ch-num">13</div><div><div class="ch-kicker">פרק שלושה־עשר</div><h2>כלל השרשרת, גרדיאנט ומישור משיק</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> דיפרנציאביליות וקירוב לינארי (<a class="xref" href="chapter-12.html">פרק 12</a>), מכפלה סקלרית וזווית (<a class="xref" href="chapter-7.html">פרק 7</a>), מישור דרך נקודה עם נורמל (<a class="xref" href="chapter-8.html">פרק 8</a>), קווי גובה (<a class="xref" href="chapter-9.html">פרק 9</a>).</p>
+<ul class="goals"><li>כלל השרשרת</li><li>נגזרת כיוונית</li><li>הגרדיאנט = כיוון העלייה התלולה</li><li>גרדיאנט ⊥ קו גובה</li><li>מישור משיק</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+בפרק הקודם קיבלנו קירוב לינארי \(f(A+H)\approx f(A)+\nabla f\cdot H\). מהנוסחה האחת הזו נובעות שלוש תשובות לשאלות שימושיות מאוד:
+<ul>
+<li><b>איך \(f\) משתנה לאורך מסלול?</b> כלל השרשרת: \(\frac{d}{dt}f(X(t))=\nabla f\cdot X'(t)\).</li>
+<li><b>כמה מהר \(f\) משתנה בכיוון נתון?</b> נגזרת כיוונית: \(D_{\vec v}f=\nabla f\cdot\vec v\). ומכאן: הגרדיאנט מצביע לכיוון העלייה התלולה ביותר.</li>
+<li><b>מה המישור המשיק למשטח?</b> הגרדיאנט ניצב לקו הגובה, ולכן הוא הנורמל של המישור המשיק.</li>
+</ul>
+שלושתן הן אותה מכפלה סקלרית מפרק 7. וזו גם ההכנה לקיצון: בנקודת קיצון אין כיוון שבו \(f\) עולה, ולכן \(\nabla f=\vec0\).
+</div>
+
+<h3>כלל השרשרת</h3>
+<figure class="fig" data-fig="chaintree"><figcaption><b>עץ התלות.</b> \(z=f(x,y)\), ו־\(x,y\) תלויים ב־\(t\). כדי לגזור את \(z\) לפי \(t\) עוברים על <b>כל המסלולים</b> מ־\(z\) ל־\(t\), כופלים את הנגזרות לאורך כל מסלול, ומחברים: \(\frac{dz}{dt}=\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}\).</figcaption></figure>
+<div class="box thm"><div class="tag">1. פונקציה על מסילה</div>
+\(F(t)=f(x(t),y(t))\), ואז
+\[F'(t)=f_x\frac{dx}{dt}+f_y\frac{dy}{dt}=\nabla f(X(t))\cdot X'(t)\]
+<b>דוגמה:</b> \(f=x^2+y^4\) על המסילה \((t,2t)\): \(F'=(2t,\ 4(2t)^3)\cdot(1,2)=2t+64t^3\). (אפשר לבדוק ישירות: \(F=t^2+16t^4\).)<br>
+<b>דוגמה:</b> חלקיק נע על הבורג \((\cos t,\sin t,t)\), והטמפרטורה היא \(e^{-x^2-y^2-z^2}\). קצב השינוי של הטמפרטורה הוא \(F'(t)=-2te^{-(1+t^2)}\).
+</div>
+<div class="box thm"><div class="tag">2. פונקציה של משתנה אחד אחרי פונקציה של כמה משתנים</div>
+\(\frac{\partial}{\partial x_i}g\big(f(x)\big)=g'\big(f(x)\big)\cdot\frac{\partial f}{\partial x_i}\). למשל עבור \(\sqrt{x^2+y^2+z^2}\): \(\frac{\partial}{\partial x}=\frac{x}{\sqrt{x^2+y^2+z^2}}\).
+</div>
+<div class="box thm"><div class="tag">3. הצורה הכללית (מטריצות)</div>
+\[D_{F\circ G}(T)=D_F\big(G(T)\big)\cdot D_G(T)\]
+כלומר <b>כופלים מטריצות נגזרות</b>, כש־\(D_F\) מחושבת בנקודה \(G(T)\).
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>כלל השרשרת לנגזרות חלקיות</div>
+<div class="wk-q">\(z=e^u\sin v\), כאשר \(u=xy\) ו־\(v=x+y\). חשבו \(\frac{\partial z}{\partial x}\) ו־\(\frac{\partial z}{\partial y}\) בנקודה \((x,y)=(0,1)\).</div>
+<ol class="wsteps">
+<li><span class="st">משרטטים את עץ התלות.</span>
+\(z\) תלוי ב־\(u,v\), וכל אחד מהם תלוי ב־\(x,y\). לכן מ־\(z\) ל־\(x\) יש שני מסלולים: דרך \(u\) ודרך \(v\).
+\[\frac{\partial z}{\partial x}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\frac{\partial v}{\partial x}\]
+<p class="why-step">לכל מסלול בעץ מתאים איבר אחד בסכום, והוא מכפלת הנגזרות לאורך המסלול.</p></li>
+<li><span class="st">נגזרות הפונקציה החיצונית.</span>
+\(z_u=e^u\sin v\), \(\ z_v=e^u\cos v\).</li>
+<li><span class="st">נגזרות הפונקציות הפנימיות.</span>
+\(u_x=y,\ u_y=x,\ v_x=1,\ v_y=1\).</li>
+<li><span class="st">מחשבים את הנקודה הפנימית ומציבים.</span>
+ב־\((0,1)\): \(u=0\), \(v=1\). את נגזרות \(z\) מחשבים ב־\((u,v)=(0,1)\), ואת נגזרות \(u,v\) ב־\((x,y)=(0,1)\):
+\[\frac{\partial z}{\partial x}=e^0\sin1\cdot1+e^0\cos1\cdot1=\sin1+\cos1\]
+\[\frac{\partial z}{\partial y}=e^0\sin1\cdot0+e^0\cos1\cdot1=\cos1\]
+<p class="why-step">הנגזרות של הפונקציה החיצונית מחושבות בנקודה \(G(T)=(u,v)\), לא ב־\((x,y)\). זו הטעות הנפוצה בכלל השרשרת.</p></li>
+<li><span class="st">אותו חישוב בצורה המטריצית.</span>
+\[\big(z_x\ \ z_y\big)=\big(z_u\ \ z_v\big)\begin{pmatrix}u_x&amp;u_y\\v_x&amp;v_y\end{pmatrix}=\big(\sin1\ \ \cos1\big)\begin{pmatrix}1&amp;0\\1&amp;1\end{pmatrix}=\big(\sin1+\cos1\ \ \ \cos1\big)\]</li>
+<li><span class="st">בדיקה בהצבה ישירה.</span>
+\(z=e^{xy}\sin(x+y)\), ולכן \(z_x=ye^{xy}\sin(x+y)+e^{xy}\cos(x+y)\). ב־\((0,1)\): \(\sin1+\cos1\). ✓</li>
+</ol>
+<div class="res">\(z_x(0,1)=\sin1+\cos1,\qquad z_y(0,1)=\cos1\)</div>
+</div>
+
+
+<h3>נגזרת כיוונית והגרדיאנט</h3>
+<figure class="fig" data-fig="gradient"><figcaption><b>מפת קווי גובה של \(f=x^2+2y^2\), עם הגרדיאנט בנקודה \(P\).</b> החץ הירוק \(\nabla f\) <b>ניצב לקו הגובה</b>. סובבו את כיוון התנועה \(\vec v\) (הצהוב): \(D_{\vec v}f=|\nabla f|\cos\theta\) מקסימלי כש־\(\vec v\) בכיוון הגרדיאנט, שלילי מקסימלי בכיוון ההפוך, ו־0 כשזזים לאורך קו הגובה.</figcaption></figure>
+<div class="box def"><div class="tag">הגדרה ונוסחה</div>
+עבור וקטור <b>יחידה</b> \(\vec v\) (\(|\vec v|=1\)):
+\[D_{\vec v}f(P)=\nabla f(P)\cdot\vec v=|\nabla f(P)|\cos\theta\]
+זה <b>קצב השינוי</b> של \(f\) כשזזים מ־\(P\) בכיוון \(\vec v\).
+</div>
+<div class="box thm"><div class="tag">המשמעות של הגרדיאנט</div>
+<ul>
+<li>בכיוון \(\nabla f\) הפונקציה <b>עולה הכי מהר</b>, וקצב השינוי שם הוא \(|\nabla f|\).</li>
+<li>בכיוון \(-\nabla f\) היא <b>יורדת הכי מהר</b>, בקצב \(-|\nabla f|\).</li>
+<li>בכיוון שניצב ל־\(\nabla f\) קצב השינוי הוא 0, כלומר זזים לאורך קו גובה.</li>
+</ul>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>נגזרת כיוונית וכיוון העלייה המרבית</div>
+<div class="wk-q">\(f(x,y,z)=x^2y-3yz\). חשבו את הנגזרת הכיוונית ב־\(P=(1,2,-1)\) בכיוון \(\vec u=(2,-1,2)\), ומצאו את כיוון העלייה המרבית ואת קצבה.</div>
+<ol class="wsteps">
+<li><span class="st">בודקים דיפרנציאביליות.</span>
+\(f\) פולינום, ולכן דיפרנציאבילית בכל מקום, והנוסחה \(D_{\vec v}f=\nabla f\cdot\vec v\) תקפה.</li>
+<li><span class="st">מחשבים את הגרדיאנט בנקודה.</span>
+\[\nabla f=\big(2xy,\ x^2-3z,\ -3y\big)\ \Longrightarrow\ \nabla f(1,2,-1)=(4,\ 4,\ -6)\]</li>
+<li><span class="st">מנרמלים את הכיוון.</span>
+\(|\vec u|=\sqrt{4+1+4}=3\), ולכן \(\vec v=\frac13(2,-1,2)\).
+<p class="why-step">הנוסחה דורשת וקטור יחידה. בלי נרמול התוצאה מוכפלת ב־\(|\vec u|\).</p></li>
+<li><span class="st">מכפלה סקלרית.</span>
+\[D_{\vec v}f(P)=(4,4,-6)\cdot\tfrac13(2,-1,2)=\tfrac13(8-4-12)=-\tfrac83\]
+הסימן השלילי אומר ש־\(f\) יורדת בכיוון הזה.</li>
+<li><span class="st">כיוון העלייה המרבית וקצבה.</span>
+הכיוון הוא \(\nabla f(P)\), כלומר וקטור היחידה \(\frac{(4,4,-6)}{\sqrt{68}}=\frac{(2,2,-3)}{\sqrt{17}}\). הקצב שם הוא \(|\nabla f(P)|=\sqrt{68}=2\sqrt{17}\).</li>
+</ol>
+<div class="res">\(D_{\vec v}f(P)=-\frac83\); עלייה מרבית בכיוון \(\frac{(2,2,-3)}{\sqrt{17}}\) בקצב \(2\sqrt{17}\).</div>
+</div>
+<div class="box ex"><div class="tag">דוגמאות</div>
+<ul>
+<li>\(f=x+y^2+z^4\) ב־\((3,2,1)\): \(\nabla f=(1,4,4)\). העלייה המקסימלית היא בכיוון \((1,4,4)\), והקצב שם \(\sqrt{33}\). קצב שינוי 0 מתקבל בכל כיוון \(\vec v\) עם \(v_1+4v_2+4v_3=0\).</li>
+<li><b>כדור מתגלגל</b> על המשטח \(z=x^3+5xy^2\) מהנקודה \((2,2,48)\): הוא יתגלגל בכיוון \(-\nabla f(2,2)=-(32,40)\) במישור \(xy\).</li>
+</ul>
+</div>
+<div class="box warn"><div class="tag">מלכודת</div>
+אם נותנים לכם כיוון שהוא לא וקטור יחידה, <b>חייבים לנרמל</b> אותו: \(\vec v=\frac{\vec u}{|\vec u|}\).
+</div>
+
+
+<h3>גרדיאנט, קווי גובה ומישור משיק</h3>
+<figure class="fig" data-fig="tangentplane"><figcaption><b>המישור המשיק לגרף \(z=f(x,y)\).</b> קרוב לנקודת ההשקה, המשטח והמישור כמעט זהים. זה הקירוב הלינארי של <a class="xref" href="chapter-12.html">פרק 12</a> בתמונה: \(z\approx f(a,b)+f_x(x-a)+f_y(y-b)\).</figcaption></figure>
+<div class="box thm"><div class="tag">משפט</div>
+\(\nabla f(P)\) <b>ניצב לקו הגובה (למשטח הרמה) שעובר דרך \(P\)</b>, בתנאי ש־\(\nabla f(P)\neq\vec0\).<br>
+לכן <b>מישור משיק למשטח \(F(x,y,z)=k\)</b> בנקודה \(P=(a,b,c)\) הוא
+\[\nabla F(P)\cdot(x-a,\ y-b,\ z-c)=0\]
+<b>מישור משיק לגרף \(z=f(x,y)\)</b> בנקודה \((a,b,f(a,b))\) הוא
+\[z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b),\]
+והנורמל שלו הוא \((f_x,f_y,-1)\).
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>מישור משיק וישר נורמל למשטח רמה</div>
+<div class="wk-q">מצאו את המישור המשיק ואת הישר הנורמל למשטח \(xyz+z^3=3\) בנקודה \(P=(1,2,1)\).</div>
+<ol class="wsteps">
+<li><span class="st">מוודאים שהנקודה על המשטח.</span>
+\(1\cdot2\cdot1+1^3=3\). ✓</li>
+<li><span class="st">כותבים את המשטח כמשטח רמה.</span>
+\(F(x,y,z)=xyz+z^3\), והמשטח הוא \(F=3\). \(F\) פולינום, ולכן גזירה ברציפות.</li>
+<li><span class="st">מחשבים את הגרדיאנט בנקודה.</span>
+\[\nabla F=\big(yz,\ xz,\ xy+3z^2\big)\ \Longrightarrow\ \nabla F(P)=(2,\ 1,\ 5)\ne\vec0\]
+<p class="why-step">הגרדיאנט ניצב למשטח הרמה, ולכן הוא הנורמל של המישור המשיק. התנאי \(\nabla F(P)\ne\vec0\) הכרחי לכך שהמשטח חלק בנקודה.</p></li>
+<li><span class="st">המישור המשיק: נקודה ונורמל.</span>
+\[2(x-1)+1(y-2)+5(z-1)=0\ \Longrightarrow\ 2x+y+5z=9\]</li>
+<li><span class="st">הישר הנורמל: נקודה וכיוון הגרדיאנט.</span>
+\[(x,y,z)=(1,2,1)+t\,(2,1,5),\qquad t\in\mathbb R\]</li>
+</ol>
+<div class="res">מישור משיק \(2x+y+5z=9\); ישר נורמל \(\frac{x-1}2=\frac{y-2}1=\frac{z-1}5\).</div>
+</div>
+<div class="box ex"><div class="tag">מישור משיק לספירה</div>
+עבור \(x^2+y^2+z^2=R^2\) בנקודה \((a,b,c)\): \(\nabla F=(2a,2b,2c)\), והמישור הוא \(a(x-a)+b(y-b)+c(z-c)=0\), כלומר \(ax+by+cz=R^2\). הנורמל מצביע מהמרכז החוצה, כמצופה.
+</div>
+
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לא לנרמל את הכיוון בנגזרת כיוונית.</li>
+<li>בכלל השרשרת: לחשב את \(\nabla f\) בנקודה הלא נכונה. צריך \(\nabla f\big(X(t)\big)\), לא \(\nabla f(t)\).</li>
+<li>מישור משיק לגרף: הנורמל הוא \((f_x,f_y,-1)\), לא \((f_x,f_y)\).</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="0"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(f=x^2+y^2\). מה הערך המקסימלי של הנגזרת הכיוונית בנקודה \((1,2)\)?</p>
+<div class="opts"><button class="opt">\(2\sqrt5\)</button><button class="opt">\(6\)</button><button class="opt">\(\sqrt5\)</button><button class="opt">\(20\)</button></div>
+<div class="exp">\(\nabla f=(2x,2y)=(2,4)\), והמקסימום הוא \(|\nabla f|=\sqrt{4+16}=2\sqrt5\), בכיוון הגרדיאנט.</div></div>
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">מה המישור המשיק ל־\(x^2+y^2+z^2=3\) בנקודה \((1,1,1)\)?</p>
+<div class="opts"><button class="opt">\(x+y+z=1\)</button><button class="opt">\(2x+2y+2z=3\)</button><button class="opt">\(x+y+z=3\)</button><button class="opt">\(z=1\)</button></div>
+<div class="exp">\(\nabla F=(2,2,2)\), ולכן \(2(x-1)+2(y-1)+2(z-1)=0\), כלומר \(x+y+z=3\).</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+הכול הוא \(\nabla f\cdot(\text{משהו})\): לאורך מסלול \(\nabla f\cdot X'\), בכיוון \(\nabla f\cdot\vec v\). <b>\(\nabla f\) מצביע לעלייה התלולה וניצב לקווי הגובה</b>, ולכן הוא הנורמל של המישור המשיק.
+</div>
+<a class="next" href="chapter-14.html"><span class="arr">←</span><span><b>הלאה: משפט הפונקציה הסתומה.</b> קו גובה \(F(x,y)=c\) הוא עקומה. מתי אפשר לכתוב אותה כגרף \(y=\varphi(x)\), ומה השיפוע שלה? התשובה משתמשת בגרדיאנט ובכלל השרשרת.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-12.html"><small>→ הקודם</small><span>12. נגזרות חלקיות ודיפרנציאביליות</span></a><a class="pg pg-next" href="chapter-14.html"><small>הבא ←</small><span>14. משפט הפונקציה הסתומה</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

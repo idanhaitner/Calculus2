@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. המשפט היסודי של החדו״א · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html" class="on" aria-current="page"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="#c2">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c2" class="chapter" data-part="A">
+<header class="ch-head"><div class="ch-num">2</div><div><div class="ch-kicker">פרק שני</div><h2>המשפט היסודי של החדו״א</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> ההגדרה והתכונות של האינטגרל (<a class="xref" href="chapter-1.html">פרק 1</a>), נגזרות וכלל השרשרת (חדו״א 1), לופיטל.</p>
+<ul class="goals"><li>פונקציית השטח \(F(x)\)</li><li>\(F'=f\)</li><li>ניוטון־לייבניץ</li><li>גזירת אינטגרל עם גבולות משתנים</li><li>גבולות עם אינטגרלים</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+ב<a class="xref" href="chapter-1.html">פרק 1</a> חישבנו \(\int_0^bx^2\) בעזרת נוסחה ל־\(\sum i^2\). עבור \(\sin x\) או \(\frac1{1+x^2}\) הדרך הזו כמעט בלתי אפשרית. המשפט היסודי פותר את זה: הוא אומר ש<b>אינטגרציה וגזירה הן פעולות הפוכות</b>. במקום לסכם מלבנים, מחפשים פונקציה שהנגזרת שלה היא \(f\), ומציבים בה את הקצוות.
+</div>
+
+<figure class="fig" data-fig="ftc"><figcaption><b>פונקציית השטח \(F(x)=\int_a^xf(t)\,dt\).</b> למעלה: השטח המצטבר מתחת ל־\(f\) עד הנקודה \(x\) (שטח מתחת לציר נספר במינוס). למטה: הגרף של \(F\). הזיזו את \(x\): השיפוע של \(F\) (הקו המשיק) שווה בכל רגע ל<b>גובה</b> של \(f\). איפה ש־\(f\gt0\), \(F\) עולה; איפה ש־\(f\lt0\), \(F\) יורדת; איפה ש־\(f=0\), ל־\(F\) יש קיצון.</figcaption></figure>
+
+<div class="card thm"><span class="pill">המשפט היסודי של החדו״א</span>
+תהא \(f\) אינטגרבילית ב־\([a,b]\), ונגדיר \(F(x)=\int_a^x f(t)\,dt\) לכל \(x\in[a,b]\). אז:
+<ol>
+<li>\(F\) רציפה ב־\([a,b]\).</li>
+<li>בכל נקודה \(x_0\) שבה \(f\) רציפה, \(F\) גזירה ו־\(F'(x_0)=f(x_0)\).</li>
+<li>אם \(f\) רציפה בכל הקטע, אז \(F\) היא פונקציה קדומה של \(f\), וכל פונקציה קדומה היא מהצורה \(F+C\).</li>
+</ol>
+<span class="plain">אם מזיזים את \(x\) קצת ימינה, ב־\(h\), השטח גדל ברצועה דקה ברוחב \(h\) ובגובה בערך \(f(x)\): \(F(x+h)-F(x)\approx f(x)\cdot h\). מחלקים ב־\(h\) ומקבלים \(F'(x)=f(x)\). <b>קצב הגדילה של השטח הוא גובה הגרף.</b></span>
+</div>
+
+<div class="card thm"><span class="pill">נוסחת ניוטון־לייבניץ</span>
+אם \(f\) אינטגרבילית ב־\([a,b]\) ו־\(F\) פונקציה קדומה שלה, אז
+\[\int_a^b f(x)\,dx=F(b)-F(a)=F(x)\Big|_a^b\]
+<span class="plain">כדי לחשב שטח, לא צריך מלבנים: מוצאים פונקציה ש"נגזרתה היא \(f\)", ומחסרים ערכים בקצוות. לדוגמה \(\int_0^bx^2dx=\frac{x^3}3\big|_0^b=\frac{b^3}3\), אותה תשובה כמו ב<a class="xref" href="chapter-1.html">פרק 1</a>, בשורה אחת.</span>
+</div>
+
+<div class="card thm"><span class="pill">גזירת אינטגרל עם גבולות משתנים</span>
+מהמשפט היסודי וכלל השרשרת: אם \(f\) רציפה ו־\(g,h\) גזירות, אז
+\[\frac{d}{dx}\int_{g(x)}^{h(x)}f(t)\,dt=f\big(h(x)\big)\,h'(x)-f\big(g(x)\big)\,g'(x)\]
+<span class="plain">מציבים את הגבול העליון ב־\(f\) וכופלים בנגזרת שלו, פחות אותו דבר עבור הגבול התחתון.</span>
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>גזירת אינטגרל עם גבולות משתנים</div>
+<div class="wk-q">גזרו את \(\displaystyle G(x)=\int_{\sqrt x}^{x^2}\ln(1+t^2)\,dt\) עבור \(x\gt0\).</div>
+<ol class="wsteps">
+<li><span class="st">בודקים את התנאים.</span>
+\(f(t)=\ln(1+t^2)\) רציפה בכל \(\mathbb R\). הגבולות \(h(x)=x^2\) ו־\(g(x)=\sqrt x\) גזירים עבור \(x\gt0\).</li>
+<li><span class="st">מפצלים בנקודה קבועה.</span>
+\[G(x)=\int_{0}^{x^2}f(t)\,dt-\int_{0}^{\sqrt x}f(t)\,dt=F(x^2)-F(\sqrt x),\qquad F(u)=\int_0^uf(t)\,dt\]
+<p class="why-step">המשפט היסודי מטפל בגבול עליון משתנה וגבול תחתון קבוע. הפיצול מביא כל אחד מהאיברים לצורה הזו, וכל נקודה קבועה מתאימה.</p></li>
+<li><span class="st">גוזרים כל איבר לפי כלל השרשרת.</span>
+\(F'(u)=f(u)\) לפי המשפט היסודי, ולכן
+\[\frac{d}{dx}F(x^2)=f(x^2)\cdot2x,\qquad \frac{d}{dx}F(\sqrt x)=f(\sqrt x)\cdot\frac1{2\sqrt x}\]</li>
+<li><span class="st">מציבים את \(f\).</span>
+\(f(x^2)=\ln(1+x^4)\) ו־\(f(\sqrt x)=\ln(1+x)\).</li>
+</ol>
+<div class="res">\(\displaystyle G'(x)=2x\ln(1+x^4)-\frac{\ln(1+x)}{2\sqrt x}\)</div>
+<p class="small" style="margin:0 18px 14px"><b>כאשר \(x\) מופיע גם בתוך האינטגרנד</b>, מוציאים אותו מהאינטגרל לפני הגזירה, כי המשתנה של האינטגרציה הוא \(t\). למשל \(H(x)=\int_0^x x\,e^{t^2}dt=x\int_0^xe^{t^2}dt\), ולכן לפי כלל המכפלה \(H'(x)=\int_0^xe^{t^2}dt+xe^{x^2}\).</p>
+</div>
+
+<h3>טבלת אינטגרלים בסיסיים (חובה לדעת בעל־פה)</h3>
+<p>כל שורה בטבלה היא פשוט נוסחת גזירה מחדו״א 1, הפוכה.</p>
+<div class="tablewrap"><table>
+<tr><th>פונקציה</th><th>פונקציה קדומה</th><th>פונקציה</th><th>פונקציה קדומה</th></tr>
+<tr><td>\(x^\alpha\ (\alpha\ne -1)\)</td><td>\(\frac{x^{\alpha+1}}{\alpha+1}\)</td><td>\(\frac1x\)</td><td>\(\ln|x|\)</td></tr>
+<tr><td>\(e^x\)</td><td>\(e^x\)</td><td>\(a^x\)</td><td>\(\frac{a^x}{\ln a}\)</td></tr>
+<tr><td>\(\sin x\)</td><td>\(-\cos x\)</td><td>\(\cos x\)</td><td>\(\sin x\)</td></tr>
+<tr><td>\(\frac{1}{\cos^2x}\)</td><td>\(\tan x\)</td><td>\(\tan x\)</td><td>\(-\ln|\cos x|\)</td></tr>
+<tr><td>\(\frac{1}{1+x^2}\)</td><td>\(\arctan x\)</td><td>\(\frac{1}{x^2+a^2}\)</td><td>\(\frac1a\arctan\frac xa\)</td></tr>
+<tr><td>\(\frac{1}{\sqrt{1-x^2}}\)</td><td>\(\arcsin x\)</td><td>\(\frac{f'(x)}{f(x)}\)</td><td>\(\ln|f(x)|\)</td></tr>
+</table></div>
+<div class="note"><b>שני כללים שימושיים:</b> אם \(\int f=F+C\), אז \(\int f(ax+b)\,dx=\frac1aF(ax+b)+C\). ולמה \(\ln|x|\) ולא \(\ln x\)? כי גם עבור \(x\lt0\): \((\ln(-x))'=\frac{-1}{-x}=\frac1x\).</div>
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>אינטגרל של פונקציה מחזורית</div>
+<div class="exr-q">\(f:\mathbb R\to\mathbb R\) רציפה ומחזורית עם מחזור \(T\). הוכיחו שלכל \(a\in\mathbb R\): \(\displaystyle\int_a^{a+T}f(t)\,dt=\int_0^Tf(t)\,dt\).</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">שיטה: מגדירים את האגף השמאלי כפונקציה של \(a\), ומראים שהנגזרת שלה אפס, ולכן היא קבועה.</p>
+<p>נגדיר \(g(a)=\int_a^{a+T}f(t)\,dt\). לפי נוסחת הגזירה עם גבולות משתנים:</p>
+\[g'(a)=f(a+T)\cdot1-f(a)\cdot1=0\qquad(\text{כי }f\text{ מחזורית})\]
+<p>לכן \(g\) קבועה, ובפרט \(g(a)=g(0)=\int_0^Tf\). \(\blacksquare\)</p>
+</div></div>
+
+<div class="exr"><div class="exr-h"><span class="n">תרגיל</span>גבולות עם אינטגרל מסוים</div>
+<div class="exr-q">חשבו: <b>(א)</b> \(\displaystyle\lim_{x\to0}\frac{\int_0^x\cos(t^2)\,dt}{x}\) &nbsp;&nbsp; <b>(ב)</b> \(\displaystyle\lim_{x\to\infty}\frac{\big(\int_0^xe^{t^2}dt\big)^2}{\int_0^xe^{2t^2}dt}\)</div>
+<div class="exr-s"><span class="sh">פתרון</span>
+<p class="why-step">אי אפשר לחשב את האינטגרלים האלה במפורש. אבל לופיטל צריך רק את <b>הנגזרות</b>, והמשפט היסודי נותן אותן מיד.</p>
+<p><b>(א)</b> קודם בודקים שזה \(\frac00\): \(\big|\int_0^x\cos(t^2)dt\big|\le\big|\int_0^x1\,dt\big|=|x|\to0\). לפי לופיטל:</p>
+\[\lim_{x\to0}\frac{\int_0^x\cos(t^2)dt}{x}\overset{L'H}{=}\lim_{x\to0}\frac{\cos(x^2)}{1}=\boxed{1}\]
+<p><b>(ב)</b> \(e^{t^2}\ge1\), ולכן \(\int_0^xe^{t^2}dt\ge x\to\infty\). באותו אופן המכנה שואף ל־\(\infty\). זה \(\frac\infty\infty\):</p>
+\[\overset{L'H}{=}\lim\frac{2\big(\int_0^xe^{t^2}dt\big)e^{x^2}}{e^{2x^2}}=\lim\frac{2\int_0^xe^{t^2}dt}{e^{x^2}}\overset{L'H}{=}\lim\frac{2e^{x^2}}{2xe^{x^2}}=\lim\frac1x=\boxed{0}\]
+</div></div>
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>לשכוח את הנגזרת של הגבול: \(\frac{d}{dx}\int_0^{x^2}\sin t\,dt=2x\sin(x^2)\), ולא \(\sin(x^2)\).</li>
+<li>להפעיל לופיטל בלי להראות קודם שזה באמת \(\frac00\) או \(\frac\infty\infty\).</li>
+<li>לכתוב \(F'=f\) בנקודה שבה \(f\) לא רציפה. שם המשפט לא מבטיח כלום.</li>
+<li>לשכוח את \(+C\) באינטגרל לא מסוים.</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\displaystyle\frac{d}{dx}\int_0^{x^2}\sin t\,dt=\ ?\)</p>
+<div class="opts"><button class="opt">\(\sin(x^2)\)</button><button class="opt">\(2x\sin(x^2)\)</button><button class="opt">\(2x\cos(x^2)\)</button><button class="opt">\(-\cos(x^2)\)</button></div>
+<div class="exp">\(f(h(x))\cdot h'(x)\) עם \(h=x^2\) נותן \(\sin(x^2)\cdot2x\). לא לשכוח את הנגזרת של הגבול.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+\(\big(\int_a^xf\big)'=f(x)\), ולכן \(\int_a^bf=F(b)-F(a)\) לכל פונקציה קדומה \(F\). <b>חישוב אינטגרל = מציאת פונקציה קדומה.</b>
+</div>
+<a class="next" href="chapter-3.html"><span class="arr">←</span><span><b>הלאה: שיטות אינטגרציה.</b> לגזור זה מכני: יש כלל למכפלה, למנה ולהרכבה. לאינטגרל אין כללים כאלה. בשני הפרקים הבאים נבנה ארגז כלים: הצבה ואינטגרציה בחלקים (שהן כלל השרשרת וכלל המכפלה "הפוכים"), ואחר כך שברים חלקיים והצבות טריגונומטריות.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-1.html"><small>→ הקודם</small><span>1. האינטגרל המסוים</span></a><a class="pg pg-next" href="chapter-3.html"><small>הבא ←</small><span>3. שיטות אינטגרציה: הצבה ובחלקים</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10. טופולוגיה ב־ℝⁿ · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html" class="on" aria-current="page"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="#c10">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c10" class="chapter" data-part="C">
+<header class="ch-head"><div class="ch-num">10</div><div><div class="ch-kicker">פרק עשירי</div><h2>טופולוגיה ב־\(\mathbb R^n\)</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> מרחק בין נקודות (<a class="xref" href="chapter-7.html">פרק 7</a>), תחומי הגדרה של פונקציות (<a class="xref" href="chapter-9.html">פרק 9</a>), וקטעים פתוחים וסגורים מחדו״א 1.</p>
+<ul class="goals"><li>כדור פתוח</li><li>פנים ושפה</li><li>פתוחה / סגורה</li><li>חסומה / קומפקטית</li><li>מרחב מטרי</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+במשתנה אחד דיברנו על "קטע פתוח \((a,b)\)" ו"קטע סגור \([a,b]\)", והבדל קטן זה היה חשוב: על \([a,b]\) פונקציה רציפה <b>מקבלת</b> מקסימום (ויירשטראס), ועל \((a,b)\) לא בהכרח. במישור הקבוצות מסובכות יותר (עיגולים, משולשים, חצאי מישור), ולכן צריך הגדרות כלליות. שלוש שאלות נשאל על כל קבוצה:
+<ul>
+<li><b>פתוחה?</b> צריך את זה כדי לגזור: נגזרת מוגדרת בנקודה פנימית.</li>
+<li><b>סגורה וחסומה (קומפקטית)?</b> אז ויירשטראס מבטיח מקסימום ומינימום (<a class="xref" href="chapter-15.html">פרק 15</a>).</li>
+<li><b>מה השפה?</b> שם מחפשים קיצון בנוסף לפנים, למשל בעזרת לגרנז׳ (<a class="xref" href="chapter-16.html">פרק 16</a>).</li>
+</ul>
+</div>
+
+<figure class="fig" data-fig="topo"><figcaption><b>שלושה סוגים של נקודות ביחס לקבוצה \(\Omega\).</b> <b>פנימית</b> (ירוק): יש כדור קטן סביבה שכולו בתוך \(\Omega\). <b>שפה</b> (צהוב): כל כדור סביבה, קטן ככל שיהיה, מכיל גם נקודות מ־\(\Omega\) וגם נקודות מחוצה לה. <b>חיצונית</b> (ורוד): יש כדור סביבה שכולו מחוץ ל־\(\Omega\).</figcaption></figure>
+
+<div class="box def"><div class="tag">הגדרות</div>
+<ul>
+<li><b>כדור פתוח:</b> \(B_\delta(M_0)=\{M: d(M,M_0)\lt\delta\}\). ב־\(\mathbb R^1\) זה קטע, ב־\(\mathbb R^2\) עיגול בלי השפה, ב־\(\mathbb R^3\) כדור. בכדור <b>סגור</b> יש \(\le\).</li>
+<li><b>נקודה פנימית</b> של \(\Omega\): יש סביבה שלה שכולה בתוך \(\Omega\). אוסף הנקודות הפנימיות מסומן \(\Omega^\circ\).</li>
+<li><b>נקודת שפה:</b> בכל סביבה שלה יש גם נקודות של \(\Omega\) וגם נקודות שאינן ב־\(\Omega\). השפה מסומנת \(\partial\Omega\).</li>
+<li>\(\Omega\) <b>פתוחה</b> אם כל הנקודות שלה פנימיות (\(\Omega=\Omega^\circ\)).</li>
+<li>\(\Omega\) <b>סגורה</b> אם היא מכילה את כל השפה שלה (\(\partial\Omega\subseteq\Omega\)). <b>הסגור</b> הוא \(\overline\Omega=\Omega\cup\partial\Omega\).</li>
+<li>\(\Omega\) <b>חסומה</b> אם היא מוכלת בכדור כלשהו \(B_R(0)\).</li>
+<li>\(\Omega\) <b>קומפקטית</b> אם היא סגורה וחסומה.</li>
+<li>\(\Omega\) <b>קשירה מסילתית</b> אם כל שתי נקודות בה אפשר לחבר במסילה רציפה שנשארת בתוך \(\Omega\).</li>
+</ul>
+</div>
+
+<div class="box thm"><div class="tag">משפטים</div>
+<ul>
+<li>\(\Omega\) סגורה אם ורק אם המשלים שלה \(\mathbb R^n\setminus\Omega\) פתוח.</li>
+<li>סדרה ב־\(\mathbb R^n\) מתכנסת אם ורק אם <b>כל רכיב</b> שלה מתכנס. למשל \(\big(\frac{k}{2^k},\arctan k\big)\to(0,\frac\pi2)\).</li>
+<li>\(\Omega\) קומפקטית אם ורק אם לכל סדרה ב־\(\Omega\) יש תת־סדרה שמתכנסת לנקודה ב־\(\Omega\). למשל \(\mathbb R^n\) לא קומפקטית, כי לסדרה \((k,\dots,k)\) אין תת־סדרה מתכנסת.</li>
+</ul>
+</div>
+
+<div class="box ex"><div class="tag">דוגמאות</div>
+<ul>
+<li>\(\{a\le x\lt b,\ c\lt y\le d\}\), מלבן עם אי־שוויונות "מעורבים", הוא <b>לא פתוח וגם לא סגור</b>.</li>
+<li>\(\{1\le x\le2,\ -10\le y\le10,\ 15\le z\le20\}\) חסומה: \(\sqrt{x^2+y^2+z^2}\le\sqrt{4+100+400}\).</li>
+<li>\(\{x\le y^2\}\) לא חסומה: הנקודות \((-2R,0)\) נמצאות בקבוצה ורחוקות מהראשית יותר מ־\(R\), לכל \(R\).</li>
+</ul>
+</div>
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>סיווג טופולוגי של קבוצה</div>
+<div class="wk-q">\(\Omega=\{(x,y):\ 1\lt x^2+y^2\le4\}\). מצאו את \(\Omega^\circ\) ואת \(\partial\Omega\), וקבעו אם \(\Omega\) פתוחה, סגורה, חסומה וקומפקטית.</div>
+<ol class="wsteps">
+<li><span class="st">מתארים את הקבוצה.</span>
+טבעת בין המעגל ברדיוס 1 (לא כלול) למעגל ברדיוס 2 (כלול). נסמן \(\rho=\sqrt{x^2+y^2}\), המרחק מהראשית.</li>
+<li><span class="st">נקודות פנימיות: מוכיחים עם רדיוס מפורש.</span>
+תהי \(M\) עם \(1\lt\rho_M\lt2\). נבחר \(\delta=\min(\rho_M-1,\ 2-\rho_M)\gt0\). לכל \(P\in B_\delta(M)\), לפי אי־שוויון המשולש \(|\rho_P-\rho_M|\le d(P,M)\lt\delta\), ולכן \(1\lt\rho_P\lt2\) ו־\(P\in\Omega\). מכאן \(\{1\lt\rho\lt2\}\subseteq\Omega^\circ\).
+<p class="why-step">כדי להוכיח שנקודה פנימית, מציגים \(\delta\) מפורש ומראים שכל הכדור בתוך הקבוצה. "רואים בשרטוט" אינו הוכחה.</p></li>
+<li><span class="st">נקודות שפה.</span>
+נקודה \(M\) עם \(\rho_M=2\): הנקודות \((1-t)M\) עבור \(t\gt0\) קטן נמצאות ב־\(\Omega\), והנקודות \((1+t)M\) אינן ב־\(\Omega\), וכולן קרובות כרצוננו ל־\(M\). לכן \(M\in\partial\Omega\). באותו אופן כל נקודה עם \(\rho_M=1\) היא נקודת שפה. נקודות עם \(\rho\lt1\) או \(\rho\gt2\) הן חיצוניות.
+\[\Omega^\circ=\{1\lt\rho\lt2\},\qquad\partial\Omega=\{\rho=1\}\cup\{\rho=2\}\]</li>
+<li><span class="st">פתוחה? סגורה?</span>
+<b>לא פתוחה:</b> \((2,0)\in\Omega\) אבל אינה פנימית. <b>לא סגורה:</b> \((1,0)\in\partial\Omega\) אבל \((1,0)\notin\Omega\).</li>
+<li><span class="st">חסומה? קומפקטית?</span>
+<b>חסומה:</b> \(\Omega\subseteq B_3(0)\). <b>לא קומפקטית</b>, כי אינה סגורה. לכן משפט ויירשטראס אינו חל עליה: למשל \(f=\frac1{x^2+y^2-1}\) רציפה על \(\Omega\) ואינה חסומה בה.</li>
+</ol>
+<div class="res">\(\Omega\) חסומה, לא פתוחה, לא סגורה, ולכן לא קומפקטית.</div>
+</div>
+
+<div class="box tip"><div class="tag">טיפ</div>
+כלל אצבע: קבוצה שמוגדרת על ידי פונקציות רציפות עם \(\le,\ge,=\) היא <b>סגורה</b>. עם \(\lt,\gt\) בלבד היא <b>פתוחה</b>. כדי להוכיח שקבוצה לא חסומה, מראים שלכל \(R\) יש בה נקודה במרחק גדול מ־\(R\).
+</div>
+
+<div class="card thm"><span class="pill">משפט ויירשטראס (תצוגה מקדימה)</span>
+אם \(f\) רציפה על קבוצה <b>קומפקטית</b>, אז \(f\) חסומה ומקבלת בה מקסימום ומינימום. זו הסיבה שבשאלות על מקסימום ומינימום מוחלטים הקבוצה היא בדרך כלל סגורה וחסומה.
+</div>
+
+<h3>מרחב מטרי</h3>
+<div class="box def"><div class="tag">הגדרה</div>
+<b>מטריקה</b> על קבוצה \(X\) היא פונקציה \(d:X\times X\to\mathbb R_{\ge0}\) שמקיימת:
+<ol>
+<li>\(d(x,y)=0\) אם ורק אם \(x=y\)</li>
+<li>סימטריה: \(d(x,y)=d(y,x)\)</li>
+<li>אי־שוויון המשולש: \(d(x,z)\le d(x,y)+d(y,z)\)</li>
+</ol>
+<b>דוגמאות:</b> \(|x-y|\) על \(\mathbb R\). המרחק האוקלידי \(\sqrt{\sum(x_i-y_i)^2}\) על \(\mathbb R^n\). מטריקת ה־sup על פונקציות חסומות: \(d(f,g)=\sup_x|f(x)-g(x)|\).<br>
+כל ההגדרות של פתוחה, סגורה וחסומה עובדות אותו דבר עם כל מטריקה, כשהכדור מוגדר בעזרת \(d\).
+</div>
+<div class="box ex"><div class="tag">דוגמאות</div>
+<ul>
+<li><b>האלכסון \(A=\{x=y\}\) ב־\(\mathbb R^2\) אינו פתוח:</b> כל כדור סביב \((1,1)\), ברדיוס \(r\) כלשהו, מכיל את \((1,1+\frac r2)\), שלא נמצאת על הישר. (\(A\) כן סגורה.)</li>
+<li><b>נקודה בודדת \(\{x\}\) היא קבוצה סגורה:</b> המשלים שלה פתוח, כי לכל \(y\neq x\) הכדור ברדיוס \(\frac{d(x,y)}2\) סביב \(y\) לא מכיל את \(x\).</li>
+<li><b>\([0,1)\) לא סגורה:</b> \(1\) היא נקודת הצטברות של הקבוצה שלא שייכת לה.</li>
+<li>\([0,1]\) קומפקטית. \((0,1)\) חסומה ולא סגורה. \([0,\infty)\) וגם \(\{x=y\}\) סגורות ולא חסומות. \((0,\infty)\) לא סגורה ולא חסומה.</li>
+</ul>
+</div>
+
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li>"לא פתוחה" לא אומר "סגורה". יש קבוצות שהן לא זה ולא זה (\([0,1)\)), ויש שהן גם וגם (\(\mathbb R^n\), \(\emptyset\)).</li>
+<li>קומפקטית = סגורה <b>וגם</b> חסומה. חצי מישור סגור הוא לא קומפקטי.</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="2"><div class="tag">בדוק את עצמך</div>
+<p class="q">איזו מהקבוצות הבאות ב־\(\mathbb R^2\) קומפקטית?</p>
+<div class="opts"><button class="opt">\(\{x^2+y^2\lt1\}\)</button><button class="opt">\(\{y\ge0\}\)</button><button class="opt">\(\{x^2+y^2\le1\}\)</button><button class="opt">\(\{x=y\}\)</button></div>
+<div class="exp">קומפקטית פירושו סגורה וחסומה. העיגול הפתוח לא סגור. חצי המישור והישר לא חסומים.</div></div>
+<div class="quiz" data-correct="3"><div class="tag">בדוק את עצמך</div>
+<p class="q">הקבוצה \(\{0\le x\lt1,\ 0\le y\le1\}\) היא:</p>
+<div class="opts"><button class="opt">פתוחה</button><button class="opt">סגורה</button><button class="opt">פתוחה וסגורה</button><button class="opt">לא פתוחה ולא סגורה</button></div>
+<div class="exp">הנקודה \((0,0)\) שייכת לקבוצה ואינה פנימית, ולכן היא לא פתוחה. נקודת השפה \((1,0)\) לא שייכת לקבוצה, ולכן היא לא סגורה.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>פתוחה</b> = כל נקודה פנימית. <b>סגורה</b> = מכילה את השפה. <b>קומפקטית</b> = סגורה + חסומה, ושם לפונקציה רציפה יש מקסימום ומינימום.
+</div>
+<a class="next" href="chapter-11.html"><span class="arr">←</span><span><b>הלאה: גבולות ורציפות.</b> עכשיו שיש לנו "סביבה", אפשר להגדיר גבול. ההבדל הגדול ממשתנה אחד: לנקודה אפשר להתקרב מאינסוף כיוונים.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-9.html"><small>→ הקודם</small><span>9. פונקציות, גרפים וקווי גובה</span></a><a class="pg pg-next" href="chapter-11.html"><small>הבא ←</small><span>11. גבולות ורציפות</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

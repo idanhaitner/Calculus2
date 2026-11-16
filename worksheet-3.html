@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דף עבודה 3: אינטגרלים לא מסוימים, מסוימים ושימושים · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html" class="on" aria-current="page"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="chapter-3.html">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="#w3">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="w3">
+<h2>דף עבודה 3: אינטגרלים לא מסוימים, מסוימים ושימושים</h2>
+<div class="box idea"><div class="tag">💡 איך מתרגלים עם זה</div>
+הדף מכסה את <a href="chapter-3.html">פרקים <bdi dir="ltr">3–4</bdi></a> (שיטות) ואת <a href="chapter-5.html">פרק 5</a> (נפח, שטח, אורך). לפני כל סעיף שאלו: <b>איזו שיטה?</b> (התרשים ב<a href="chapter-21.html">פרק 21</a> עוזר.)
+</div>
+
+<div class="wq" id="w3q1a"><div class="wq-title">שאלה 1 (א)–(ה)</div>
+<div class="wq-q">חשבו: <b>(א)</b> \(\int e^{\sqrt x}dx\) &nbsp; <b>(ב)</b> \(\int\frac{12x+5}{x^2(x^2+2x+5)}dx\) &nbsp; <b>(ג)</b> \(\int\frac{dx}{1+\sin x+\cos x}\) &nbsp; <b>(ד)</b> \(\int\frac{x^2}{\sqrt{1-x^6}}dx\) &nbsp; <b>(ה)</b> \(\int\frac{dx}{x\ln x}\)</div>
+<details class="hint"><summary>רמז</summary><div>(א) \(t=\sqrt x\) ואז בחלקים. (ב) שברים חלקיים. (ג) הצבה אוניברסלית. (ד) \(t=x^3\). (ה) \(t=\ln x\).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(א)</b> \(t=\sqrt x\), \(x=t^2\), \(dx=2t\,dt\): \(\int2te^t\,dt\). בחלקים (\(u=2t\), \(v'=e^t\)): \(2te^t-2e^t\). לכן</p>
+\[\int e^{\sqrt x}dx=\boxed{2e^{\sqrt x}(\sqrt x-1)+C}\]
+<p><b>(ב)</b> זו הדוגמה המלאה מ<a href="chapter-4.html">פרק 4</a>. הפירוק \(\frac2x+\frac1{x^2}+\frac{-2x-5}{x^2+2x+5}\), ואחרי השלמה לריבוע \(x^2+2x+5=(x+1)^2+4\):</p>
+\[\boxed{2\ln|x|-\frac1x-\ln(x^2+2x+5)-\frac32\arctan\frac{x+1}2+C}\]
+<p><b>(ג)</b> \(t=\tan\frac x2\): \(1+\sin x+\cos x=\frac{(1+t^2)+2t+(1-t^2)}{1+t^2}=\frac{2(1+t)}{1+t^2}\), \(dx=\frac{2dt}{1+t^2}\):</p>
+\[\int\frac{1+t^2}{2(1+t)}\cdot\frac{2\,dt}{1+t^2}=\int\frac{dt}{1+t}=\boxed{\ln\big|1+\tan\tfrac x2\big|+C}\]
+<p><b>(ד)</b> \(t=x^3\), \(dt=3x^2dx\), ו־\(x^6=t^2\):</p>
+\[\frac13\int\frac{dt}{\sqrt{1-t^2}}=\boxed{\frac13\arcsin(x^3)+C}\]
+<p><b>(ה)</b> \(t=\ln x\), \(dt=\frac{dx}x\): \(\int\frac{dt}t=\boxed{\ln|\ln x|+C}\).</p>
+</div></details></div>
+
+<div class="wq" id="w3q1f"><div class="wq-title">שאלה 1 (ו)–(ח)</div>
+<div class="wq-q"><b>(ו)</b> \(\int\frac{dx}{\sin^4x}\) &nbsp; <b>(ז)</b> \(\int\frac{dx}{\sqrt{x^2+4x-16}}\), רמז: הצבת אוילר \(\sqrt{x^2+4x-16}=t-x\) &nbsp; <b>(ח)</b> \(\int xe^x\cos x\,dx\)</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(ו)</b> \(\frac1{\sin^4x}=\frac1{\sin^2x}\cdot\big(1+\cot^2x\big)\). עם \(u=\cot x\), \(du=-\frac{dx}{\sin^2x}\):</p>
+\[-\int(1+u^2)\,du=-u-\frac{u^3}3=\boxed{-\cot x-\frac{\cot^3x}3+C}\]
+<p><b>(ז)</b> מעלים בריבוע את \(\sqrt{x^2+4x-16}=t-x\): \(x^2+4x-16=t^2-2tx+x^2\), ולכן \(x=\frac{t^2+16}{2(t+2)}\). חישוב ישיר נותן</p>
+\[dx=\frac{t^2+4t-16}{2(t+2)^2}dt,\qquad \sqrt{x^2+4x-16}=t-x=\frac{t^2+4t-16}{2(t+2)} .\]
+<p>לכן \(\frac{dx}{\sqrt{x^2+4x-16}}=\frac{dt}{t+2}\), והאינטגרל הוא \(\ln|t+2|\). חוזרים: \(t=x+\sqrt{x^2+4x-16}\):</p>
+\[\boxed{\ln\big|x+2+\sqrt{x^2+4x-16}\big|+C}\]
+<p><b>(ח)</b> קודם (בטריק החזרה) \(\int e^x\cos x\,dx=\frac{e^x(\cos x+\sin x)}2\) ו־\(\int e^x\sin x\,dx=\frac{e^x(\sin x-\cos x)}2\). עכשיו בחלקים עם \(u=x\), \(v'=e^x\cos x\):</p>
+\[\int xe^x\cos x\,dx=x\cdot\frac{e^x(\cos x+\sin x)}2-\frac12\int e^x(\cos x+\sin x)\,dx=x\cdot\frac{e^x(\cos x+\sin x)}2-\frac{e^x\sin x}2\]
+\[=\boxed{\frac{e^x}2\big(x\cos x+x\sin x-\sin x\big)+C}\]
+</div></details></div>
+
+<div class="wq" id="w3q2a"><div class="wq-title">שאלה 2 (א)–(ג)</div>
+<div class="wq-q"><b>(א)</b> \(\int_0^3\frac{x^2}{\sqrt{1+x}}dx\) &nbsp; <b>(ב)</b> \(\int_1^2\frac{\ln(x^2+1)}{x^3}dx\) &nbsp; <b>(ג)</b> \(\int_0^{\pi/4}x\tan^2x\,dx\), רמז: מצאו את האינטגרל של \(\tan^2x\) והיעזרו בחלקים.</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(א)</b> \(t=\sqrt{1+x}\), \(x=t^2-1\), \(dx=2t\,dt\), הגבולות \(1\to2\):</p>
+\[\int_1^2\frac{(t^2-1)^2}t\,2t\,dt=2\int_1^2(t^4-2t^2+1)\,dt=2\Big[\frac{t^5}5-\frac{2t^3}3+t\Big]_1^2=2\cdot\frac{38}{15}=\boxed{\frac{76}{15}}\]
+<p><b>(ב)</b> בחלקים: \(u=\ln(x^2+1)\), \(v'=x^{-3}\), \(v=-\frac1{2x^2}\):</p>
+\[\Big[-\frac{\ln(x^2+1)}{2x^2}\Big]_1^2+\int_1^2\frac1{2x^2}\cdot\frac{2x}{x^2+1}dx=\frac{\ln2}2-\frac{\ln5}8+\int_1^2\frac{dx}{x(x^2+1)}\]
+<p>שברים חלקיים: \(\frac1{x(x^2+1)}=\frac1x-\frac x{x^2+1}\), ולכן \(\int_1^2=\big[\ln x-\frac12\ln(x^2+1)\big]_1^2=\frac32\ln2-\frac12\ln5\). ביחד:</p>
+\[\boxed{2\ln2-\frac58\ln5}\approx0.380\]
+<p><b>(ג)</b> \(\int\tan^2x\,dx=\int\big(\frac1{\cos^2x}-1\big)dx=\tan x-x\). בחלקים עם \(u=x\), \(v=\tan x-x\):</p>
+\[\Big[x(\tan x-x)\Big]_0^{\pi/4}-\int_0^{\pi/4}(\tan x-x)\,dx=\frac\pi4\Big(1-\frac\pi4\Big)-\Big[-\ln\cos x-\frac{x^2}2\Big]_0^{\pi/4}\]
+\[=\frac\pi4-\frac{\pi^2}{16}+\ln\frac{\sqrt2}2+\frac{\pi^2}{32}=\boxed{\frac\pi4-\frac{\pi^2}{32}-\frac{\ln2}2}\approx0.130\]
+</div></details></div>
+
+<div class="wq" id="w3q2d"><div class="wq-title">שאלה 2 (ד)–(ו)</div>
+<div class="wq-q"><b>(ד)</b> \(\int_0^{\pi/4}\frac{dx}{4\sin^2x+9\cos^2x}\) &nbsp; <b>(ה)</b> \(\int_4^8\frac{\sqrt{x^2+1}}x\,dx\) &nbsp; <b>(ו)</b> \(\int_0^{\pi/2}\frac{2-\sin x}{2+\sin x}\,dx\)</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(ד)</b> רק חזקות זוגיות של \(\sin,\cos\), ולכן מחלקים ב־\(\cos^2x\) ומציבים \(t=\tan x\) (\(dt=\frac{dx}{\cos^2x}\)), הגבולות \(0\to1\):</p>
+\[\int_0^1\frac{dt}{4t^2+9}=\frac16\arctan\frac{2t}3\Big|_0^1=\boxed{\frac16\arctan\frac23}\]
+<p><b>(ה)</b> נסמן \(s=\sqrt{x^2+1}\). פונקציה קדומה (בודקים בגזירה, או מגיעים אליה בהצבה \(s=\sqrt{x^2+1}\) ושברים חלקיים):</p>
+\[\int\frac{\sqrt{x^2+1}}x\,dx=\sqrt{x^2+1}-\ln\frac{1+\sqrt{x^2+1}}x+C\]
+\[\int_4^8=\boxed{\sqrt{65}-\sqrt{17}+\ln\frac{2(1+\sqrt{17})}{1+\sqrt{65}}}\approx4.062\]
+<p class="small">בדיקה בגזירה: \(\big(s-\ln(1+s)+\ln x\big)'=\frac xs-\frac{x}{s(1+s)}+\frac1x=\frac x{1+s}+\frac1x=\frac{x^2+1+s}{x(1+s)}=\frac{s}{x}\). ✓</p>
+<p><b>(ו)</b> \(\frac{2-\sin x}{2+\sin x}=\frac4{2+\sin x}-1\). ל־\(\int\frac{dx}{2+\sin x}\) מציבים \(t=\tan\frac x2\) (גבולות \(0\to1\)):</p>
+\[\int_0^1\frac{2\,dt}{2(1+t^2)+2t}=\int_0^1\frac{dt}{t^2+t+1}=\frac2{\sqrt3}\arctan\frac{2t+1}{\sqrt3}\Big|_0^1=\frac2{\sqrt3}\Big(\frac\pi3-\frac\pi6\Big)=\frac{\pi}{3\sqrt3}\]
+\[\int_0^{\pi/2}\frac{2-\sin x}{2+\sin x}dx=\boxed{\frac{4\pi}{3\sqrt3}-\frac\pi2}\approx0.848\]
+</div></details></div>
+
+<div class="wq" id="w3q3"><div class="wq-title">שאלה 3: נפח גוף סיבוב</div>
+<div class="wq-q">חשבו את נפח גוף הסיבוב של \(f(x)=\sqrt{\frac{x^2-x^3}{3x+1}}\) סביב ציר \(x\), בתחום \(0\le x\le1\).</div>
+<details class="hint"><summary>רמז</summary><div>\(V=\pi\int f^2\), והשורש נעלם. אחר כך חילוק פולינומים.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>בתחום \(x^2-x^3=x^2(1-x)\ge0\) ו־\(3x+1\gt0\), ולכן \(f\) מוגדרת. לפי נוסחת הדיסקות:</p>
+\[V=\pi\int_0^1\frac{x^2-x^3}{3x+1}\,dx .\]
+<p>חילוק ארוך: \(\frac{-x^3+x^2}{3x+1}=-\frac{x^2}3+\frac{4x}9-\frac4{27}+\frac{4/27}{3x+1}\). לכן</p>
+\[\int_0^1=-\frac19+\frac29-\frac4{27}+\frac4{81}\ln4=-\frac1{27}+\frac{8\ln2}{81}\]
+\[V=\boxed{\frac{\pi(8\ln2-3)}{81}}\approx0.0987\]
+</div></details></div>
+
+<div class="wq" id="w3q4"><div class="wq-title">שאלה 4: שטח</div>
+<div class="wq-q">חשבו את השטח הכלוא בין הגרף של \(f(x)=e^{2x}\sin x\) לבין ציר \(x\) בקטע \([0,2\pi]\).</div>
+<details class="hint"><summary>רמז</summary><div>הפונקציה שלילית ב־\((\pi,2\pi)\). שטח = \(\int|f|\). את הפונקציה הקדומה מוצאים בטריק החזרה.</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>בטריק החזרה (פעמיים בחלקים): \(\int e^{2x}\sin x\,dx=\frac{e^{2x}(2\sin x-\cos x)}5+C=:F(x)\).</p>
+<p>\(f\ge0\) ב־\([0,\pi]\) ו־\(f\le0\) ב־\([\pi,2\pi]\). \(F(0)=-\frac15\), \(F(\pi)=\frac{e^{2\pi}}5\), \(F(2\pi)=-\frac{e^{4\pi}}5\):</p>
+\[S=\big(F(\pi)-F(0)\big)-\big(F(2\pi)-F(\pi)\big)=\frac{e^{2\pi}+1}5+\frac{e^{4\pi}+e^{2\pi}}5=\boxed{\frac{(e^{2\pi}+1)^2}5}\]
+</div></details></div>
+
+<div class="wq" id="w3q5"><div class="wq-title">שאלה 5: אורך גרף</div>
+<div class="wq-q">חשבו את אורך הגרף של \(f(x)=\frac45x^{5/4}\) בקטע \([0,4]\).</div>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p>\(f'(x)=x^{1/4}\), רציפה, ולכן \(L=\int_0^4\sqrt{1+\sqrt x}\,dx\). נציב \(u=1+\sqrt x\): \(x=(u-1)^2\), \(dx=2(u-1)du\), הגבולות \(1\to3\):</p>
+\[L=2\int_1^3\sqrt u\,(u-1)\,du=2\Big[\frac25u^{5/2}-\frac23u^{3/2}\Big]_1^3=2\Big(\frac{8\sqrt3}5+\frac4{15}\Big)=\boxed{\frac{16\sqrt3}5+\frac8{15}}\approx6.076\]
+</div></details></div>
+
+<div class="wq" id="w3q6"><div class="wq-title">שאלה 6: נוסחת נסיגה (אינטגרל בטא)</div>
+<div class="wq-q">לכל \(a,b\ge0\) נגדיר \(I(a,b)=\int_0^1x^a(1-x)^b\,dx\).<br><b>(א)</b> הראו שלכל \(n,m\) טבעיים: \(I(n,m)=\frac m{n+1}I(n+1,m-1)\).<br><b>(ב)</b> הראו בעזרת (א) שלכל \(n,m\) טבעיים: \(I(n,m)=\frac{m!\,n!}{(m+n+1)!}\).</div>
+<details class="hint"><summary>רמז</summary><div>(א) בחלקים, כשגוזרים את \((1-x)^m\). (ב) הפעילו את (א) \(m\) פעמים (או אינדוקציה על \(m\)).</div></details>
+<details class="sol"><summary>פתרון מלא</summary><div class="sol-body">
+<p><b>(א)</b> עבור \(m\ge1\), בחלקים עם \(u=(1-x)^m\), \(v'=x^n\): \(u'=-m(1-x)^{m-1}\), \(v=\frac{x^{n+1}}{n+1}\).</p>
+\[I(n,m)=\Big[\frac{x^{n+1}(1-x)^m}{n+1}\Big]_0^1+\frac m{n+1}\int_0^1x^{n+1}(1-x)^{m-1}dx=0+\frac m{n+1}I(n+1,m-1)\]
+<p class="why-step">איבר השפה מתאפס: ב־\(x=0\) בגלל \(x^{n+1}\), וב־\(x=1\) בגלל \((1-x)^m\) עם \(m\ge1\).</p>
+<p><b>(ב)</b> באינדוקציה על \(m\). <b>בסיס</b> \(m=0\): \(I(n,0)=\int_0^1x^ndx=\frac1{n+1}=\frac{0!\,n!}{(n+1)!}\). ✓<br>
+<b>צעד:</b> נניח שהטענה נכונה עבור \(m-1\) (ולכל \(n\)). לפי (א) ולפי ההנחה (עם \(n+1\) במקום \(n\)):</p>
+\[I(n,m)=\frac m{n+1}\cdot\frac{(m-1)!\,(n+1)!}{(m-1+n+1+1)!}=\frac{m!\,n!}{(m+n+1)!}.\qquad\blacksquare\]
+<p class="small">לדוגמה \(I(1,1)=\int_0^1x(1-x)dx=\frac16=\frac{1!\,1!}{3!}\). ✓</p>
+</div></details></div>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="worksheet-2.html"><small>→ הקודם</small><span>דף עבודה 2: המשפט היסודי ושיטות אינטגרציה</span></a><a class="pg pg-next" href="chapter-21.html"><small>הבא ←</small><span>21. איזו שיטה? תרשימי החלטה</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

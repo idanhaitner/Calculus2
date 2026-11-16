@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. שיטות אינטגרציה: הצבה ובחלקים · חדו״א 2</title>
+<meta name="description" content="סיכום מלא של קורס חדו״א 2: אינטגרלים, וקטורים, פונקציות של כמה משתנים ואינטגרלים מרובים, עם דוגמאות מלאות, שרטוטים אינטראקטיביים ושאלות לבדיקה עצמית.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b4ea8'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' fill='white' font-family='serif' font-style='italic'%3E%E2%88%AB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc" aria-label="תוכן עניינים">
+  <a class="home" href="index.html">חדו״א 2 · סיכום הקורס</a>
+  <h2>תוכן עניינים</h2>
+  <a href="index.html"><b>⌂</b>מפת הקורס</a>
+  <div class="part">חלק א׳ · אינטגרלים במשתנה אחד</div>
+  <a href="chapter-1.html"><b>1</b>האינטגרל המסוים</a>
+  <a href="chapter-2.html"><b>2</b>המשפט היסודי</a>
+  <a href="chapter-3.html" class="on" aria-current="page"><b>3</b>שיטות אינטגרציה: הצבה ובחלקים</a>
+  <a href="chapter-4.html"><b>4</b>שברים חלקיים והצבות טריג׳</a>
+  <a href="chapter-5.html"><b>5</b>שימושים: שטח, נפח, אורך</a>
+  <a href="chapter-6.html"><b>6</b>אינטגרלים לא אמיתיים</a>
+  <div class="part">חלק ב׳ · וקטורים וגאומטריה</div>
+  <a href="chapter-7.html"><b>7</b>וקטורים ב־ℝⁿ</a>
+  <a href="chapter-8.html"><b>8</b>ישרים ומישורים</a>
+  <div class="part">חלק ג׳ · פונקציות של כמה משתנים</div>
+  <a href="chapter-9.html"><b>9</b>פונקציות, גרפים וקווי גובה</a>
+  <a href="chapter-10.html"><b>10</b>טופולוגיה ב־ℝⁿ</a>
+  <a href="chapter-11.html"><b>11</b>גבולות ורציפות</a>
+  <a href="chapter-12.html"><b>12</b>נגזרות חלקיות ודיפרנציאביליות</a>
+  <a href="chapter-13.html"><b>13</b>שרשרת, גרדיאנט ומישור משיק</a>
+  <a href="chapter-14.html"><b>14</b>משפט הפונקציה הסתומה</a>
+  <a href="chapter-15.html"><b>15</b>נקודות קיצון</a>
+  <a href="chapter-16.html"><b>16</b>כופלי לגרנז׳</a>
+  <div class="part">חלק ד׳ · אינטגרלים מרובים</div>
+  <a href="chapter-17.html"><b>17</b>אינטגרל כפול</a>
+  <a href="chapter-18.html"><b>18</b>החלפת סדר אינטגרציה</a>
+  <a href="chapter-19.html"><b>19</b>החלפת משתנים ויעקוביאן</a>
+  <a href="chapter-20.html"><b>20</b>אינטגרל משולש</a>
+  <div class="part">דפי עבודה</div>
+  <a href="worksheet-1.html"><b>1</b>דף עבודה 1</a>
+  <a href="worksheet-2.html"><b>2</b>דף עבודה 2</a>
+  <a href="worksheet-3.html"><b>3</b>דף עבודה 3</a>
+  <div class="part">חזרה וסיכום</div>
+  <a href="chapter-21.html"><b>21</b>איזו שיטה? תרשימי החלטה</a>
+  <a href="chapter-22.html"><b>22</b>תרגילי חזרה</a>
+  <a href="chapter-23.html"><b>23</b>כתיבת פתרון ושגיאות נפוצות</a>
+  <a href="chapter-24.html"><b>24</b>דף נוסחאות מרוכז</a>
+</nav>
+
+<main>
+<details class="mobile-toc">
+  <summary>תוכן עניינים</summary>
+  <a href="index.html">מפת הקורס</a><a href="chapter-1.html">1. האינטגרל המסוים</a><a href="chapter-2.html">2. המשפט היסודי</a><a href="#c3">3. הצבה ובחלקים</a><a href="chapter-4.html">4. שברים חלקיים והצבות טריג׳</a><a href="chapter-5.html">5. שימושים</a><a href="chapter-6.html">6. אינטגרלים לא אמיתיים</a><a href="chapter-7.html">7. וקטורים</a><a href="chapter-8.html">8. ישרים ומישורים</a><a href="chapter-9.html">9. פונקציות וקווי גובה</a><a href="chapter-10.html">10. טופולוגיה</a><a href="chapter-11.html">11. גבולות ורציפות</a><a href="chapter-12.html">12. נגזרות חלקיות</a><a href="chapter-13.html">13. שרשרת וגרדיאנט</a><a href="chapter-14.html">14. פונקציה סתומה</a><a href="chapter-15.html">15. נקודות קיצון</a><a href="chapter-16.html">16. לגרנז׳</a><a href="chapter-17.html">17. אינטגרל כפול</a><a href="chapter-18.html">18. החלפת סדר</a><a href="chapter-19.html">19. יעקוביאן</a><a href="chapter-20.html">20. אינטגרל משולש</a><a href="worksheet-1.html">דף עבודה 1</a><a href="worksheet-2.html">דף עבודה 2</a><a href="worksheet-3.html">דף עבודה 3</a><a href="chapter-21.html">21. תרשימי החלטה</a><a href="chapter-22.html">22. תרגילי חזרה</a><a href="chapter-23.html">23. כתיבת פתרון</a><a href="chapter-24.html">24. דף נוסחאות</a>
+</details>
+
+<section id="c3" class="chapter" data-part="A">
+<header class="ch-head"><div class="ch-num">3</div><div><div class="ch-kicker">פרק שלישי</div><h2>שיטות אינטגרציה: הצבה ובחלקים</h2></div></header>
+<p class="from"><b>מה כבר יודעים:</b> חישוב אינטגרל = מציאת פונקציה קדומה (<a class="xref" href="chapter-2.html">פרק 2</a>), טבלת האינטגרלים הבסיסיים, כלל השרשרת וכלל המכפלה לנגזרות.</p>
+<ul class="goals"><li>איך ניגשים לאינטגרל</li><li>החלפת משתנה</li><li>אינטגרציה בחלקים</li><li>טריק החזרה</li><li>חזקות של sin ו־cos</li></ul>
+
+<div class="card why"><span class="pill">למה זה חשוב?</span>
+את \(\int x^2\) או \(\int\cos x\) קוראים ישר מהטבלה. אבל \(\int x\cos(x^2)\,dx\) או \(\int xe^x\,dx\) לא נמצאים שם. לנגזרות יש כללים לכל צורה, ולאינטגרלים אין. לכן הופכים את כללי הגזירה:
+<ul>
+<li><b>כלל השרשרת הפוך = החלפת משתנה.</b> מתאים כשרואים "פונקציה פנימית והנגזרת שלה".</li>
+<li><b>כלל המכפלה הפוך = אינטגרציה בחלקים.</b> מתאים למכפלה של שני סוגים שונים של פונקציות.</li>
+</ul>
+רוב האינטגרלים בקורס נפתרים בשתי השיטות האלה. בפרק הבא נוסיף כלים לשני מקרים מיוחדים: מנות של פולינומים ושורשים של ביטויים ריבועיים.
+</div>
+
+<h3>איך ניגשים לאינטגרל</h3>
+<div class="box idea"><div class="tag">💡 סדר החשיבה כשרואים אינטגרל</div>
+<ol class="steps">
+<li>האם זה אינטגרל מהטבלה, או כמעט? (אולי צריך רק לפתוח סוגריים או לפצל.)</li>
+<li>האם מופיעות <b>פונקציה והנגזרת שלה</b>? אז מציבים \(t=\) הפונקציה (החלפת משתנה).</li>
+<li>האם זו <b>מכפלה</b> של שני סוגים שונים (פולינום כפול \(e^x\), \(\ln\), טריגו)? אז בחלקים.</li>
+<li>האם יש <b>חזקות של \(\sin,\cos\)</b>? לפי הזוגיות (בהמשך הפרק).</li>
+<li>האם יש \(\sqrt{a^2-x^2}\), \(\sqrt{a^2+x^2}\) או \(\sqrt{x^2-a^2}\)? הצבה טריגונומטרית.</li>
+<li>האם זו <b>מנה של פולינומים</b>? חילוק ארוך, אחר כך שברים חלקיים.</li>
+</ol>
+</div>
+
+<p class="small">תרשים החלטה מלא לכל השיטות נמצא ב<a href="chapter-21.html">פרק 21</a>.</p>
+
+<h3>החלפת משתנה (הצבה)</h3>
+<p>אם \(F'=f\), אז לפי כלל השרשרת \(\big(F(g(x))\big)'=f(g(x))\,g'(x)\). לכן כשרואים <b>מכפלה של \(f(g(x))\) בנגזרת של הפנימית</b>, האינטגרל הוא פשוט \(F(g(x))\). בפועל כותבים \(t=g(x)\), \(dt=g'(x)\,dx\), ו"מחליפים שפה" מ־\(x\) ל־\(t\).</p>
+<figure class="fig" data-fig="subst"><figcaption><b>הצבה משנה את "הסרגל" על הציר, לא את השטח.</b> משמאל: \(\int_0^{\sqrt\pi}2x\sin(x^2)\,dx\) על ציר \(x\). מימין: אחרי \(t=x^2\) מקבלים \(\int_0^{\pi}\sin t\,dt\) על ציר \(t\). שני השטחים שווים ל־2. הפס הצהוב מראה איך רצועה ברוחב \(dx\) הופכת לרצועה ברוחב \(dt=2x\,dx\).</figcaption></figure>
+<div class="box thm"><div class="tag">משפט החלפת המשתנה</div>
+אם \(g\) גזירה ברציפות ו־\(f\) רציפה, אז
+\[\int_a^b f(g(x))\,g'(x)\,dx=\int_{g(a)}^{g(b)}f(t)\,dt\]
+<b>טכנית:</b> מציבים \(t=g(x)\), ואז \(dt=g'(x)dx\). <b>באינטגרל מסוים מחליפים גם את הגבולות.</b>
+</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>החלפת משתנה באינטגרל מסוים</div>
+<div class="wk-q">חשבו \(\displaystyle\int_0^{2}x\sqrt{x^2+5}\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים פונקציה פנימית ואת הנגזרת שלה.</span>
+הביטוי מתחת לשורש הוא \(g(x)=x^2+5\), והנגזרת שלו היא \(g'(x)=2x\). הגורם \(x\) שמחוץ לשורש הוא הנגזרת עד כדי קבוע, ולכן ההצבה \(t=x^2+5\) מתאימה.</li>
+<li><span class="st">מחשבים את הדיפרנציאל.</span>
+\[t=x^2+5\ \Longrightarrow\ dt=2x\,dx\ \Longrightarrow\ x\,dx=\tfrac12\,dt\]
+<p class="why-step">מבטאים את <b>כל</b> מה שמופיע באינטגרל, כולל \(dx\), במשתנה החדש. אם נשאר \(x\) שאי אפשר לבטא דרך \(t\), ההצבה אינה מתאימה.</p></li>
+<li><span class="st">מחליפים את גבולות האינטגרציה.</span>
+\(x=0\Rightarrow t=5\) ו־\(x=2\Rightarrow t=9\).
+<p class="why-step">באינטגרל מסוים הגבולות שייכים למשתנה. אחרי ההחלפה אין צורך לחזור ל־\(x\).</p></li>
+<li><span class="st">כותבים את האינטגרל החדש ומחשבים.</span>
+\[\int_0^{2}x\sqrt{x^2+5}\,dx=\frac12\int_5^{9}t^{1/2}\,dt=\frac12\cdot\frac23\,t^{3/2}\Big|_5^9=\frac13\big(27-5\sqrt5\big)\]</li>
+<li><span class="st">בודקים על ידי גזירה.</span>
+הפונקציה הקדומה ב־\(x\) היא \(F(x)=\frac13(x^2+5)^{3/2}\), ואכן \(F'(x)=\frac13\cdot\frac32(x^2+5)^{1/2}\cdot2x=x\sqrt{x^2+5}\).</li>
+</ol>
+<div class="res">\(\displaystyle\int_0^{2}x\sqrt{x^2+5}\,dx=\frac{27-5\sqrt5}{3}\)</div>
+</div>
+
+<div class="box ex"><div class="tag">דפוסים נוספים של הצבה</div>
+<p class="small">כל שורה מדגימה דרך אחרת לזהות את ההצבה.</p>
+<ul>
+<li><b>מונה שהוא נגזרת המכנה:</b> \(\int\tan x\,dx=\int\frac{\sin x}{\cos x}dx\). עם \(t=\cos x\), \(dt=-\sin x\,dx\), מקבלים \(-\int\frac{dt}t=-\ln|\cos x|+C\). באופן כללי \(\int\frac{g'(x)}{g(x)}dx=\ln|g(x)|+C\).</li>
+<li><b>פונקציה מורכבת שמוסתרת בחזקה:</b> \(\int\frac{e^x}{1+e^{2x}}dx\). כאן \(e^{2x}=(e^x)^2\), ו־\(e^x\) במונה היא הנגזרת. עם \(t=e^x\) מקבלים \(\int\frac{dt}{1+t^2}=\arctan(e^x)+C\).</li>
+<li><b>לוגריתם והגורם \(\frac1x\):</b> \(\int\frac{dx}{x\ln x}\). עם \(t=\ln x\), \(dt=\frac{dx}x\), מקבלים \(\int\frac{dt}t=\ln|\ln x|+C\).</li>
+<li><b>הצבה של שורש שלם:</b> \(\int_0^{\ln2}\sqrt{e^x-1}\,dx\). מציבים \(t=\sqrt{e^x-1}\), כלומר \(x=\ln(1+t^2)\) ו־\(dx=\frac{2t\,dt}{1+t^2}\). הגבולות: \(0\to1\).
+\[\int_0^1 t\cdot\frac{2t}{1+t^2}\,dt=2\int_0^1\Big(1-\frac1{1+t^2}\Big)dt=2-\frac\pi2\]</li>
+<li><b>הזזה שחוסכת פיתוח בינום:</b> \(\int_0^1x(1-x)^{10}dx\). עם \(t=1-x\) הגבולות מתחלפים ל־\(1\to0\), והסימן של \(dx=-dt\) מחזיר אותם: \(\int_0^1(1-t)t^{10}dt=\frac1{11}-\frac1{12}=\frac1{132}\).</li>
+</ul>
+</div>
+
+
+<h3>אינטגרציה בחלקים</h3>
+<div class="card thm"><span class="pill">נוסחה · נובעת מ־\((uv)'=u'v+uv'\)</span>
+\[\int u\,v'\,dx=u\,v-\int v\,u'\,dx,\qquad \int_a^b u\,v'\,dx=u\,v\Big|_a^b-\int_a^b v\,u'\,dx\]
+<span class="plain">מעבירים את הנגזרת מגורם אחד לגורם השני. משתלם כשהאינטגרל החדש \(\int vu'\) קל יותר מהמקורי.</span>
+</div>
+<figure class="fig" data-fig="byparts"><figcaption><b>אינטגרציה בחלקים כתמונה.</b> העקומה עוברת מהנקודה \((u(a),v(a))\) לנקודה \((u(b),v(b))\). השטח הכחול הכהה הוא \(\int v\,du\) והשטח הירוק הוא \(\int u\,dv\). ביחד הם ממלאים את המלבן הגדול פחות המלבן הקטן: \(\int u\,dv+\int v\,du=uv\big|_a^b\).</figcaption></figure>
+<p><b>בחירת \(u\) ו־\(v'\).</b> בתור \(u\) (הגורם שגוזרים) בוחרים גורם שנעשה פשוט יותר בגזירה: \(\ln x\), \(\arctan x\), \(\arcsin x\), פולינום. בתור \(v'\) (הגורם שמאנטגרלים) בוחרים גורם שקל לאנטגרל: \(e^x\), \(\sin x\), \(\cos x\), או \(1\).</p>
+<div class="note"><b>כלל אצבע (LIATE):</b> את הגורם שמופיע ראשון ברשימה גוזרים (\(u\)): <b>L</b>ogarithm (\(\ln\)), <b>I</b>nverse trig (\(\arctan,\arcsin\)), <b>A</b>lgebraic (פולינום), <b>T</b>rig, <b>E</b>xponential. את האחרון מאנטגרלים.</div>
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>אינטגרציה בחלקים</div>
+<div class="wk-q">חשבו \(\displaystyle\int_1^{e}x\ln x\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים מכפלה של שני סוגי פונקציות.</span>
+הגורמים הם \(\ln x\) (לוגריתם) ו־\(x\) (פולינום). אין כאן פונקציה פנימית עם הנגזרת שלה, ולכן הצבה אינה מתאימה.</li>
+<li><span class="st">בוחרים \(u\) ו־\(v'\) לפי LIATE.</span>
+\(\ln x\) קודם ל־\(x\) ברשימה, ולכן \(u=\ln x\) ו־\(v'=x\).
+<p class="why-step">הנגזרת \(\frac1x\) היא פונקציה רציונלית פשוטה, בעוד שאת \(\ln x\) לא היינו יודעים לאנטגרל בתוך מכפלה. בבחירה ההפוכה (\(u=x\), \(v'=\ln x\)) היה צריך לחשב קודם את \(\int\ln x\), והאינטגרל שנשאר היה מסובך יותר.</p></li>
+<li><span class="st">מחשבים \(u'\) ו־\(v\).</span>
+\[u=\ln x\Rightarrow u'=\frac1x,\qquad v'=x\Rightarrow v=\frac{x^2}2\]
+<p class="why-step">ב־\(v\) לא מוסיפים קבוע: כל פונקציה קדומה של \(v'\) מתאימה.</p></li>
+<li><span class="st">מציבים בנוסחה.</span>
+\[\int_1^e x\ln x\,dx=\frac{x^2}{2}\ln x\Big|_1^e-\int_1^e\frac{x^2}2\cdot\frac1x\,dx=\frac{x^2}{2}\ln x\Big|_1^e-\frac12\int_1^e x\,dx\]
+<p class="why-step">האינטגרל שנשאר הוא של פולינום: הגורם הלוגריתמי נעלם בגזירה, וזו בדיוק המטרה.</p></li>
+<li><span class="st">מחשבים את שני האיברים.</span>
+\[\frac{x^2}{2}\ln x\Big|_1^e=\frac{e^2}2\cdot1-\frac12\cdot0=\frac{e^2}2,\qquad \frac12\int_1^e x\,dx=\frac{x^2}4\Big|_1^e=\frac{e^2-1}4\]</li>
+<li><span class="st">מחברים ובודקים.</span>
+\(\frac{e^2}2-\frac{e^2-1}4=\frac{e^2+1}4\). בדיקה: הפונקציה הקדומה היא \(F=\frac{x^2}2\ln x-\frac{x^2}4\), ו־\(F'=x\ln x+\frac x2-\frac x2=x\ln x\).</li>
+</ol>
+<div class="res">\(\displaystyle\int_1^{e}x\ln x\,dx=\frac{e^2+1}{4}\)</div>
+</div>
+
+<div class="box ex"><div class="tag">דפוסים נוספים של אינטגרציה בחלקים</div>
+<p><b>(1) גורם יחיד: \(v'=1\).</b> כשיש רק \(\ln x\), \(\arctan x\) או \(\arcsin x\), כותבים אותו ככפול 1:
+\[\int\ln x\,dx=x\ln x-\int x\cdot\frac1x\,dx=x\ln x-x+C\]
+\[\int\arcsin x\,dx=x\arcsin x-\int\frac{x}{\sqrt{1-x^2}}dx=x\arcsin x+\sqrt{1-x^2}+C\]
+<span class="small">באינטגרל שנשאר ב־\(\arcsin\) מציבים \(t=1-x^2\).</span></p>
+<p><b>(2) חלוקה בסוף.</b> \(\int x\arctan x\,dx\), עם \(u=\arctan x\), \(v'=x\). האינטגרל שנשאר הוא \(\int\frac{x^2}{1+x^2}dx\), ומפשטים אותו בחלוקה \(\frac{x^2}{1+x^2}=1-\frac1{1+x^2}\):
+\[\int x\arctan x\,dx=\frac{x^2}2\arctan x-\frac12\big(x-\arctan x\big)+C=\frac{x^2+1}2\arctan x-\frac x2+C\]</p>
+<p><b>(3) הפעלה חוזרת.</b> בפולינום ממעלה \(n\) כפול \(\sin\), \(\cos\) או \(e^x\) מפעילים את הנוסחה \(n\) פעמים, ובכל פעם המעלה יורדת באחד:
+\[\begin{aligned}\int x^2\sin x\,dx&=-x^2\cos x+\int2x\cos x\,dx\\&=-x^2\cos x+2x\sin x-\int2\sin x\,dx=-x^2\cos x+2x\sin x+2\cos x+C\end{aligned}\]</p>
+</div>
+
+<div class="box tip"><div class="tag">טיפ: שיטת הטבלה (פולינום כפול \(e^x\), \(\sin\), \(\cos\))</div>
+כותבים שתי עמודות. בעמודה אחת גוזרים את הפולינום עד 0, ובשנייה מאנטגרלים את הפונקציה השנייה שוב ושוב. כופלים באלכסון עם סימנים מתחלפים \(+,-,+,-\). לדוגמה ל־\(\int x^3e^xdx\): הנגזרות הן \(x^3,\,3x^2,\,6x,\,6,\,0\), והאינטגרלים כולם \(e^x\). לכן
+\[\int x^3e^x\,dx=e^x\big(x^3-3x^2+6x-6\big)+C\]
+</div>
+
+<div class="box thm"><div class="tag">נוסחת וליס (Wallis)</div>
+באותה שיטה מקבלים נוסחת נסיגה: \(\int\sin^nx\,dx=-\frac1n\sin^{n-1}x\cos x+\frac{n-1}{n}\int\sin^{n-2}x\,dx\). עבור \(W_n=\int_0^{\pi/2}\sin^nx\,dx\):
+\[W_n=\frac{n-1}{n}W_{n-2},\qquad W_0=\frac\pi2,\quad W_1=1\]
+לדוגמה \(W_2=\frac12\cdot\frac\pi2=\frac\pi4\) ו־\(W_3=\frac23\cdot1=\frac23\). מכאן נובעת גם נוסחת המכפלה \(\frac\pi2=\frac21\cdot\frac23\cdot\frac43\cdot\frac45\cdot\frac65\cdot\frac67\cdots\)
+</div>
+
+
+<div class="wk"><div class="wk-h"><span class="n">דוגמה מלאה</span>טריק החזרה: \(\int e^{3x}\cos4x\,dx\)</div>
+<div class="wk-q">חשבו \(\displaystyle\int e^{3x}\cos 4x\,dx\).</div>
+<ol class="wsteps">
+<li><span class="st">מזהים את המצב.</span>
+אף גורם לא נעלם בגזירה: הנגזרות של \(e^{3x}\) ושל \(\cos4x\) חוזרות על עצמן עד כדי קבוע. במקרה כזה מפעילים בחלקים פעמיים ומצפים שהאינטגרל המקורי יחזור.</li>
+<li><span class="st">בחלקים בפעם הראשונה.</span>
+\(u=\cos4x\), \(v'=e^{3x}\), ולכן \(u'=-4\sin4x\), \(v=\frac13e^{3x}\):
+\[\int e^{3x}\cos4x\,dx=\tfrac13e^{3x}\cos4x+\tfrac43\int e^{3x}\sin4x\,dx\]</li>
+<li><span class="st">בחלקים בפעם השנייה, עם אותה בחירה.</span>
+\(u=\sin4x\), \(v'=e^{3x}\):
+\[\int e^{3x}\sin4x\,dx=\tfrac13e^{3x}\sin4x-\tfrac43\int e^{3x}\cos4x\,dx\]
+<p class="why-step">חשוב להמשיך עם האקספוננט בתפקיד \(v'\). החלפת התפקידים בפעם השנייה מבטלת את הצעד הראשון ומחזירה את הזהות הטריוויאלית \(I=I\).</p></li>
+<li><span class="st">מסמנים \(I\) ומקבלים משוואה.</span>
+\(I=\int e^{3x}\cos4x\,dx\). מהצבת הצעד השלישי בשני:
+\[I=\tfrac13e^{3x}\cos4x+\tfrac49e^{3x}\sin4x-\tfrac{16}9I\]</li>
+<li><span class="st">פותרים עבור \(I\) ומוסיפים קבוע.</span>
+\(\big(1+\frac{16}9\big)I=\frac{25}9I=\frac13e^{3x}\cos4x+\frac49e^{3x}\sin4x\), ולכן
+\[I=\tfrac{3}{25}e^{3x}\cos4x+\tfrac{4}{25}e^{3x}\sin4x+C=\tfrac{e^{3x}}{25}\big(3\cos4x+4\sin4x\big)+C\]
+<p class="why-step">הקבוע מופיע רק בסוף: המשוואה עצמה היא בין פונקציות קדומות, והקבוע נבלע בה.</p></li>
+</ol>
+<div class="res">\(\displaystyle\int e^{3x}\cos4x\,dx=\frac{e^{3x}}{25}\big(3\cos4x+4\sin4x\big)+C\)</div>
+</div>
+
+<h3>חזקות של פונקציות טריגונומטריות</h3>
+<p>כאן שתי השיטות נפגשות: <b>זהויות טריגונומטריות</b> הופכות את האינטגרל לצורה של "פונקציה כפול הנגזרת שלה", ואז <b>הצבה</b> מסיימת. הכלל: מסתכלים על <b>זוגיות החזקות</b>.</p>
+<div class="tablewrap"><table>
+<tr><th>אינטגרל</th><th>מקרה</th><th>מה עושים</th></tr>
+<tr><td rowspan="3">\(\int\sin^nx\cos^mx\,dx\)</td><td>\(n\) אי־זוגי</td><td>מפרידים \(\sin x\) אחד, ממירים את השאר בעזרת \(\sin^2=1-\cos^2\), ומציבים \(t=\cos x\)</td></tr>
+<tr><td>\(m\) אי־זוגי</td><td>מפרידים \(\cos x\) אחד, ממירים את השאר בעזרת \(\cos^2=1-\sin^2\), ומציבים \(t=\sin x\)</td></tr>
+<tr><td>שניהם זוגיים</td><td>זהויות הזווית הכפולה: \(\sin^2x=\frac{1-\cos2x}2\), \(\cos^2x=\frac{1+\cos2x}2\), \(\sin x\cos x=\frac12\sin2x\)</td></tr>
+<tr><td rowspan="2">\(\int\tan^nx\sec^mx\,dx\)<br><span class="small">\(\sec x=\frac{1}{\cos x}\)</span></td><td>\(n\) אי־זוגי</td><td>מפרידים \(\tan x\sec x\), משתמשים ב־\(\tan^2=\sec^2-1\), ומציבים \(t=\sec x\)</td></tr>
+<tr><td>\(m\) זוגי</td><td>מפרידים \(\sec^2x\), משתמשים ב־\(\sec^2=\tan^2+1\), ומציבים \(t=\tan x\)</td></tr>
+</table></div>
+<p>בכל המקרים מגיעים לאינטגרל של פולינום ב־\(t\).</p>
+<div class="box ex"><div class="tag">דוגמה לכל שורה בטבלה</div>
+<p><b>(1) \(\sin\) בחזקה אי־זוגית: \(\int\sin^5x\,dx\).</b> מפרידים \(\sin x\) אחד: \(\sin^5x=(\sin^2x)^2\sin x=(1-\cos^2x)^2\sin x\). מציבים \(t=\cos x\), \(dt=-\sin x\,dx\):
+\[\begin{aligned}\int\sin^5x\,dx&=-\int(1-t^2)^2dt=-\Big(t-\frac{2t^3}3+\frac{t^5}5\Big)+C\\&=-\cos x+\frac23\cos^3x-\frac15\cos^5x+C\end{aligned}\]</p>
+<p><b>(2) \(\cos\) בחזקה אי־זוגית: \(\int\sin^2x\cos^3x\,dx\).</b> מפרידים \(\cos x\) אחד: \(\sin^2x(1-\sin^2x)\cos x\). מציבים \(t=\sin x\), \(dt=\cos x\,dx\):
+\[=\int(t^2-t^4)dt=\frac{\sin^3x}3-\frac{\sin^5x}5+C\]</p>
+<p><b>(3) שתי חזקות זוגיות: \(\int\cos^4x\,dx\).</b> מפעילים את זהות הזווית הכפולה פעמיים:
+\[\begin{aligned}\cos^4x&=\Big(\frac{1+\cos2x}2\Big)^2=\frac14\Big(1+2\cos2x+\underbrace{\cos^22x}_{\frac{1+\cos4x}2}\Big)\\&=\frac38+\frac12\cos2x+\frac18\cos4x\end{aligned}\]
+\[\int\cos^4x\,dx=\frac{3x}8+\frac{\sin2x}4+\frac{\sin4x}{32}+C\]</p>
+<p><b>(3׳) \(\int\sin^2x\cos^2x\,dx\).</b> מהר יותר עם \(\sin x\cos x=\frac12\sin2x\): \(=\frac14\int\sin^22x\,dx=\frac18\int(1-\cos4x)dx=\frac x8-\frac{\sin4x}{32}+C\).</p>
+<p><b>(4) \(\tan\) ו־\(\sec\), \(m\) זוגי: \(\int\tan^2x\sec^4x\,dx\).</b> מפרידים \(\sec^2x\), וב־\(\sec^2x\) שנשאר משתמשים ב־\(1+\tan^2x\). מציבים \(t=\tan x\), \(dt=\sec^2x\,dx\):
+\[=\int t^2(1+t^2)dt=\frac{\tan^3x}3+\frac{\tan^5x}5+C\]</p>
+<p><b>(5) \(\tan\) ו־\(\sec\), \(n\) אי־זוגי: \(\int\tan^3x\sec^3x\,dx\).</b> מפרידים \(\tan x\sec x\): נשאר \(\tan^2x\sec^2x=(\sec^2x-1)\sec^2x\). מציבים \(t=\sec x\), \(dt=\sec x\tan x\,dx\):
+\[=\int(t^4-t^2)dt=\frac{\sec^5x}5-\frac{\sec^3x}3+C\]</p>
+<p><b>(6) בלי \(\sec\) בכלל: \(\int\tan^2x\,dx\) ו־\(\int\tan^3x\,dx\).</b> מחליפים \(\tan^2x=\sec^2x-1\):
+\[\int\tan^2x\,dx=\tan x-x+C\]
+\[\int\tan^3x\,dx=\int\tan x\sec^2x\,dx-\int\tan x\,dx=\frac{\tan^2x}2+\ln|\cos x|+C\]</p>
+</div>
+<div class="box tip"><div class="tag">טיפ: מכפלה של זוויות שונות</div>
+את \(\sin ax\cos bx\) הופכים לסכום: \(\sin A\cos B=\frac12\big[\sin(A+B)+\sin(A-B)\big]\). למשל
+\(\int\sin3x\cos x\,dx=\frac12\int(\sin4x+\sin2x)dx=-\frac{\cos4x}8-\frac{\cos2x}4+C\).
+</div>
+
+
+<div class="box thm"><div class="tag">טריק הסימטריה</div>
+\[I=\int_0^{\pi/2}\frac{\sin^{100}x}{\sin^{100}x+\cos^{100}x}dx\]
+מציבים \(t=\frac\pi2-x\). כיוון ש־\(\sin(\frac\pi2-t)=\cos t\), מקבלים את אותו אינטגרל עם \(\cos^{100}\) במונה. מחברים את שתי הגרסאות:
+\[2I=\int_0^{\pi/2}\frac{\sin^{100}x+\cos^{100}x}{\sin^{100}x+\cos^{100}x}dx=\frac\pi2\ \Rightarrow\ I=\frac\pi4\]
+<b>מתי לחשוב על זה:</b> אינטגרל "מפחיד" על קטע סימטרי כמו \([0,\frac\pi2]\) או \([0,a]\). ההצבה \(t=a-x\) (או \(t=\frac\pi2-x\)) ואז חיבור.
+</div>
+
+
+<div class="card warn"><span class="pill">טעויות נפוצות</span>
+<ul>
+<li><b>באינטגרל מסוים עם הצבה, לא להחליף גבולות</b> (או להחליף ואז גם לחזור ל־\(x\)). בוחרים אחד מהשניים.</li>
+<li>לשכוח את \(dx\): ב־\(t=x^2\), \(dx\) הוא לא \(dt\) אלא \(\frac{dt}{2x}\).</li>
+<li>בחלקים, לבחור הפוך: \(u=e^x\), \(v'=x\) רק מסבך (החזקה של \(x\) עולה).</li>
+<li>בטריק החזרה, לשכוח את \(+C\) בסוף, או לטעות בסימן כשמעבירים אגף.</li>
+</ul>
+</div>
+
+<div class="quiz" data-correct="1"><div class="tag">בדוק את עצמך</div>
+<p class="q">איזו הצבה הכי מתאימה ל־\(\int\sin^3x\cos^2x\,dx\)?</p>
+<div class="opts"><button class="opt">\(t=\sin x\)</button><button class="opt">\(t=\cos x\)</button><button class="opt">זהויות הזווית הכפולה</button><button class="opt">\(t=\tan\frac x2\) (חובה)</button></div>
+<div class="exp">החזקה של \(\sin\) אי־זוגית. מפרידים \(\sin x\) אחד, \(\sin^2=1-\cos^2\), ואז \(t=\cos x\) נותן \(-\int(1-t^2)t^2dt\).</div></div>
+<div class="quiz" data-correct="0"><div class="tag">בדוק את עצמך</div>
+<p class="q">\(\int x\,e^{x}dx\) פותרים הכי מהר עם:</p>
+<div class="opts"><button class="opt">בחלקים, עם \(g=x\) ו־\(f'=e^x\)</button><button class="opt">בחלקים, עם \(g=e^x\) ו־\(f'=x\)</button><button class="opt">הצבה \(t=e^x\)</button><button class="opt">שברים חלקיים</button></div>
+<div class="exp">גוזרים את \(x\), שהופך ל־1, ומאנטגרלים את \(e^x\): \(xe^x-e^x+C\). בבחירה ההפוכה החזקה של \(x\) רק עולה.</div></div>
+<div class="quiz" data-correct="0"><div class="tag">בדוק את עצמך</div>
+<p class="q">מה הדרך המהירה ביותר ל־\(\int\frac{x\,dx}{\sqrt{9-x^2}}\)?</p>
+<div class="opts"><button class="opt">\(t=9-x^2\)</button><button class="opt">\(x=3\sin\theta\)</button><button class="opt">בחלקים</button><button class="opt">שברים חלקיים</button></div>
+<div class="exp">ה־\(x\) במונה הוא (כמעט) הנגזרת של \(9-x^2\). מקבלים \(-\frac12\int t^{-1/2}dt=-\sqrt{9-x^2}+C\). הצבה טריגונומטרית גם עובדת, אבל היא ארוכה יותר.</div></div>
+
+<div class="card recap"><span class="pill">בשורה אחת</span>
+<b>הצבה</b> כשיש פונקציה פנימית והנגזרת שלה; <b>בחלקים</b> כשיש מכפלה, ומעבירים את הנגזרת לגורם שנעשה פשוט יותר; <b>זוגיות החזקות</b> קובעת מה עושים עם \(\sin^n\cos^m\).
+</div>
+<a class="next" href="chapter-4.html"><span class="arr">←</span><span><b>הלאה: שברים חלקיים והצבות טריגונומטריות.</b> שני סוגי אינטגרלים לא נפתרים בקלות בהצבה רגילה: מנה של פולינומים, ושורש של ביטוי ריבועי. לשניהם יש מתכון שעובד תמיד.</span></a>
+</section>
+
+<nav class="pager" aria-label="ניווט בין פרקים"><a class="pg pg-prev" href="chapter-2.html"><small>→ הקודם</small><span>2. המשפט היסודי של החדו״א</span></a><a class="pg pg-next" href="chapter-4.html"><small>הבא ←</small><span>4. שברים חלקיים והצבות טריגונומטריות</span></a></nav>
+</main>
+</div>
+<script>window.COURSE = [{"id": "c1", "num": "1", "part": "A", "title": "האינטגרל המסוים", "href": "chapter-1.html"}, {"id": "c2", "num": "2", "part": "A", "title": "המשפט היסודי של החדו״א", "href": "chapter-2.html"}, {"id": "c3", "num": "3", "part": "A", "title": "שיטות אינטגרציה: הצבה ובחלקים", "href": "chapter-3.html"}, {"id": "c4", "num": "4", "part": "A", "title": "שברים חלקיים והצבות טריגונומטריות", "href": "chapter-4.html"}, {"id": "c5", "num": "5", "part": "A", "title": "שימושים: שטח, נפח, אורך עקומה", "href": "chapter-5.html"}, {"id": "c6", "num": "6", "part": "A", "title": "אינטגרלים לא אמיתיים", "href": "chapter-6.html"}, {"id": "c7", "num": "7", "part": "B", "title": "וקטורים ב־ℝⁿ", "href": "chapter-7.html"}, {"id": "c8", "num": "8", "part": "B", "title": "ישרים ומישורים", "href": "chapter-8.html"}, {"id": "c9", "num": "9", "part": "C", "title": "פונקציות, גרפים וקווי גובה", "href": "chapter-9.html"}, {"id": "c10", "num": "10", "part": "C", "title": "טופולוגיה ב־ℝⁿ", "href": "chapter-10.html"}, {"id": "c11", "num": "11", "part": "C", "title": "גבולות ורציפות", "href": "chapter-11.html"}, {"id": "c12", "num": "12", "part": "C", "title": "נגזרות חלקיות ודיפרנציאביליות", "href": "chapter-12.html"}, {"id": "c13", "num": "13", "part": "C", "title": "כלל השרשרת, גרדיאנט ומישור משיק", "href": "chapter-13.html"}, {"id": "c14", "num": "14", "part": "C", "title": "משפט הפונקציה הסתומה", "href": "chapter-14.html"}, {"id": "c15", "num": "15", "part": "C", "title": "נקודות קיצון", "href": "chapter-15.html"}, {"id": "c16", "num": "16", "part": "C", "title": "כופלי לגרנז׳", "href": "chapter-16.html"}, {"id": "c17", "num": "17", "part": "D", "title": "אינטגרל כפול", "href": "chapter-17.html"}, {"id": "c18", "num": "18", "part": "D", "title": "החלפת סדר אינטגרציה", "href": "chapter-18.html"}, {"id": "c19", "num": "19", "part": "D", "title": "החלפת משתנים ויעקוביאן", "href": "chapter-19.html"}, {"id": "c20", "num": "20", "part": "D", "title": "אינטגרל משולש", "href": "chapter-20.html"}, {"id": "c21", "num": "21", "part": "E", "title": "איזו שיטה? תרשימי החלטה", "href": "chapter-21.html"}, {"id": "c22", "num": "22", "part": "E", "title": "תרגילי חזרה", "href": "chapter-22.html"}, {"id": "c23", "num": "23", "part": "E", "title": "כתיבת פתרון ושגיאות נפוצות", "href": "chapter-23.html"}, {"id": "c24", "num": "24", "part": "E", "title": "דף נוסחאות מרוכז", "href": "chapter-24.html"}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
